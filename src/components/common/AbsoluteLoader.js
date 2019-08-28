@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, ActivityIndicator } from 'react-native';
-import { Colors } from '../../utilities/constants';
+import { colors } from '../../utilities/constants';
 
 const AbsoluteLoader = (props) => (
     <View
@@ -9,11 +9,11 @@ const AbsoluteLoader = (props) => (
             StyleSheet.absoluteFill,
             styles.flexCenterStyle,
             {
-                backgroundColor: Colors.loaderBackgroundColor
+                backgroundColor: colors.loaderBackgroundColor
             }
         ]}
     >
-        <ActivityIndicator color={Colors.white} size={'large'} />
+        <ActivityIndicator color={colors.white} size={'large'} />
     </View>
 );
 
