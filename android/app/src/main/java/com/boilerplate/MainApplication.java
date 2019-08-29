@@ -1,4 +1,4 @@
-package com.react_native_boilerplate;
+package com.boilerplate;
 
 import android.app.Application;
 import android.util.Log;

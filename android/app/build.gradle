@@ -128,7 +128,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.react_native_boilerplate"
+        applicationId "com.boilerplate"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

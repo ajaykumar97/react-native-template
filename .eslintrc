@@ -1,8 +1,0 @@
-{
-  "extends": "@react-native-community",
-  // "extends": "rallycoding",
-  "rules": {
-    "comma-dangle": "off",
-    "prettier/prettier": "off"
-  }
-}
