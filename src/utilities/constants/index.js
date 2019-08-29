@@ -1,3 +1,3 @@
 export * from './actionTypes';
-export * from './appColors';
+export * from './colors';
 export * from './urls';
