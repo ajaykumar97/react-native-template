@@ -5,9 +5,9 @@ import MainNavigator from './MainNavigator';
 export default createAppContainer(createSwitchNavigator(
   {
     // AuthNavigator,
-    MainNavigator
+    MainNavigator,
   },
   {
-    initialRouteName: 'MainNavigator'
+    initialRouteName: 'MainNavigator',
   }
 ));

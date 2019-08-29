@@ -2,7 +2,7 @@ import { actionTypes } from '../../utilities/constants';
 
 const INITIAL_STATE = {
     users: [],
-    loading: false
+    loading: false,
 };
 
 export default (state = INITIAL_STATE, { type, payload }) => {
