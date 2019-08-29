@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     },
     itemSeparator: { height: 15 },
     netInfoContainer: {
-        marginTop: 10,
+        marginVertical: 10,
         paddingHorizontal: 20,
     },
     netInfoTitle: {
