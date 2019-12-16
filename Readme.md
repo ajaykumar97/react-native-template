@@ -7,7 +7,13 @@ To create a new project using the boilerplate:
 - install the npm dependencies by running `yarn`
 - rename the React Native project to your own project name: `react-native-rename <newName>` (the default name is `Boilerplate`).
 
-You can install `react-native-rename` from [npm](https://www.npmjs.com/package/react-native-rename)
+You can install `react-native-rename`  by:
+
+``yarn global add react-native-rename``
+
+or
+
+``npm install react-native-rename -g``
 
 You can now create a new git repository for your project (using `git init`) and create the first commit.
 
@@ -25,4 +31,3 @@ Assuming you have all the requirements installed, you can setup and run the proj
 2. To avoid error like: ``debug.keystore not found for signing config 'debug'``, run the following command in the ``android/app/`` directory of the project:
 
 ``keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000``
-
