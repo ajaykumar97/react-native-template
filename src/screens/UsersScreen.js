@@ -24,13 +24,14 @@ import { UserCard } from '../components/UsersScreen';
 import { icUsers } from '../../assets';
 import { strings } from '../localization';
 import { Loader } from '../components/common/Loader';
+import logger from '../utilities/logger';
 
 class UsersScreen extends PureComponent {
     componentDidMount() {
         this.props.getAllUsers();
         this.unsubscribe = NetInfo.addEventListener(state => {
-            // console.log('Connection type: ', state.type);
-            // console.log('Is connected? ', state.isConnected);
+            logger.log('Connection type: ', state.type);
+            // logger.log('Is connected? ', state.isConnected);
             if (state) {
                 this.props.updateNetInfo(state);
             }
