@@ -8,11 +8,12 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, { type, payload }) => {
     switch (type) {
         case actionTypes.START_USERS_LOADING:
-            return { ...state, loading: true };
-        case actionTypes.STOP_USERS_LOADING:
-            return { ...state, loading: false };
         case actionTypes.GET_USERS:
             return { ...state, loading: true };
+
+        case actionTypes.STOP_USERS_LOADING:
+            return { ...state, loading: false };
+
         case actionTypes.GET_USERS_SUCCESS:
             return { ...state, users: payload.users, loading: false };
         default:

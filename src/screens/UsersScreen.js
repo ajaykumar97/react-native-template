@@ -12,17 +12,18 @@ import {
     Text,
     StatusBar,
     FlatList,
-    ActivityIndicator,
     Image,
 } from 'react-native';
 import { connect } from 'react-redux';
 import NetInfo from '@react-native-community/netinfo';
+import { moderateScale } from 'react-native-size-matters';
+
 import { getAllUsers, updateNetInfo } from '../store/actions/';
 import { colors } from '../utilities/constants';
 import { UserCard } from '../components/UsersScreen';
 import { icUsers } from '../../assets';
-import { moderateScale } from 'react-native-size-matters';
 import { strings } from '../localization';
+import { Loader } from '../components/common/Loader';
 
 class UsersScreen extends PureComponent {
     componentDidMount() {
@@ -63,9 +64,7 @@ class UsersScreen extends PureComponent {
 
         if (loading) {
             content = (
-                <View style={styles.loader}>
-                    <ActivityIndicator size={'large'} />
-                </View>
+                <Loader isLoading />
             );
         } else {
             content = (
@@ -176,6 +175,7 @@ const styles = StyleSheet.create({
 const mapStatesToProps = ({ user, net }) => {
     const { users, loading } = user;
     const { type, isConnected, isInternetReachable } = net;
+    
     return {
         users,
         loading,

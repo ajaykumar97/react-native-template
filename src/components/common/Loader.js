@@ -3,15 +3,15 @@ import { View, StyleSheet, ActivityIndicator } from 'react-native';
 
 import { colors } from '../../utilities/constants';
 
-const Loader = (props) => {
-    if (!props.isLoading) {
+const Loader = ({ isLoading, isAbsolute, containerProps }) => {
+    if (!isLoading) {
         return null;
     }
 
-    if (props.isAbsolute) {
+    if (isAbsolute) {
         return (
             <View
-                {...props}
+                {...containerProps}
                 style={[
                     StyleSheet.absoluteFill,
                     styles.flexCenterStyle,
@@ -20,14 +20,17 @@ const Loader = (props) => {
                     },
                 ]}
             >
-                <ActivityIndicator color={colors.white1} size={'large'} />
+                <ActivityIndicator
+                    color={colors.white1}
+                    size={'large'}
+                />
             </View>
         );
     }
 
     return (
         <View
-            {...props}
+            {...containerProps}
             style={[
                 styles.flexCenterStyle,
                 { flex: 1 },

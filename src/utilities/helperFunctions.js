@@ -1,11 +1,9 @@
-
-export const validateEmail = (email) => {
+const validateEmail = (email) => {
     const regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regEx.test(email);
 };
 
-/*validating password*/
-export const validatePassword = (password) => {
+const validatePassword = (password) => {
     // var regEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}/;
 
     //should contain atleast 6 characters
@@ -17,12 +15,17 @@ export const validatePassword = (password) => {
     return regEx.test(password);
 };
 
-/*validating mobile bumber*/
-export const validateMobileNumber = (mobileNo) => {
+const validateMobileNumber = (mobileNo) => {
     //should contain atleast 10 characters
     // const regEx = /^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$/;
     // const regEx = /^.{9,}$/;
     const regEx = /^[+\d]\d{5,}$/;
     // const regEx = /^([0|\+[0-9]{1,5})?([7-9][0-9]{5,})$/;
     return regEx.test(mobileNo);
+};
+
+export {
+    validateEmail,
+    validatePassword,
+    validateMobileNumber
 };

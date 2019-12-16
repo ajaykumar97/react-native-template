@@ -1,7 +1,9 @@
 module.exports = {
   root: true,
-  extends: '@react-native-community',
+  // extends: '@react-native-community',
+  extends: 'rallycoding',
   rules: {
-    "prettier/prettier": "off"
+    "no-underscore-dangle": "off",
+    "babel/camelcase": "off"
   }
 };
