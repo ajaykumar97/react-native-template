@@ -8,7 +8,7 @@ function* getUsersSaga(params) {
         const config = {
             url: urls.getUsers,
             method: 'GET',
-            data: {}
+            data: {},
         };
 
         let { data } = yield call(request, config);
@@ -19,7 +19,7 @@ function* getUsersSaga(params) {
         });
 
         const payload = {
-            users: data
+            users: data,
         };
 
         console.log('payload is: ', data);
@@ -36,5 +36,5 @@ function* getUsersSaga(params) {
 }
 
 export {
-    getUsersSaga
+    getUsersSaga,
 };

@@ -21,6 +21,8 @@ import { getAllUsers, updateNetInfo } from '../store/actions/';
 import { colors } from '../utilities/constants';
 import { UserCard } from '../components/UsersScreen';
 import { icUsers } from '../../assets';
+import { moderateScale } from 'react-native-size-matters';
+import { strings } from '../localization';
 
 class UsersScreen extends PureComponent {
     componentDidMount() {
@@ -42,7 +44,7 @@ class UsersScreen extends PureComponent {
 
     renderListEmptyComponent = () => (
         <View style={styles.noUserFound}>
-            <Text>No Users Found</Text>
+            <Text>{strings.noUserFound}</Text>
         </View>
     );
 
@@ -83,15 +85,34 @@ class UsersScreen extends PureComponent {
                 <StatusBar barStyle="dark-content" />
                 <View style={styles.sectionContainer}>
                     <View style={styles.headerView}>
-                        <Text style={styles.headerTitle}>Users</Text>
+                        <Text style={styles.headerTitle}>
+                            {strings.users}
+                        </Text>
                         <Image source={icUsers} style={styles.headerIcon} />
                     </View>
                     {content}
                     <View style={styles.netInfoContainer}>
-                        <Text style={styles.netInfoTitle}>Net info</Text>
-                        <Text><Text style={styles.boldText}>Type: </Text>{String(type)}</Text>
-                        <Text><Text style={styles.boldText}>Is Connected: </Text>{String(isConnected)}</Text>
-                        <Text><Text style={styles.boldText}>Is InternetReachable: </Text>{String(isInternetReachable)}</Text>
+                        <Text style={styles.netInfoTitle}>
+                            {strings.netInfo}
+                        </Text>
+                        <Text>
+                            <Text style={styles.boldText}>
+                                {`${strings.type} `}
+                            </Text>
+                            {String(type)}
+                        </Text>
+                        <Text>
+                            <Text style={styles.boldText}>
+                                {`${strings.isConnected} `}
+                            </Text>
+                            {String(isConnected)}
+                        </Text>
+                        <Text>
+                            <Text style={styles.boldText}>
+                                {`${strings.isInternetReachable} `}
+                            </Text>
+                            {String(isInternetReachable)}
+                        </Text>
                     </View>
                 </View>
             </SafeAreaView>
@@ -113,38 +134,38 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     headerView: {
-        padding: 20,
+        padding: moderateScale(20),
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: colors.white,
+        backgroundColor: colors.white1,
         elevation: 5,
         shadowOffset: { width: 0, height: 2 },
-        shadowColor: colors.black,
+        shadowColor: colors.black1,
         shadowOpacity: 0.2,
     },
     headerTitle: {
-        fontSize: 24,
+        fontSize: moderateScale(24),
         fontWeight: '600',
-        color: colors.black,
+        color: colors.black1,
     },
     headerIcon: {
-        height: 30,
-        width: 30,
-        marginLeft: 5,
+        height: moderateScale(30),
+        width: moderateScale(30),
+        marginLeft: moderateScale(5),
     },
     noUserFound: { alignItems: 'center' },
     list: {
-        paddingHorizontal: 20,
-        paddingTop: 20,
-        paddingBottom: 50,
+        paddingHorizontal: moderateScale(20),
+        paddingTop: moderateScale(20),
+        paddingBottom: moderateScale(50),
     },
-    itemSeparator: { height: 15 },
+    itemSeparator: { height: moderateScale(15) },
     netInfoContainer: {
-        marginVertical: 10,
-        paddingHorizontal: 20,
+        marginVertical: moderateScale(10),
+        paddingHorizontal: moderateScale(20),
     },
     netInfoTitle: {
-        fontSize: 18,
+        fontSize: moderateScale(18),
         fontWeight: 'bold',
     },
     boldText: {

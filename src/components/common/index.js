@@ -1,1 +1,1 @@
-export * from './AbsoluteLoader';
+export * from './Loader';

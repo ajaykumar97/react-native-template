@@ -17,3 +17,12 @@ Assuming you have all the requirements installed, you can setup and run the proj
 
 - `react-native run-android` to run the Android application (remember to start a simulator or connect an Android phone)
 - `react-native run-ios` to run the iOS application (remember to start a simulator or connect an iPhone phone)
+
+##Android notes:
+
+1. To avoid any error like ``SDK location not found`` while running ``react-native run-android``, please open the project in Android Studio for the first time so that Android Studio could automatically insert the Android SDK path and other configuration settings.
+
+2. To avoid error like: ``debug.keystore not found for signing config 'debug'``, run the following command in the ``android/app/`` directory of the project:
+
+``keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000``
+

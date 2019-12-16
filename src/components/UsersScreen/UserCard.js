@@ -1,31 +1,33 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { moderateScale } from 'react-native-size-matters';
+
 import { colors } from '../../utilities/constants';
-import { CustomText } from '../CustomText';
+import { strings } from '../../localization';
 
 const UserCard = ({ user }) => (
     <View style={styles.container}>
         <Text style={styles.name}>{user.name}</Text>
-        <Text><CustomText text={'username'} />: {user.username}</Text>
-        <Text><CustomText text={'email'} />: {user.email}</Text>
-        <Text><CustomText text={'phone'} />: {user.phone}</Text>
+        <Text>{strings.username}: {user.username}</Text>
+        <Text>{strings.email}: {user.email}</Text>
+        <Text>{strings.phone}: {user.phone}</Text>
     </View>
 );
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10,
-        backgroundColor: colors.white,
+        padding: moderateScale(10),
+        backgroundColor: colors.white1,
         elevation: 5,
         shadowOffset: { width: 0, height: 2 },
-        shadowColor: colors.black,
+        shadowColor: colors.black1,
         shadowOpacity: 0.2,
-        borderRadius: 5
+        borderRadius: moderateScale(5)
     },
     name: {
-        fontSize: 16,
-        fontWeight: 'bold'
-    }
+        fontSize: moderateScale(16),
+        fontWeight: 'bold',
+    },
 });
 
 export { UserCard };
