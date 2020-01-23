@@ -9,7 +9,6 @@ function* getUsersSaga(params) {
         const config = {
             url: urls.getUsers,
             method: 'GET',
-            data: {},
         };
 
         let { data } = yield call(request, config);
