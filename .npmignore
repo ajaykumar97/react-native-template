@@ -1,0 +1,18 @@
+# Logs
+*.log
+npm-debug.log
+
+# Dependency directory
+node_modules
+
+# Runtime data
+tmp
+
+#screenshots
+assets
+
+#android build folder
+template/android/app/build
+
+#Xcode Pods folder
+template/ios/Pods
