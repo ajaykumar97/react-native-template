@@ -1,18 +1,20 @@
-# Logs
+# logs
 *.log
 npm-debug.log
 
-# Dependency directory
+# dependency directory
 node_modules
 
-# Runtime data
+# runtime data
 tmp
 
 #screenshots
 assets
 
-#android build folder
+#android
 template/android/app/build
+template/android/.gradle
+template/android/app/debug.keystore
 
-#Xcode Pods folder
+#iOS
 template/ios/Pods
