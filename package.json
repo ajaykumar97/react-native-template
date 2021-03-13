@@ -23,9 +23,7 @@
     "url": "https://github.com/ajaykumar97/react-native-template/issues"
   },
   "homepage": "https://github.com/ajaykumar97/react-native-template#readme",
-  "dependencies": {
-    "react-native-localization": "^2.1.6"
-  },
+  "dependencies": {},
   "release-it": {
     "git": {
       "commitMessage": "chore: release v${version}"
