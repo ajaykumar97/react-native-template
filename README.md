@@ -5,14 +5,36 @@
 
 # react-native-template
 
+A starter kit for initializing a new React-Native project with some commonly used preconfigured libraries and the folder structure.
+
+Key features:
+- Folder structure
+- Navigation using `react-navigation`(v5)
+- State management using `redux`
+- Redux middleware `redux-saga`
+- Splash screen
+- API request using `axios`
+- Localization using `react-native-localization`
+- Responsive UI using `react-native-size-matters`
+
 ## Getting Started
 
-Create a new project using the template.
-
-- **Note:** the command will fail if you have the global legacy react-native-cli installed. Make sure you uninstall it first. More info at [react-native-community/cli](https://github.com/react-native-community/cli#about).
-
-### RN 0.63.4
+This template is base on the React-Native v0.63.4. To create a new project using the template, use the `init` command like:
 
 ```bash
-$ npx react-native init MyApp --template @ajaysidhu/react-native-template
+npx react-native init MyApp --template @ajaysidhu/react-native-template
 ```
+
+**Note:** The above command will fail if you have the global legacy `react-native-cli` installed. Make sure you uninstall it first(only if you have the old version of the  `react-native-cli`):
+
+```bash
+npm uninstall -g react-native-cli
+```
+or
+```bash
+yarn global remove react-native-cli
+```
+
+Then run the above `npx` command again.
+
+More info can be found at [react-native-community/cli](https://github.com/react-native-community/cli#about).
