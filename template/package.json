@@ -7,7 +7,9 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "uninstall": "node ./scripts/runPostInstallUninstallTasks.js",
+    "postinstall": "node ./scripts/runPostInstallUninstallTasks.js"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",
