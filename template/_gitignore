@@ -28,6 +28,8 @@ build/
 .gradle
 local.properties
 *.iml
+*.apk
+output.json
 
 # node.js
 #
@@ -57,3 +59,8 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+# .env files
+.env
+.env.staging
+.env.production

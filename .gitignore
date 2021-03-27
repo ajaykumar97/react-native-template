@@ -28,6 +28,8 @@ build/
 .gradle
 local.properties
 *.iml
+*.apk
+output.json
 
 # node.js
 #
@@ -66,3 +68,9 @@ template/.flowconfig
 template/.buckconfig
 template/.prettierrc.js
 template/.watchmanconfig
+
+
+# .env files
+.env
+.env.staging
+.env.production

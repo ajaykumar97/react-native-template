@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
 import cloneDeep from 'clone-deep';
 import { connect } from 'react-redux';
+import Config from 'react-native-config';
 
 import { fonts } from '../../../assets';
 import { TextInputWithLabel, Button, Wrapper } from '../../../commonComponents';
@@ -65,6 +66,16 @@ class Login extends PureComponent {
             }}
           >
             Boilerplate
+          </Text>
+
+          <Text
+            style={{
+              color: colors.white1,
+              fontFamily: fonts.regular,
+              fontSize: moderateScale(16)
+            }}
+          >
+            App environment: {Config.ENV_TYPE}
           </Text>
         </View>
 
