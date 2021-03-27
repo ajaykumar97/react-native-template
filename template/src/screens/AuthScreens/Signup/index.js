@@ -1,26 +1,31 @@
-import React, { PureComponent } from 'react';
-import { StyleSheet, Keyboard } from 'react-native';
-import { connect } from 'react-redux';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import React, {PureComponent} from 'react';
+import {StyleSheet, Keyboard} from 'react-native';
+import {connect} from 'react-redux';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import cloneDeep from 'clone-deep';
-import { moderateScale } from 'react-native-size-matters';
+import {moderateScale} from 'react-native-size-matters';
 
-import { Wrapper, Header, TextInputWithLabel, Button } from '../../../commonComponents';
-import { colors, regex } from '../../../utilities/constants';
-import { showErrorMessage } from '../../../utilities/helperFunctions';
-import { signup } from './actions';
+import {
+  Wrapper,
+  Header,
+  TextInputWithLabel,
+  Button,
+} from '../../../commonComponents';
+import {colors, regex} from '../../../utilities/constants';
+import {showErrorMessage} from '../../../utilities/helperFunctions';
+import {signup} from './actions';
 
 class Signup extends PureComponent {
   state = {
     name: '',
     email: '',
-    password: ''
+    password: '',
   };
 
   onNameSubmit = () => this.emailRef.current.focus();
   onEmailSubmit = () => this.passwordRef.current.focus();
   onSignupPress = () => {
-    const { name, email, password } = this.state;
+    const {name, email, password} = this.state;
     if (!name.trim()) {
       return showErrorMessage('Please enter your name');
     } else if (!email.trim()) {
@@ -30,14 +35,16 @@ class Signup extends PureComponent {
     } else if (!password) {
       return showErrorMessage('Please enter a passsword');
     } else if (!regex.password.test(password)) {
-      return showErrorMessage('Password can only contain alphabets, numbers and any of the special characters from _@./#&+-');
+      return showErrorMessage(
+        'Password can only contain alphabets, numbers and any of the special characters from _@./#&+-',
+      );
     }
 
     Keyboard.dismiss();
     this.props.signup({
       name: name.trim(),
       email: email.trim(),
-      password: password.trim()
+      password: password.trim(),
     });
   };
 
@@ -52,18 +59,14 @@ class Signup extends PureComponent {
   };
 
   render() {
-    const { name, email, password } = this.state;
+    const {name, email, password} = this.state;
     return (
       <Wrapper wrapperBackgroundColor={colors.blue2}>
-        <Header
-          title={'Signup'}
-          wrapperBackgroundColor={colors.blue2}
-        />
+        <Header title={'Signup'} wrapperBackgroundColor={colors.blue2} />
         <KeyboardAwareScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.container}
-          keyboardShouldPersistTaps={'handled'}
-        >
+          keyboardShouldPersistTaps={'handled'}>
           <TextInputWithLabel
             value={name}
             label={'Name'}
@@ -112,8 +115,8 @@ class Signup extends PureComponent {
 const styles = StyleSheet.create({
   container: {
     paddingBottom: moderateScale(40),
-    paddingHorizontal: moderateScale(15)
-  }
+    paddingHorizontal: moderateScale(15),
+  },
 });
 
-export default connect(null, { signup })(Signup);
+export default connect(null, {signup})(Signup);

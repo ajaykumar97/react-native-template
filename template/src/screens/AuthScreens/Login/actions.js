@@ -1,6 +1,6 @@
-import { LOGIN_REQUESTED } from './types';
+import {LOGIN_REQUESTED} from './types';
 
 export const login = (params) => ({
   type: LOGIN_REQUESTED,
-  params
+  params,
 });

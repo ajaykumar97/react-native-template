@@ -1,8 +1,11 @@
 import React from 'react';
-import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
+import {
+  createStackNavigator,
+  CardStyleInterpolators,
+} from '@react-navigation/stack';
 
 import Login from '../screens/AuthScreens/Login';
-import { screenNames } from '../utilities/constants';
+import {screenNames} from '../utilities/constants';
 import Signup from '../screens/AuthScreens/Signup';
 import ForgotPassword from '../screens/AuthScreens/ForgotPassword';
 
@@ -12,12 +15,14 @@ const AuthNavigator = () => (
   <AuthStack.Navigator
     headerMode={'none'}
     screenOptions={{
-      cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
-    }}
-  >
+      cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+    }}>
     <AuthStack.Screen name={screenNames.Login} component={Login} />
     <AuthStack.Screen name={screenNames.Signup} component={Signup} />
-    <AuthStack.Screen name={screenNames.ForgotPassword} component={ForgotPassword} />
+    <AuthStack.Screen
+      name={screenNames.ForgotPassword}
+      component={ForgotPassword}
+    />
   </AuthStack.Navigator>
 );
 

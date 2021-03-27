@@ -1,13 +1,13 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
-import { Provider } from 'react-redux';
-import { NavigationContainer } from '@react-navigation/native';
+import {StatusBar} from 'react-native';
+import {Provider} from 'react-redux';
+import {NavigationContainer} from '@react-navigation/native';
 import FlashMessage from 'react-native-flash-message';
 
 import store from './store';
-import { colors } from './utilities/constants';
-import { navigationRef } from './utilities/NavigationService';
-import { layout } from './utilities/layout';
+import {colors} from './utilities/constants';
+import {navigationRef} from './utilities/NavigationService';
+import {layout} from './utilities/layout';
 import AppNavigator from './navigation/AppNavigator';
 
 const App = () => (

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import React, {useState} from 'react';
+import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import dayjs from 'dayjs';
-import { moderateScale } from 'react-native-size-matters';
+import {moderateScale} from 'react-native-size-matters';
 
-import { DATE_FORMAT, colors } from '../utilities/constants';
-import { fonts } from '../assets';
+import {DATE_FORMAT, colors} from '../utilities/constants';
+import {fonts} from '../assets';
 
 const DateTimePicker = ({
   onDateSelect,
@@ -15,7 +15,7 @@ const DateTimePicker = ({
   dateTimeFormat = DATE_FORMAT,
   labelStyle,
   label,
-  containerMarginTop
+  containerMarginTop,
 }) => {
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
 
@@ -27,7 +27,7 @@ const DateTimePicker = ({
     setDatePickerVisibility(false);
   };
 
-  const handleConfirm = selectedDate => {
+  const handleConfirm = (selectedDate) => {
     hideDatePicker();
     onDateSelect(selectedDate);
   };
@@ -39,25 +39,17 @@ const DateTimePicker = ({
   }
 
   return (
-    <View style={{ ...styles.container, marginTop: containerMarginTop || 0 }}>
-      {label ?
-        <Text style={[styles.label, labelStyle]}>
-          {label}
-        </Text>
-        : null
-      }
+    <View style={{...styles.container, marginTop: containerMarginTop || 0}}>
+      {label ? <Text style={[styles.label, labelStyle]}>{label}</Text> : null}
       <TouchableOpacity
         activeOpacity={0.6}
         onPress={showDatePicker}
-        style={styles.dateContainer}
-      >
+        style={styles.dateContainer}>
         <Text
           style={{
             ...styles.date,
-            color: selectedDate
-              ? colors.white1 : colors.grey2
-          }}
-        >
+            color: selectedDate ? colors.white1 : colors.grey2,
+          }}>
           {selectedDate}
         </Text>
       </TouchableOpacity>
@@ -81,19 +73,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   dateContainer: {
-    height: moderateScale(40)
+    height: moderateScale(40),
   },
   date: {
     margin: moderateScale(10),
     fontSize: moderateScale(14),
     fontFamily: fonts.regular,
-    borderColor: colors.grey2
+    borderColor: colors.grey2,
   },
   label: {
     color: colors.white2,
     fontSize: moderateScale(12),
-    fontFamily: fonts.regular
+    fontFamily: fonts.regular,
   },
 });
 
-export { DateTimePicker };
+export {DateTimePicker};

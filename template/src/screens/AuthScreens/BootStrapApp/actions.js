@@ -1,5 +1,5 @@
-import { CHECKED_IF_LOGGED_IN } from './types';
+import {CHECKED_IF_LOGGED_IN} from './types';
 
 export const checkIfLoggedIn = () => ({
-  type: CHECKED_IF_LOGGED_IN
+  type: CHECKED_IF_LOGGED_IN,
 });

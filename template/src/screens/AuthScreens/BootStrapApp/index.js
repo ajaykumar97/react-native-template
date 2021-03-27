@@ -1,16 +1,16 @@
-import { useEffect } from 'react';
+import {useEffect} from 'react';
+import {useDispatch} from 'react-redux';
 
-import { connect } from 'react-redux';
-import { checkIfLoggedIn } from './actions';
+import {checkIfLoggedIn} from './actions';
 
-const BootStrapApp = (props) => {
+const BootStrapApp = () => {
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    props.checkIfLoggedIn();
-  }, []);
+    dispatch(checkIfLoggedIn());
+  }, [dispatch]);
 
   return null;
 };
 
-export default connect(null, {
-  checkIfLoggedIn
-})(BootStrapApp);
+export default BootStrapApp;

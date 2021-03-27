@@ -15,4 +15,4 @@ const colors = {
   blue2: '#008DF6',
 };
 
-export { colors };
+export {colors};

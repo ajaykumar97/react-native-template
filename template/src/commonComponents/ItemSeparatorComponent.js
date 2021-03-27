@@ -1,8 +1,6 @@
 import React from 'react';
-import { View } from 'react-native';
+import {View} from 'react-native';
 
-const ItemSeparatorComponent = () => (
-  <View style={{ height: 20 }} />
-);
+const ItemSeparatorComponent = () => <View style={{height: 20}} />;
 
-export { ItemSeparatorComponent };
+export {ItemSeparatorComponent};

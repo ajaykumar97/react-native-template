@@ -1,9 +1,9 @@
 import React from 'react';
-import { Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { moderateScale } from 'react-native-size-matters';
+import {Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {moderateScale} from 'react-native-size-matters';
 
-import { fonts } from '../assets';
-import { colors } from '../utilities/constants';
+import {fonts} from '../assets';
+import {colors} from '../utilities/constants';
 
 const Button = ({
   onPress,
@@ -15,35 +15,34 @@ const Button = ({
   marginBottom = 0,
   marginHorizontal = 0,
   transparent,
-  borderRadius = moderateScale(2)
+  borderRadius = moderateScale(2),
 }) => (
-    <TouchableOpacity
-      activeOpacity={0.7}
-      onPress={onPress}
-      style={[
-        styles.button,
-        {
-          backgroundColor: bgColor || (transparent ? colors.transparent : colors.blue1),
-          marginTop,
-          marginBottom,
-          marginHorizontal,
-          borderWidth: transparent ? moderateScale(2) : 0,
-          borderColor: transparent ? colors.white1 : 'transparent',
-          borderRadius
-        },
-        containerStyle
-      ]}
-    >
-      <Text
-        style={{
-          ...styles.label,
-          color: labelColor || (transparent ? colors.blue1 : colors.white1)
-        }}
-      >
-        {label}
-      </Text>
-    </TouchableOpacity>
-  );
+  <TouchableOpacity
+    activeOpacity={0.7}
+    onPress={onPress}
+    style={[
+      styles.button,
+      {
+        backgroundColor:
+          bgColor || (transparent ? colors.transparent : colors.blue1),
+        marginTop,
+        marginBottom,
+        marginHorizontal,
+        borderWidth: transparent ? moderateScale(2) : 0,
+        borderColor: transparent ? colors.white1 : 'transparent',
+        borderRadius,
+      },
+      containerStyle,
+    ]}>
+    <Text
+      style={{
+        ...styles.label,
+        color: labelColor || (transparent ? colors.blue1 : colors.white1),
+      }}>
+      {label}
+    </Text>
+  </TouchableOpacity>
+);
 
 const styles = StyleSheet.create({
   button: {
@@ -56,8 +55,8 @@ const styles = StyleSheet.create({
     color: colors.blue2,
     fontSize: moderateScale(18),
     fontFamily: fonts.semiBold,
-    textAlign: 'center'
+    textAlign: 'center',
   },
 });
 
-export { Button };
+export {Button};

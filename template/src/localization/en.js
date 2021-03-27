@@ -3,7 +3,7 @@ const en = {
   permissionToUseCamera: 'Permission to use Camera',
   weNeedYourPermission: 'We need your permission to use camera to take photos.',
   sessionExpired: 'Session Expired! Please login again.',
-  done: 'Done'
+  done: 'Done',
 };
 
-export { en };
+export {en};

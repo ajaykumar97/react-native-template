@@ -2,11 +2,13 @@
 
 const logger = {
   error: (header, err) => {
-    if (!__DEV__) { //to disable log in production mode
+    if (!__DEV__) {
+      //to disable log in production mode
       return;
     }
 
-    if (!err) { //single argument is passed;
+    if (!err) {
+      //single argument is passed;
       err = header;
       header = 'ERROR';
     }
@@ -27,13 +29,15 @@ const logger = {
   },
 
   apiError: (header, error) => {
-    if (!__DEV__) { //to disable log in production mode
+    if (!__DEV__) {
+      //to disable log in production mode
       return;
     }
 
     console.log('\n');
 
-    if (!error) { //single argument is passed;
+    if (!error) {
+      //single argument is passed;
       error = header;
       header = 'API ERROR';
     }
@@ -43,12 +47,14 @@ const logger = {
     try {
       if (error.config) {
         console.log(
-          '%c URL ', 'background:orange;color:#FFFFFF',
-          error.config.url
+          '%c URL ',
+          'background:orange;color:#FFFFFF',
+          error.config.url,
         );
         console.log(
-          '%c DATA ', 'background:#00ffff;color:#FFFFFF',
-          error.config.data
+          '%c DATA ',
+          'background:#00ffff;color:#FFFFFF',
+          error.config.data,
         );
       }
 
@@ -62,15 +68,17 @@ const logger = {
 
         if (error.response.status) {
           console.log(
-            '%c STATUS CODE ', 'background:orange;color:#FFFFFF',
-            error.response.status
+            '%c STATUS CODE ',
+            'background:orange;color:#FFFFFF',
+            error.response.status,
           );
         }
 
         if (error.response.data) {
           console.log(
-            '%c RESPONSE DATA ', 'background:orange;color:#FFFFFF',
-            JSON.stringify(error.response.data, null, 4).replace(/'/g, '')
+            '%c RESPONSE DATA ',
+            'background:orange;color:#FFFFFF',
+            JSON.stringify(error.response.data, null, 4).replace(/'/g, ''),
           );
         }
       } else if (error.request) {
@@ -79,8 +87,9 @@ const logger = {
         // http.ClientRequest in node.js
 
         console.log(
-          '%c REQUEST ', 'background:orange;color:#FFFFFF',
-          error.request
+          '%c REQUEST ',
+          'background:orange;color:#FFFFFF',
+          error.request,
         );
       } else {
         // Something happened in setting up the request that triggered an Error
@@ -93,7 +102,8 @@ const logger = {
     console.log('\n');
   },
   log: (header, text, expandJson) => {
-    if (!__DEV__) { //to disable log in production mode
+    if (!__DEV__) {
+      //to disable log in production mode
       return;
     }
     console.log('\n');
@@ -106,8 +116,9 @@ const logger = {
 
       if (expandJson) {
         console.log(
-          `%c ${header} `, 'background:green;color:#FFFFFF',
-          JSON.stringify(text, null, 4).replace(/'/g, '')
+          `%c ${header} `,
+          'background:green;color:#FFFFFF',
+          JSON.stringify(text, null, 4).replace(/'/g, ''),
         );
       } else {
         console.log(`%c ${header} `, 'background:green;color:#FFFFFF', text);
@@ -120,7 +131,8 @@ const logger = {
     }
   },
   data: (header, text, noJsonExpand) => {
-    if (!__DEV__) { //to disable log in production mode
+    if (!__DEV__) {
+      //to disable log in production mode
       return;
     }
 
@@ -136,8 +148,9 @@ const logger = {
         console.log(`%c ${header} `, 'background:#00ffff;color:#FFFFFF', text);
       } else {
         console.log(
-          `%c ${header} `, 'background:#00ffff;color:#FFFFFF',
-          JSON.stringify(text, null, 4).replace(/\\/g, '')
+          `%c ${header} `,
+          'background:#00ffff;color:#FFFFFF',
+          JSON.stringify(text, null, 4).replace(/\\/g, ''),
         );
       }
 
@@ -146,7 +159,7 @@ const logger = {
       console.log(`%c ${header} `, 'background:#00ffff;color:#FFFFFF', text);
       console.log('\n');
     }
-  }
+  },
 };
 
 export default logger;

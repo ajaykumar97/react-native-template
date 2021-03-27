@@ -1,24 +1,18 @@
-import { Platform } from 'react-native';
+import {Platform} from 'react-native';
 
 import icUsers from './icons/icUsers.png';
 
 const fonts = Platform.select({
   ios: {
     regular: 'Arial',
-    semiBold: 'Arial'
+    semiBold: 'Arial',
   },
   android: {
     regular: 'Arial',
-    semiBold: 'Arial'
+    semiBold: 'Arial',
   },
 });
 
-const icons = {
+const icons = {};
 
-};
-
-export {
-  icUsers,
-  fonts,
-  icons
-};
+export {icUsers, fonts, icons};

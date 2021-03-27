@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { moderateScale } from 'react-native-size-matters';
+import {View, Text, StyleSheet} from 'react-native';
+import {moderateScale} from 'react-native-size-matters';
 
-import { colors, commonStyles } from '../../../../utilities/constants';
+import {colors, commonStyles} from '../../../../utilities/constants';
 
-const UserCard = ({ user }) => (
+const UserCard = ({user}) => (
   <View style={styles.container}>
     <Text style={styles.name}>{user.name}</Text>
     <Text>Username: {user.username}</Text>
@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 16,
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 });
 
-export { UserCard };
+export {UserCard};

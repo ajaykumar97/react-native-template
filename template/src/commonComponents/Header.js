@@ -5,12 +5,12 @@ import {
   TouchableOpacity,
   Image,
   Text,
-  I18nManager
+  I18nManager,
 } from 'react-native';
-import { moderateScale } from 'react-native-size-matters';
+import {moderateScale} from 'react-native-size-matters';
 
-import { colors } from '../utilities/constants';
-import { fonts } from '../assets';
+import {colors} from '../utilities/constants';
+import {fonts} from '../assets';
 
 const Header = ({
   wrapperBackgroundColor,
@@ -42,13 +42,12 @@ const Header = ({
         <TouchableOpacity
           activeOpacity={0.6}
           style={[styles.leftStyle, leftButtonStyle]}
-          onPress={onLeftPress}
-        >
+          onPress={onLeftPress}>
           <Image
             source={leftIconSource}
             style={[
               leftIconStyle,
-              { transform: [{ rotateY: I18nManager.isRTL ? '180deg' : '0deg' }] }
+              {transform: [{rotateY: I18nManager.isRTL ? '180deg' : '0deg'}]},
             ]}
           />
         </TouchableOpacity>
@@ -65,12 +64,8 @@ const Header = ({
         <TouchableOpacity
           activeOpacity={0.6}
           style={[styles.rightStyle, rightButtonStyle]}
-          onPress={onRightPress}
-        >
-          <Image
-            source={rightIconSource}
-            style={rightIconStyle}
-          />
+          onPress={onRightPress}>
+          <Image source={rightIconSource} style={rightIconStyle} />
         </TouchableOpacity>
       );
     }
@@ -85,16 +80,20 @@ const Header = ({
         <View
           style={{
             flex: 1,
-            marginHorizontal: titlePosition === 'center' ? moderateScale(10) : 0
-          }}
-        >
+            marginHorizontal:
+              titlePosition === 'center' ? moderateScale(10) : 0,
+          }}>
           <Text
-            style={[{
-              ...styles.titleStyle,
-              textAlign: titlePosition,
-            }, titleStyle]}
-            numberOfLines={1}
-          >{title}</Text>
+            style={[
+              {
+                ...styles.titleStyle,
+                textAlign: titlePosition,
+              },
+              titleStyle,
+            ]}
+            numberOfLines={1}>
+            {title}
+          </Text>
         </View>
       );
     }
@@ -103,21 +102,19 @@ const Header = ({
 
   return (
     <View
-      style={
-        [{ ...styles.wrapper, backgroundColor: wrapperBackgroundColor },
-          wrapperStyle
-        ]}
-    >
+      style={[
+        {...styles.wrapper, backgroundColor: wrapperBackgroundColor},
+        wrapperStyle,
+      ]}>
       <View
         style={[
           styles.container,
           containerStyle,
           {
             borderBottomWidth: showBottomBorder ? moderateScale(0.5) : 0,
-            borderBottomColor: colors.grey1
-          }
-        ]}
-      >
+            borderBottomColor: colors.grey1,
+          },
+        ]}>
         {renderLeft()}
         {renderTitle()}
         {renderRight()}
@@ -130,12 +127,12 @@ const styles = StyleSheet.create({
   wrapper: {
     height: moderateScale(56),
     overflow: 'hidden',
-    backgroundColor: colors.white1
+    backgroundColor: colors.white1,
   },
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   leftStyle: {
     height: moderateScale(56),
@@ -147,13 +144,13 @@ const styles = StyleSheet.create({
     height: moderateScale(56),
     width: moderateScale(56),
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   titleStyle: {
     fontSize: moderateScale(20),
     fontFamily: fonts.semiBold,
-    color: colors.black1
+    color: colors.black1,
   },
 });
 
-export { Header };
+export {Header};

@@ -1,5 +1,5 @@
-import { Dimensions, Platform, StatusBar } from 'react-native';
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import {Dimensions, Platform, StatusBar} from 'react-native';
+import {getStatusBarHeight} from 'react-native-iphone-x-helper';
 
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
@@ -15,7 +15,8 @@ if (Platform.OS === 'ios') {
 
   statusBarHeight = getStatusBarHeight();
 
-  if (majorVersionOS < 11) { //old iOS device
+  if (majorVersionOS < 11) {
+    //old iOS device
     statusBarPadding = 20; //safe area doesn't work in old iOS devices
     isOldDevice = true;
   }
@@ -24,7 +25,8 @@ if (Platform.OS === 'ios') {
 
   statusBarHeight = StatusBar.currentHeight;
 
-  if (majorVersionOS < 23) { //old android device
+  if (majorVersionOS < 23) {
+    //old android device
     isOldDevice = true;
   } else {
     statusBarPadding = StatusBar.currentHeight; //to add statusbar height at top of the container in new devices
@@ -32,11 +34,11 @@ if (Platform.OS === 'ios') {
 }
 
 const layout = {
-  size: { width, height, },
+  size: {width, height},
   statusBarPadding,
   statusBarHeight,
   isiOS: Platform.OS === 'ios',
-  isOldDevice
+  isOldDevice,
 };
 
-export { layout };
+export {layout};

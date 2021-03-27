@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
-import { StyleSheet, Keyboard } from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { moderateScale } from 'react-native-size-matters';
+import React, {useState} from 'react';
+import {StyleSheet, Keyboard} from 'react-native';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {moderateScale} from 'react-native-size-matters';
 
-import { Wrapper, TextInputWithLabel, Header, Button } from '../../../commonComponents';
-import { colors, regex } from '../../../utilities/constants';
-import { showSuccessMessage, showErrorMessage } from '../../../utilities/helperFunctions';
+import {
+  Wrapper,
+  TextInputWithLabel,
+  Header,
+  Button,
+} from '../../../commonComponents';
+import {colors, regex} from '../../../utilities/constants';
+import {
+  showSuccessMessage,
+  showErrorMessage,
+} from '../../../utilities/helperFunctions';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
@@ -18,20 +26,18 @@ const ForgotPassword = () => {
     }
 
     Keyboard.dismiss();
-    showSuccessMessage('Please check your email. A verification link is sent to your email to change your password.');
+    showSuccessMessage(
+      'Please check your email. A verification link is sent to your email to change your password.',
+    );
   };
 
   return (
     <Wrapper wrapperBackgroundColor={colors.blue2}>
-      <Header
-        title={'Forgot Password'}
-        wrapperBackgroundColor={colors.blue2}
-      />
+      <Header title={'Forgot Password'} wrapperBackgroundColor={colors.blue2} />
       <KeyboardAwareScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.container}
-        keyboardShouldPersistTaps={'handled'}
-      >
+        keyboardShouldPersistTaps={'handled'}>
         <TextInputWithLabel
           value={email}
           label={'Email'}
@@ -59,8 +65,8 @@ const ForgotPassword = () => {
 const styles = StyleSheet.create({
   container: {
     paddingBottom: moderateScale(40),
-    paddingHorizontal: moderateScale(15)
-  }
+    paddingHorizontal: moderateScale(15),
+  },
 });
 
 export default ForgotPassword;

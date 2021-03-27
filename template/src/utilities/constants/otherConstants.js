@@ -1,11 +1,11 @@
-import { Platform } from 'react-native';
+import {Platform} from 'react-native';
 
 const DATE_FORMAT = 'DD/MM/YYYY';
 const TIME_FORMAT = 'hh:mm a';
 
 const theme = {
   light: 'light',
-  dark: 'dark'
+  dark: 'dark',
 };
 
 const USER_DATA = 'userData';
@@ -17,18 +17,12 @@ const regex = {
   price: /^[1-9][0-9]*$/,
   email: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/,
   password: /^[A-Za-z0-9_@./#&+-]*$/, //alpha-numeric and _@./#&+-
-  name: /[^a-zA-Z\s]/
-};
-
-const requestMethods = {
-  POST: 'POST',
-  GET: 'GET',
-  PUT: 'PUT'
+  name: /[^a-zA-Z\s]/,
 };
 
 const deviceType = Platform.select({
   ios: 'IPHONE',
-  android: 'ANDROID'
+  android: 'ANDROID',
 });
 
 const CONTENT_TYPE = {
@@ -43,7 +37,6 @@ export {
   USER_DATA,
   TIME_FORMAT,
   regex,
-  requestMethods,
   deviceType,
-  CONTENT_TYPE
+  CONTENT_TYPE,
 };

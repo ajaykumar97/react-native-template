@@ -1,16 +1,16 @@
-import { put } from 'redux-saga/effects';
+import {put} from 'redux-saga/effects';
 
-import { screenNames } from '../../../utilities/constants';
+import {screenNames} from '../../../utilities/constants';
 import {
   getAPIError,
   setLocalUserData,
-  showErrorMessage
+  showErrorMessage,
 } from '../../../utilities/helperFunctions';
 import logger from '../../../utilities/logger';
-import { replace } from '../../../utilities/NavigationService';
-import { SIGNUP_FAILED, SIGNUP_SUCCEEDED } from './types';
+import {replace} from '../../../utilities/NavigationService';
+import {SIGNUP_FAILED, SIGNUP_SUCCEEDED} from './types';
 
-export function* signupSaga({ params }) {
+export function* signupSaga({params}) {
   try {
     logger.data('signup params are: ', params);
 
@@ -35,13 +35,13 @@ export function* signupSaga({ params }) {
 
     yield put({
       type: SIGNUP_SUCCEEDED,
-      payload: data
+      payload: data,
     });
 
     replace(screenNames.MainNavigator);
   } catch (error) {
     logger.apiError('signup error: ', error);
     showErrorMessage(getAPIError(error));
-    yield put({ type: SIGNUP_FAILED, });
+    yield put({type: SIGNUP_FAILED});
   }
 }

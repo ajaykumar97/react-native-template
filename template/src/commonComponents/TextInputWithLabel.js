@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, TextInput, TextInputProps, StyleSheet } from 'react-native';
-import { moderateScale } from 'react-native-size-matters';
+import {View, Text, TextInput, TextInputProps, StyleSheet} from 'react-native';
+import {moderateScale} from 'react-native-size-matters';
 
-import { colors } from '../utilities/constants';
-import { fonts } from '../assets';
-import { TextInputAccessoryView } from './TextInputAccessoryView';
+import {colors} from '../utilities/constants';
+import {fonts} from '../assets';
+import {TextInputAccessoryView} from './TextInputAccessoryView';
 
 const TextInputWithLabel = React.forwardRef((props: TextInputProps, ref) => (
   <View
@@ -13,13 +13,10 @@ const TextInputWithLabel = React.forwardRef((props: TextInputProps, ref) => (
       props.containerStyle,
       {
         marginTop: props.containerMarginTop || 0,
-        marginHorizontal: props.containerMarginHorizontal || 0
-      }
-    ]}
-  >
-    <Text style={[styles.label, props.labelStyle]}>
-      {props.label}
-    </Text>
+        marginHorizontal: props.containerMarginHorizontal || 0,
+      },
+    ]}>
+    <Text style={[styles.label, props.labelStyle]}>{props.label}</Text>
 
     <TextInput
       ref={ref}
@@ -29,13 +26,13 @@ const TextInputWithLabel = React.forwardRef((props: TextInputProps, ref) => (
       style={[styles.textInput, props.style]}
     />
 
-    {props.inputAccessoryViewID ?
+    {props.inputAccessoryViewID ? (
       <TextInputAccessoryView
         inputAccessoryViewID={props.inputAccessoryViewID}
         label={props.inputAccessoryViewLabel}
         onPress={props.onInputAccessoryViewPress}
       />
-      : null}
+    ) : null}
   </View>
 ));
 
@@ -44,7 +41,7 @@ const styles = StyleSheet.create({
   label: {
     color: colors.white2,
     fontSize: moderateScale(12),
-    fontFamily: fonts.regular
+    fontFamily: fonts.regular,
   },
   textInput: {
     paddingHorizontal: moderateScale(5),
@@ -53,8 +50,8 @@ const styles = StyleSheet.create({
     fontFamily: fonts.semiBold,
     fontSize: moderateScale(14),
     color: colors.white1,
-    height: moderateScale(40)
-  }
+    height: moderateScale(40),
+  },
 });
 
-export { TextInputWithLabel };
+export {TextInputWithLabel};

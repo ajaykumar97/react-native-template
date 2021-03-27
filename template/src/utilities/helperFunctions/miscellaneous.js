@@ -1,14 +1,14 @@
-import { showMessage } from 'react-native-flash-message';
+import {showMessage} from 'react-native-flash-message';
 
-import { fonts } from '../../assets';
-import { layout } from '../layout';
+import {fonts} from '../../assets';
+import {layout} from '../layout';
 
 export const flashMessageConfig = {
   floating: true,
   duration: 4000,
-  style: { marginTop: layout.isiOS ? 0 : 20 },
-  textStyle: { fontFamily: fonts.regular },
-  titleStyle: { fontFamily: fonts.regular },
+  style: {marginTop: layout.isiOS ? 0 : 20},
+  textStyle: {fontFamily: fonts.regular},
+  titleStyle: {fontFamily: fonts.regular},
 };
 
 const showErrorMessage = (alertMessage, options = {}) => {
@@ -77,5 +77,5 @@ export {
   intoTitleCase,
   keyExtractor,
   truncateString,
-  getAPIError
+  getAPIError,
 };
