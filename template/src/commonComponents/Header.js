@@ -7,7 +7,7 @@ import {
   Text,
   I18nManager,
 } from 'react-native';
-import {moderateScale} from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters';
 
 import {colors} from '../utilities/constants';
 import {fonts} from '../assets';
@@ -81,7 +81,7 @@ const Header = ({
           style={{
             flex: 1,
             marginHorizontal:
-              titlePosition === 'center' ? moderateScale(10) : 0,
+              titlePosition === 'center' ? scale(10) : 0,
           }}>
           <Text
             style={[
@@ -111,7 +111,7 @@ const Header = ({
           styles.container,
           containerStyle,
           {
-            borderBottomWidth: showBottomBorder ? moderateScale(0.5) : 0,
+            borderBottomWidth: showBottomBorder ? scale(0.5) : 0,
             borderBottomColor: colors.grey1,
           },
         ]}>
@@ -125,7 +125,7 @@ const Header = ({
 
 const styles = StyleSheet.create({
   wrapper: {
-    height: moderateScale(56),
+    height: scale(56),
     overflow: 'hidden',
     backgroundColor: colors.white1,
   },
@@ -135,19 +135,19 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   leftStyle: {
-    height: moderateScale(56),
-    width: moderateScale(56),
+    height: scale(56),
+    width: scale(56),
     alignItems: 'center',
     justifyContent: 'center',
   },
   rightStyle: {
-    height: moderateScale(56),
-    width: moderateScale(56),
+    height: scale(56),
+    width: scale(56),
     alignItems: 'center',
     justifyContent: 'center',
   },
   titleStyle: {
-    fontSize: moderateScale(20),
+    fontSize: scale(20),
     fontFamily: fonts.semiBold,
     color: colors.black1,
   },

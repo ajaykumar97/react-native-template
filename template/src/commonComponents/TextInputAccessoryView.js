@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
-import {moderateScale} from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters';
 
 import {colors} from '../utilities/constants';
 import {fonts} from '../assets';
@@ -35,10 +35,10 @@ const styles = StyleSheet.create({
   container: {alignItems: 'flex-end'},
   label: {
     color: colors.blue1,
-    paddingVertical: moderateScale(15),
-    paddingRight: moderateScale(15),
+    paddingVertical: scale(15),
+    paddingRight: scale(15),
     fontFamily: fonts.semiBold,
-    fontSize: moderateScale(16),
+    fontSize: scale(16),
   },
 });
 

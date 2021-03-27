@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, Keyboard} from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-import {moderateScale} from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters';
 
 import {
   Wrapper,
@@ -41,7 +41,7 @@ const ForgotPassword = () => {
         <TextInputWithLabel
           value={email}
           label={'Email'}
-          containerMarginTop={moderateScale(15)}
+          containerMarginTop={scale(15)}
           keyboardType={'email-address'}
           returnKeyType={'done'}
           autoCapitalize={'none'}
@@ -64,8 +64,8 @@ const ForgotPassword = () => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingBottom: moderateScale(40),
-    paddingHorizontal: moderateScale(15),
+    paddingBottom: scale(40),
+    paddingHorizontal: scale(15),
   },
 });
 

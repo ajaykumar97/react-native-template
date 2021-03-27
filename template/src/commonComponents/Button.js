@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, TouchableOpacity, StyleSheet} from 'react-native';
-import {moderateScale} from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters';
 
 import {fonts} from '../assets';
 import {colors} from '../utilities/constants';
@@ -15,7 +15,7 @@ const Button = ({
   marginBottom = 0,
   marginHorizontal = 0,
   transparent,
-  borderRadius = moderateScale(2),
+  borderRadius = scale(2),
 }) => (
   <TouchableOpacity
     activeOpacity={0.7}
@@ -28,7 +28,7 @@ const Button = ({
         marginTop,
         marginBottom,
         marginHorizontal,
-        borderWidth: transparent ? moderateScale(2) : 0,
+        borderWidth: transparent ? scale(2) : 0,
         borderColor: transparent ? colors.white1 : 'transparent',
         borderRadius,
       },
@@ -46,14 +46,14 @@ const Button = ({
 
 const styles = StyleSheet.create({
   button: {
-    borderRadius: moderateScale(2),
+    borderRadius: scale(2),
     alignItems: 'center',
     justifyContent: 'center',
-    height: moderateScale(45),
+    height: scale(45),
   },
   label: {
     color: colors.blue2,
-    fontSize: moderateScale(18),
+    fontSize: scale(18),
     fontFamily: fonts.semiBold,
     textAlign: 'center',
   },

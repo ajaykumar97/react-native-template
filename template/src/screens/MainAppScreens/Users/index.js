@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import {StyleSheet, View, FlatList} from 'react-native';
 import {connect} from 'react-redux';
-import {moderateScale} from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters';
 
 import {
   Loader,
@@ -50,9 +50,9 @@ class UsersScreen extends PureComponent {
         <View
           style={{
             position: 'absolute',
-            bottom: moderateScale(30),
-            left: moderateScale(15),
-            right: moderateScale(15),
+            bottom: scale(30),
+            left: scale(15),
+            right: scale(15),
             backgroundColor: colors.blue1,
           }}>
           <Button label={'Logout'} onPress={this.props.logout} />
@@ -74,8 +74,8 @@ class UsersScreen extends PureComponent {
 
 const styles = StyleSheet.create({
   list: {
-    paddingHorizontal: moderateScale(15),
-    paddingBottom: moderateScale(90),
+    paddingHorizontal: scale(15),
+    paddingBottom: scale(90),
   },
   itemSeparator: {height: 15},
 });

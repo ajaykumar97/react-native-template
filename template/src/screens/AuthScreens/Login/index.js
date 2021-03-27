@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import {Text, View} from 'react-native';
-import {moderateScale} from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters';
 import cloneDeep from 'clone-deep';
 import {connect} from 'react-redux';
 import Config from 'react-native-config';
@@ -63,7 +63,7 @@ class Login extends PureComponent {
             style={{
               color: colors.white1,
               fontFamily: fonts.regular,
-              fontSize: moderateScale(28),
+              fontSize: scale(28),
             }}>
             Boilerplate
           </Text>
@@ -72,7 +72,7 @@ class Login extends PureComponent {
             style={{
               color: colors.white1,
               fontFamily: fonts.regular,
-              fontSize: moderateScale(16),
+              fontSize: scale(16),
             }}>
             App environment: {Config.ENV_TYPE}
           </Text>
@@ -81,7 +81,7 @@ class Login extends PureComponent {
         <View
           style={{
             flex: 0.65,
-            paddingHorizontal: moderateScale(20),
+            paddingHorizontal: scale(20),
           }}>
           <TextInputWithLabel
             value={email}
@@ -107,11 +107,11 @@ class Login extends PureComponent {
           <Text
             style={{
               alignSelf: 'flex-end',
-              fontSize: moderateScale(14),
+              fontSize: scale(14),
               color: colors.white1,
               fontFamily: fonts.regular,
-              marginTop: moderateScale(5),
-              paddingVertical: moderateScale(10),
+              marginTop: scale(5),
+              paddingVertical: scale(10),
             }}
             onPress={this.onForgotPasswordPress}>
             Forgot Password?
@@ -127,13 +127,13 @@ class Login extends PureComponent {
 
           <View
             style={{
-              paddingVertical: moderateScale(15),
+              paddingVertical: scale(15),
               flexDirection: 'row',
               justifyContent: 'center',
             }}>
             <Text
               style={{
-                fontSize: moderateScale(14),
+                fontSize: scale(14),
                 fontFamily: fonts.regular,
                 color: colors.white1,
               }}>
@@ -141,11 +141,11 @@ class Login extends PureComponent {
             </Text>
             <Text
               style={{
-                fontSize: moderateScale(14),
+                fontSize: scale(14),
                 fontFamily: fonts.regular,
                 color: colors.white1,
                 textDecorationLine: 'underline',
-                marginLeft: moderateScale(5),
+                marginLeft: scale(5),
               }}
               onPress={this.onSignupPress}>
               Signup

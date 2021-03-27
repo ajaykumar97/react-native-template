@@ -3,7 +3,7 @@ import {StyleSheet, Keyboard} from 'react-native';
 import {connect} from 'react-redux';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import cloneDeep from 'clone-deep';
-import {moderateScale} from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters';
 
 import {
   Wrapper,
@@ -80,7 +80,7 @@ class Signup extends PureComponent {
             value={email}
             label={'Email'}
             ref={this.emailRef}
-            containerMarginTop={moderateScale(15)}
+            containerMarginTop={scale(15)}
             keyboardType={'email-address'}
             returnKeyType={'next'}
             autoCapitalize={'none'}
@@ -94,7 +94,7 @@ class Signup extends PureComponent {
             label={'Password'}
             ref={this.passwordRef}
             secureTextEntry
-            containerMarginTop={moderateScale(15)}
+            containerMarginTop={scale(15)}
             blurOnSubmit
             onChangeText={this.updateState('password')}
           />
@@ -114,8 +114,8 @@ class Signup extends PureComponent {
 
 const styles = StyleSheet.create({
   container: {
-    paddingBottom: moderateScale(40),
-    paddingHorizontal: moderateScale(15),
+    paddingBottom: scale(40),
+    paddingHorizontal: scale(15),
   },
 });
 

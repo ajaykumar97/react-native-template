@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, TextInput, TextInputProps, StyleSheet} from 'react-native';
-import {moderateScale} from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters';
 
 import {colors} from '../utilities/constants';
 import {fonts} from '../assets';
@@ -40,17 +40,17 @@ const styles = StyleSheet.create({
   container: {},
   label: {
     color: colors.white2,
-    fontSize: moderateScale(12),
+    fontSize: scale(12),
     fontFamily: fonts.regular,
   },
   textInput: {
-    paddingHorizontal: moderateScale(5),
-    borderBottomWidth: moderateScale(0.5),
+    paddingHorizontal: scale(5),
+    borderBottomWidth: scale(0.5),
     borderColor: colors.grey2,
     fontFamily: fonts.semiBold,
-    fontSize: moderateScale(14),
+    fontSize: scale(14),
     color: colors.white1,
-    height: moderateScale(40),
+    height: scale(40),
   },
 });
 

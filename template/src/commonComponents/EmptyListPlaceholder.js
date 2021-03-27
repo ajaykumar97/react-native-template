@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import {moderateScale} from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters';
 
 import {fonts} from '../assets';
 import {colors} from '../utilities/constants';
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
   },
   placeholder: {
-    fontSize: moderateScale(16),
+    fontSize: scale(16),
     fontFamily: fonts.semiBold,
     textAlign: 'center',
   },

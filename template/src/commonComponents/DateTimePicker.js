@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import dayjs from 'dayjs';
-import {moderateScale} from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters';
 
 import {DATE_FORMAT, colors} from '../utilities/constants';
 import {fonts} from '../assets';
@@ -68,22 +68,22 @@ const DateTimePicker = ({
 
 const styles = StyleSheet.create({
   container: {
-    borderBottomWidth: moderateScale(0.5),
+    borderBottomWidth: scale(0.5),
     borderColor: colors.grey2,
     justifyContent: 'center',
   },
   dateContainer: {
-    height: moderateScale(40),
+    height: scale(40),
   },
   date: {
-    margin: moderateScale(10),
-    fontSize: moderateScale(14),
+    margin: scale(10),
+    fontSize: scale(14),
     fontFamily: fonts.regular,
     borderColor: colors.grey2,
   },
   label: {
     color: colors.white2,
-    fontSize: moderateScale(12),
+    fontSize: scale(12),
     fontFamily: fonts.regular,
   },
 });

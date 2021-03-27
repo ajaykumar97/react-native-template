@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, ActivityIndicator} from 'react-native';
-import {moderateScale} from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters';
 
 import {colors} from '../utilities/constants';
 
@@ -54,11 +54,11 @@ const styles = StyleSheet.create({
   },
   absoluteLoaderSubContainer: {
     backgroundColor: colors.white1,
-    height: moderateScale(100),
-    width: moderateScale(100),
+    height: scale(100),
+    width: scale(100),
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: moderateScale(10),
+    borderRadius: scale(10),
   },
 });
 
