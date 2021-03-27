@@ -4,6 +4,7 @@ import { moderateScale } from 'react-native-size-matters';
 
 import { colors } from '../utilities/constants';
 import { fonts } from '../assets';
+import { TextInputAccessoryView } from './TextInputAccessoryView';
 
 const TextInputWithLabel = React.forwardRef((props: TextInputProps, ref) => (
   <View
@@ -27,6 +28,14 @@ const TextInputWithLabel = React.forwardRef((props: TextInputProps, ref) => (
       {...props}
       style={[styles.textInput, props.style]}
     />
+
+    {props.inputAccessoryViewID ?
+      <TextInputAccessoryView
+        inputAccessoryViewID={props.inputAccessoryViewID}
+        label={props.inputAccessoryViewLabel}
+        onPress={props.onInputAccessoryViewPress}
+      />
+      : null}
   </View>
 ));
 

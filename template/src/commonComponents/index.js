@@ -5,7 +5,7 @@ export * from './WhiteContainer';
 export * from './Wrapper';
 export * from './Button';
 export * from './DateTimePicker';
-export * from './KeyboardAccessoryView';
+export * from './TextInputAccessoryView';
 export * from './TextInputWithLabel';
 export * from './ItemSeparatorComponent';
 export * from './EmptyListPlaceholder';

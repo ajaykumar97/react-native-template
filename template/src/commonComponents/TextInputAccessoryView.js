@@ -13,7 +13,7 @@ import { fonts } from '../assets';
 import { layout } from '../utilities/layout';
 import strings from '../localization';
 
-const KeyboardAccessoryView = ({
+const TextInputAccessoryView = ({
   inputAccessoryViewID,
   onPress,
   label
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export { KeyboardAccessoryView };
+export { TextInputAccessoryView };
