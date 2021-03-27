@@ -1,9 +1,8 @@
-import React, {PureComponent} from 'react';
+import React, {useState, useRef} from 'react';
 import {Text, View} from 'react-native';
 import {scale} from 'react-native-size-matters';
-import cloneDeep from 'clone-deep';
-import {connect} from 'react-redux';
 import Config from 'react-native-config';
+import {useDispatch} from 'react-redux';
 
 import {fonts} from '../../../assets';
 import {TextInputWithLabel, Button, Wrapper} from '../../../commonComponents';
@@ -12,18 +11,18 @@ import {navigate} from '../../../utilities/NavigationService';
 import {showErrorMessage} from '../../../utilities/helperFunctions';
 import {login} from './actions';
 
-class Login extends PureComponent {
-  state = {
-    email: '',
-    password: '',
-    date: null,
-  };
+const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
 
-  onEmailSubmit = () => this.passwordRef.current.focus();
-  onSignupPress = () => navigate(screenNames.Signup);
-  onForgotPasswordPress = () => navigate(screenNames.ForgotPassword);
-  onLoginPress = () => {
-    const {email, password} = this.state;
+  const passwordRef = useRef();
+
+  const onEmailSubmit = () => passwordRef.current.focus();
+  const onSignupPress = () => navigate(screenNames.Signup);
+  const onForgotPasswordPress = () => navigate(screenNames.ForgotPassword);
+
+  const onLoginPress = () => {
     if (!email.trim()) {
       return showErrorMessage('Please enter an email');
     } else if (!regex.email.test(email.trim())) {
@@ -36,127 +35,112 @@ class Login extends PureComponent {
       );
     }
 
-    this.props.login({email, password});
+    dispatch(login({email, password}));
   };
 
-  passwordRef = React.createRef();
+  return (
+    <Wrapper wrapperBackgroundColor={colors.blue2}>
+      <View
+        style={{
+          flex: 0.35,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+        <Text
+          style={{
+            color: colors.white1,
+            fontFamily: fonts.regular,
+            fontSize: scale(28),
+          }}>
+          Boilerplate
+        </Text>
 
-  updateState = (key) => (value) => {
-    const state = cloneDeep(this.state);
-    state[key] = value;
+        <Text
+          style={{
+            color: colors.white1,
+            fontFamily: fonts.regular,
+            fontSize: scale(16),
+          }}>
+          App environment: {Config.ENV_TYPE}
+        </Text>
+      </View>
 
-    this.setState(state);
-  };
+      <View
+        style={{
+          flex: 0.65,
+          paddingHorizontal: scale(20),
+        }}>
+        <TextInputWithLabel
+          value={email}
+          label={'Email'}
+          keyboardType={'email-address'}
+          returnKeyType={'next'}
+          autoCapitalize={'none'}
+          autoCorrect={false}
+          onSubmitEditing={onEmailSubmit}
+          onChangeText={setEmail}
+        />
 
-  render() {
-    const {email, password} = this.state;
+        <TextInputWithLabel
+          value={password}
+          label={'Password'}
+          ref={passwordRef}
+          secureTextEntry
+          containerMarginTop={20}
+          blurOnSubmit
+          onChangeText={setPassword}
+        />
 
-    return (
-      <Wrapper wrapperBackgroundColor={colors.blue2}>
+        <Text
+          style={{
+            alignSelf: 'flex-end',
+            fontSize: scale(14),
+            color: colors.white1,
+            fontFamily: fonts.regular,
+            marginTop: scale(5),
+            paddingVertical: scale(10),
+          }}
+          onPress={onForgotPasswordPress}>
+          Forgot Password?
+        </Text>
+
+        <Button
+          label={'Login'}
+          marginTop={20}
+          onPress={onLoginPress}
+          bgColor={colors.white1}
+          labelColor={colors.blue1}
+        />
+
         <View
           style={{
-            flex: 0.35,
-            alignItems: 'center',
+            paddingVertical: scale(15),
+            flexDirection: 'row',
             justifyContent: 'center',
           }}>
           <Text
             style={{
-              color: colors.white1,
-              fontFamily: fonts.regular,
-              fontSize: scale(28),
-            }}>
-            Boilerplate
-          </Text>
-
-          <Text
-            style={{
-              color: colors.white1,
-              fontFamily: fonts.regular,
-              fontSize: scale(16),
-            }}>
-            App environment: {Config.ENV_TYPE}
-          </Text>
-        </View>
-
-        <View
-          style={{
-            flex: 0.65,
-            paddingHorizontal: scale(20),
-          }}>
-          <TextInputWithLabel
-            value={email}
-            label={'Email'}
-            keyboardType={'email-address'}
-            returnKeyType={'next'}
-            autoCapitalize={'none'}
-            autoCorrect={false}
-            onSubmitEditing={this.onEmailSubmit}
-            onChangeText={this.updateState('email')}
-          />
-
-          <TextInputWithLabel
-            value={password}
-            label={'Password'}
-            ref={this.passwordRef}
-            secureTextEntry
-            containerMarginTop={20}
-            blurOnSubmit
-            onChangeText={this.updateState('password')}
-          />
-
-          <Text
-            style={{
-              alignSelf: 'flex-end',
               fontSize: scale(14),
-              color: colors.white1,
               fontFamily: fonts.regular,
-              marginTop: scale(5),
-              paddingVertical: scale(10),
-            }}
-            onPress={this.onForgotPasswordPress}>
-            Forgot Password?
-          </Text>
-
-          <Button
-            label={'Login'}
-            marginTop={20}
-            onPress={this.onLoginPress}
-            bgColor={colors.white1}
-            labelColor={colors.blue1}
-          />
-
-          <View
-            style={{
-              paddingVertical: scale(15),
-              flexDirection: 'row',
-              justifyContent: 'center',
+              color: colors.white1,
             }}>
-            <Text
-              style={{
-                fontSize: scale(14),
-                fontFamily: fonts.regular,
-                color: colors.white1,
-              }}>
-              Don't have an account?
-            </Text>
-            <Text
-              style={{
-                fontSize: scale(14),
-                fontFamily: fonts.regular,
-                color: colors.white1,
-                textDecorationLine: 'underline',
-                marginLeft: scale(5),
-              }}
-              onPress={this.onSignupPress}>
-              Signup
-            </Text>
-          </View>
+            Don't have an account?
+          </Text>
+          <Text
+            style={{
+              fontSize: scale(14),
+              fontFamily: fonts.regular,
+              color: colors.white1,
+              textDecorationLine: 'underline',
+              marginLeft: scale(5),
+            }}
+            onPress={onSignupPress}>
+            Signup
+          </Text>
         </View>
-      </Wrapper>
-    );
-  }
-}
+      </View>
+    </Wrapper>
+  );
+};
 
-const mapStateToProps = () => ({});
-
-export default connect(mapStateToProps, {login})(Login);
+export default Login;

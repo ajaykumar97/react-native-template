@@ -1,8 +1,7 @@
-import React, {PureComponent} from 'react';
+import React, {useRef, useState} from 'react';
 import {StyleSheet, Keyboard} from 'react-native';
-import {connect} from 'react-redux';
+import {connect, useDispatch} from 'react-redux';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-import cloneDeep from 'clone-deep';
 import {scale} from 'react-native-size-matters';
 
 import {
@@ -15,17 +14,19 @@ import {colors, regex} from '../../../utilities/constants';
 import {showErrorMessage} from '../../../utilities/helperFunctions';
 import {signup} from './actions';
 
-class Signup extends PureComponent {
-  state = {
-    name: '',
-    email: '',
-    password: '',
-  };
+const Signup = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  onNameSubmit = () => this.emailRef.current.focus();
-  onEmailSubmit = () => this.passwordRef.current.focus();
-  onSignupPress = () => {
-    const {name, email, password} = this.state;
+  const dispatch = useDispatch();
+
+  const emailRef = useRef();
+  const passwordRef = useRef();
+
+  const onNameSubmit = () => emailRef.current.focus();
+  const onEmailSubmit = () => passwordRef.current.focus();
+  const onSignupPress = () => {
     if (!name.trim()) {
       return showErrorMessage('Please enter your name');
     } else if (!email.trim()) {
@@ -41,76 +42,65 @@ class Signup extends PureComponent {
     }
 
     Keyboard.dismiss();
-    this.props.signup({
-      name: name.trim(),
-      email: email.trim(),
-      password: password.trim(),
-    });
-  };
-
-  emailRef = React.createRef();
-  passwordRef = React.createRef();
-
-  updateState = (key) => (value) => {
-    const state = cloneDeep(this.state);
-    state[key] = value;
-
-    this.setState(state);
-  };
-
-  render() {
-    const {name, email, password} = this.state;
-    return (
-      <Wrapper wrapperBackgroundColor={colors.blue2}>
-        <Header title={'Signup'} wrapperBackgroundColor={colors.blue2} />
-        <KeyboardAwareScrollView
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={styles.container}
-          keyboardShouldPersistTaps={'handled'}>
-          <TextInputWithLabel
-            value={name}
-            label={'Name'}
-            keyboardType={'default'}
-            returnKeyType={'next'}
-            onSubmitEditing={this.onNameSubmit}
-            onChangeText={this.updateState('name')}
-          />
-
-          <TextInputWithLabel
-            value={email}
-            label={'Email'}
-            ref={this.emailRef}
-            containerMarginTop={scale(15)}
-            keyboardType={'email-address'}
-            returnKeyType={'next'}
-            autoCapitalize={'none'}
-            autoCorrect={false}
-            onSubmitEditing={this.onEmailSubmit}
-            onChangeText={this.updateState('email')}
-          />
-
-          <TextInputWithLabel
-            value={password}
-            label={'Password'}
-            ref={this.passwordRef}
-            secureTextEntry
-            containerMarginTop={scale(15)}
-            blurOnSubmit
-            onChangeText={this.updateState('password')}
-          />
-
-          <Button
-            label={'Signup'}
-            marginTop={30}
-            onPress={this.onSignupPress}
-            bgColor={colors.white1}
-            labelColor={colors.blue1}
-          />
-        </KeyboardAwareScrollView>
-      </Wrapper>
+    dispatch(
+      signup({
+        name: name.trim(),
+        email: email.trim(),
+        password: password.trim(),
+      }),
     );
-  }
-}
+  };
+
+  return (
+    <Wrapper wrapperBackgroundColor={colors.blue2}>
+      <Header title={'Signup'} wrapperBackgroundColor={colors.blue2} />
+      <KeyboardAwareScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.container}
+        keyboardShouldPersistTaps={'handled'}>
+        <TextInputWithLabel
+          value={name}
+          label={'Name'}
+          keyboardType={'default'}
+          returnKeyType={'next'}
+          onSubmitEditing={onNameSubmit}
+          onChangeText={setName}
+        />
+
+        <TextInputWithLabel
+          value={email}
+          label={'Email'}
+          ref={emailRef}
+          containerMarginTop={scale(15)}
+          keyboardType={'email-address'}
+          returnKeyType={'next'}
+          autoCapitalize={'none'}
+          autoCorrect={false}
+          onSubmitEditing={onEmailSubmit}
+          onChangeText={setEmail}
+        />
+
+        <TextInputWithLabel
+          value={password}
+          label={'Password'}
+          ref={passwordRef}
+          secureTextEntry
+          containerMarginTop={scale(15)}
+          blurOnSubmit
+          onChangeText={setPassword}
+        />
+
+        <Button
+          label={'Signup'}
+          marginTop={30}
+          onPress={onSignupPress}
+          bgColor={colors.white1}
+          labelColor={colors.blue1}
+        />
+      </KeyboardAwareScrollView>
+    </Wrapper>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -119,4 +109,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default connect(null, {signup})(Signup);
+export default Signup;
