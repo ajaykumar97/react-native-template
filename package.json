@@ -3,7 +3,8 @@
   "version": "1.0.1",
   "description": "It is a minimalist React Native template with preconfigured common set of packages to start a new app.",
   "scripts": {
-    "test": "exit 0"
+    "test": "exit 0",
+    "release": "npx release-it"
   },
   "repository": {
     "type": "git",
