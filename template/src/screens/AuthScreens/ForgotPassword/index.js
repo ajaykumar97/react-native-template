@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, Keyboard} from 'react-native';
+import {Keyboard} from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {scale} from 'react-native-size-matters';
 
@@ -10,34 +10,37 @@ import {
   Header,
   Button,
 } from '../../../commonComponents';
+import strings from '../../../localization';
 import {regex} from '../../../utilities/constants';
 import {
   showSuccessMessage,
   showErrorMessage,
 } from '../../../utilities/helperFunctions';
 import {goBack} from '../../../utilities/NavigationService';
+import styles from './styles';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
 
   const onSubmit = () => {
     if (!email.trim()) {
-      return showErrorMessage('Please enter an email');
-    } else if (!regex.email.test(email.trim())) {
-      return showErrorMessage('Please enter a valid email');
+      return showErrorMessage(strings.enterAnEmail);
+    }
+
+    if (!regex.email.test(email.trim())) {
+      return showErrorMessage(strings.enterValidEmail);
     }
 
     Keyboard.dismiss();
-    showSuccessMessage(
-      'Please check your email. A verification link is sent to your email to change your password.',
-    );
+    showSuccessMessage(strings.checkEmailForPasswordRest);
     goBack();
+    return;
   };
 
   return (
     <Wrapper>
       <Header
-        title={'Forgot Password'}
+        title={strings.forgotPassword}
         leftIconSource={icons.icBackArrowWhite}
         onLeftPress={goBack}
       />
@@ -47,7 +50,7 @@ const ForgotPassword = () => {
         keyboardShouldPersistTaps={'handled'}>
         <TextInputWithLabel
           value={email}
-          label={'Email'}
+          label={strings.email}
           containerMarginTop={scale(15)}
           keyboardType={'email-address'}
           returnKeyType={'done'}
@@ -57,17 +60,10 @@ const ForgotPassword = () => {
           blurOnSubmit
         />
 
-        <Button label={'Submit'} marginTop={50} onPress={onSubmit} />
+        <Button label={strings.submit} marginTop={50} onPress={onSubmit} />
       </KeyboardAwareScrollView>
     </Wrapper>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    paddingBottom: scale(40),
-    paddingHorizontal: scale(15),
-  },
-});
 
 export default ForgotPassword;

@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import {StyleSheet, Keyboard} from 'react-native';
+import {Keyboard} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {scale} from 'react-native-size-matters';
@@ -15,6 +15,8 @@ import {showErrorMessage} from '../../../utilities/helperFunctions';
 import {signup} from './actions';
 import {icons} from '../../../assets';
 import {goBack} from '../../../utilities/NavigationService';
+import strings from '../../../localization';
+import styles from './styles';
 
 const Signup = () => {
   const [name, setName] = useState('');
@@ -30,17 +32,19 @@ const Signup = () => {
   const onEmailSubmit = () => passwordRef.current.focus();
   const onSignupPress = () => {
     if (!name.trim()) {
-      return showErrorMessage('Please enter your name');
-    } else if (!email.trim()) {
-      return showErrorMessage('Please enter an email');
-    } else if (!regex.email.test(email.trim())) {
-      return showErrorMessage('Please enter a valid email');
-    } else if (!password) {
-      return showErrorMessage('Please enter a passsword');
-    } else if (!regex.password.test(password)) {
-      return showErrorMessage(
-        'Password can only contain alphabets, numbers and any of the special characters from _@./#&+-',
-      );
+      return showErrorMessage(strings.enterYourName);
+    }
+    if (!email.trim()) {
+      return showErrorMessage(strings.enterAnEmail);
+    }
+    if (!regex.email.test(email.trim())) {
+      return showErrorMessage(strings.enterValidEmail);
+    }
+    if (!password) {
+      return showErrorMessage(strings.enterAPassword);
+    }
+    if (!regex.password.test(password)) {
+      return showErrorMessage(strings.passwordCanContainOnly);
     }
 
     Keyboard.dismiss();
@@ -51,12 +55,13 @@ const Signup = () => {
         password: password.trim(),
       }),
     );
+    return;
   };
 
   return (
     <Wrapper>
       <Header
-        title={'Signup'}
+        title={strings.signup}
         leftIconSource={icons.icBackArrowWhite}
         onLeftPress={goBack}
       />
@@ -66,7 +71,7 @@ const Signup = () => {
         keyboardShouldPersistTaps={'handled'}>
         <TextInputWithLabel
           value={name}
-          label={'Name'}
+          label={strings.name}
           keyboardType={'default'}
           returnKeyType={'next'}
           onSubmitEditing={onNameSubmit}
@@ -75,7 +80,7 @@ const Signup = () => {
 
         <TextInputWithLabel
           value={email}
-          label={'Email'}
+          label={strings.email}
           ref={emailRef}
           containerMarginTop={scale(15)}
           keyboardType={'email-address'}
@@ -88,7 +93,7 @@ const Signup = () => {
 
         <TextInputWithLabel
           value={password}
-          label={'Password'}
+          label={strings.password}
           ref={passwordRef}
           secureTextEntry
           containerMarginTop={scale(15)}
@@ -96,17 +101,10 @@ const Signup = () => {
           onChangeText={setPassword}
         />
 
-        <Button label={'Signup'} marginTop={30} onPress={onSignupPress} />
+        <Button label={strings.signup} marginTop={30} onPress={onSignupPress} />
       </KeyboardAwareScrollView>
     </Wrapper>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    paddingBottom: scale(40),
-    paddingHorizontal: scale(15),
-  },
-});
 
 export default Signup;

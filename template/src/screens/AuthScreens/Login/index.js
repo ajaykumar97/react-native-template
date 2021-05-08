@@ -10,6 +10,7 @@ import {colors, screenNames, regex} from '../../../utilities/constants';
 import {navigate} from '../../../utilities/NavigationService';
 import {showErrorMessage} from '../../../utilities/helperFunctions';
 import {login} from './actions';
+import strings from '../../../localization';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -24,18 +25,20 @@ const Login = () => {
 
   const onLoginPress = () => {
     if (!email.trim()) {
-      return showErrorMessage('Please enter an email');
-    } else if (!regex.email.test(email.trim())) {
-      return showErrorMessage('Please enter a valid email');
-    } else if (!password) {
-      return showErrorMessage('Please enter a passsword');
-    } else if (!regex.password.test(password)) {
-      return showErrorMessage(
-        'Password can only contain alphabets, numbers and any of the special characters from _@./#&+-',
-      );
+      return showErrorMessage(strings.enterAnEmail);
+    }
+    if (!regex.email.test(email.trim())) {
+      return showErrorMessage(strings.enterValidEmail);
+    }
+    if (!password) {
+      return showErrorMessage(strings.enterAPassword);
+    }
+    if (!regex.password.test(password)) {
+      return showErrorMessage(strings.passwordCanContainOnly);
     }
 
     dispatch(login({email, password}));
+    return;
   };
 
   return (
@@ -52,7 +55,7 @@ const Login = () => {
             fontFamily: fonts.regular,
             fontSize: scale(28),
           }}>
-          Boilerplate
+          {strings.template}
         </Text>
 
         <Text
@@ -61,7 +64,7 @@ const Login = () => {
             fontFamily: fonts.regular,
             fontSize: scale(16),
           }}>
-          App environment: {Config.ENV_TYPE}
+          {strings.formatString(strings.appEnvironment, Config.ENV_TYPE)}
         </Text>
       </View>
 
@@ -72,7 +75,7 @@ const Login = () => {
         }}>
         <TextInputWithLabel
           value={email}
-          label={'Email'}
+          label={strings.email}
           keyboardType={'email-address'}
           returnKeyType={'next'}
           autoCapitalize={'none'}
@@ -83,7 +86,7 @@ const Login = () => {
 
         <TextInputWithLabel
           value={password}
-          label={'Password'}
+          label={strings.password}
           ref={passwordRef}
           secureTextEntry
           containerMarginTop={20}
@@ -101,10 +104,10 @@ const Login = () => {
             paddingVertical: scale(10),
           }}
           onPress={onForgotPasswordPress}>
-          Forgot Password?
+          {strings.forgotPasswordWithQuestion}
         </Text>
 
-        <Button label={'Login'} marginTop={20} onPress={onLoginPress} />
+        <Button label={strings.login} marginTop={20} onPress={onLoginPress} />
 
         <View
           style={{
@@ -118,7 +121,7 @@ const Login = () => {
               fontFamily: fonts.regular,
               color: colors.white1,
             }}>
-            Don't have an account?
+            {strings.dontHaveAnAccount}
           </Text>
           <Text
             style={{
@@ -129,7 +132,7 @@ const Login = () => {
               marginLeft: scale(5),
             }}
             onPress={onSignupPress}>
-            Signup
+            {strings.signup}
           </Text>
         </View>
       </View>

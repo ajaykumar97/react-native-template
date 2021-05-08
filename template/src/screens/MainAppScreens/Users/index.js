@@ -1,7 +1,6 @@
 import React, {PureComponent} from 'react';
-import {StyleSheet, View, FlatList} from 'react-native';
+import {View, FlatList} from 'react-native';
 import {connect} from 'react-redux';
-import {scale} from 'react-native-size-matters';
 
 import {
   Loader,
@@ -11,10 +10,11 @@ import {
   ItemSeparatorComponent,
   Button,
 } from '../../../commonComponents';
-import {colors} from '../../../utilities/constants';
 import {getAllUsers, logout} from './actions';
 import UserMethodsObj from './userMethods';
 import {UserCard} from './components/UserCard';
+import styles from './styles';
+import strings from '../../../localization';
 
 class UsersScreen extends PureComponent {
   componentDidMount() {
@@ -25,7 +25,7 @@ class UsersScreen extends PureComponent {
   renderUsers = ({item}) => <UserCard user={item} />;
 
   renderListEmptyComponent = () => (
-    <EmptyListPlaceholder placeholder={'No Users Found'} />
+    <EmptyListPlaceholder placeholder={strings.noUsersFound} />
   );
 
   renderItemSeparatorComponent = () => <View style={styles.itemSeparator} />;
@@ -47,16 +47,7 @@ class UsersScreen extends PureComponent {
           ItemSeparatorComponent={ItemSeparatorComponent}
           contentContainerStyle={styles.list}
         />
-        <View
-          style={{
-            position: 'absolute',
-            bottom: scale(30),
-            left: scale(15),
-            right: scale(15),
-            backgroundColor: colors.blue1,
-          }}>
-          <Button label={'Logout'} onPress={this.props.logout} />
-        </View>
+        <Button label={strings.logout} onPress={this.props.logout} />
       </>
     );
   };
@@ -64,21 +55,13 @@ class UsersScreen extends PureComponent {
   render() {
     return (
       <Wrapper>
-        <Header title={'Users'} />
+        <Header title={strings.users} />
 
         {this.renderContent()}
       </Wrapper>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  list: {
-    paddingHorizontal: scale(15),
-    paddingBottom: scale(90),
-  },
-  itemSeparator: {height: 15},
-});
 
 const mapStatesToProps = ({user}) => {
   const {users, gettingUsers} = user;
