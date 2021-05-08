@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react';
 import {StyleSheet, Keyboard} from 'react-native';
-import {connect, useDispatch} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {scale} from 'react-native-size-matters';
 
@@ -10,9 +10,11 @@ import {
   TextInputWithLabel,
   Button,
 } from '../../../commonComponents';
-import {colors, regex} from '../../../utilities/constants';
+import {regex} from '../../../utilities/constants';
 import {showErrorMessage} from '../../../utilities/helperFunctions';
 import {signup} from './actions';
+import {icons} from '../../../assets';
+import {goBack} from '../../../utilities/NavigationService';
 
 const Signup = () => {
   const [name, setName] = useState('');
@@ -52,8 +54,12 @@ const Signup = () => {
   };
 
   return (
-    <Wrapper wrapperBackgroundColor={colors.blue2}>
-      <Header title={'Signup'} wrapperBackgroundColor={colors.blue2} />
+    <Wrapper>
+      <Header
+        title={'Signup'}
+        leftIconSource={icons.icBackArrowWhite}
+        onLeftPress={goBack}
+      />
       <KeyboardAwareScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.container}
@@ -90,13 +96,7 @@ const Signup = () => {
           onChangeText={setPassword}
         />
 
-        <Button
-          label={'Signup'}
-          marginTop={30}
-          onPress={onSignupPress}
-          bgColor={colors.white1}
-          labelColor={colors.blue1}
-        />
+        <Button label={'Signup'} marginTop={30} onPress={onSignupPress} />
       </KeyboardAwareScrollView>
     </Wrapper>
   );

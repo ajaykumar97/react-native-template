@@ -9,7 +9,6 @@ import {TextInputAccessoryView} from './TextInputAccessoryView';
 const TextInputWithLabel = React.forwardRef((props: TextInputProps, ref) => (
   <View
     style={[
-      styles.container,
       props.containerStyle,
       {
         marginTop: props.containerMarginTop || 0,
@@ -23,7 +22,11 @@ const TextInputWithLabel = React.forwardRef((props: TextInputProps, ref) => (
       blurOnSubmit={false}
       underlineColorAndroid={'transparent'}
       {...props}
-      style={[styles.textInput, props.style]}
+      style={[
+        styles.textInput,
+        {height: props.multiline ? undefined : scale(40)},
+        props.style,
+      ]}
     />
 
     {props.inputAccessoryViewID ? (
@@ -37,7 +40,6 @@ const TextInputWithLabel = React.forwardRef((props: TextInputProps, ref) => (
 ));
 
 const styles = StyleSheet.create({
-  container: {},
   label: {
     color: colors.white2,
     fontSize: scale(12),
@@ -50,7 +52,6 @@ const styles = StyleSheet.create({
     fontFamily: fonts.semiBold,
     fontSize: scale(14),
     color: colors.white1,
-    height: scale(40),
   },
 });
 

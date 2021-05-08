@@ -39,7 +39,7 @@ const Login = () => {
   };
 
   return (
-    <Wrapper wrapperBackgroundColor={colors.blue2}>
+    <Wrapper>
       <View
         style={{
           flex: 0.35,
@@ -104,13 +104,7 @@ const Login = () => {
           Forgot Password?
         </Text>
 
-        <Button
-          label={'Login'}
-          marginTop={20}
-          onPress={onLoginPress}
-          bgColor={colors.white1}
-          labelColor={colors.blue1}
-        />
+        <Button label={'Login'} marginTop={20} onPress={onLoginPress} />
 
         <View
           style={{

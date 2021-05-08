@@ -26,7 +26,7 @@ const Loader = ({
         ]}>
         <View style={styles.absoluteLoaderSubContainer}>
           <ActivityIndicator
-            color={loaderColor || colors.blue1}
+            color={loaderColor || colors.white1}
             size={'large'}
           />
         </View>
@@ -42,7 +42,7 @@ const Loader = ({
         flex: 1,
         containerStyle,
       }}>
-      <ActivityIndicator color={loaderColor || colors.black1} size={'large'} />
+      <ActivityIndicator color={loaderColor || colors.white1} size={'large'} />
     </View>
   );
 };

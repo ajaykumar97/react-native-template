@@ -8,7 +8,7 @@ const Wrapper = ({children, wrapperStyle, wrapperBackgroundColor}) => (
     style={[
       {
         flex: 1,
-        backgroundColor: wrapperBackgroundColor || colors.white1,
+        backgroundColor: wrapperBackgroundColor || colors.blue2,
       },
       wrapperStyle,
     ]}>

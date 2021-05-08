@@ -13,6 +13,8 @@ const fonts = Platform.select({
   },
 });
 
-const icons = {};
+const icons = {
+  icBackArrowWhite: require('./icons/icBackArrowWhite.png'),
+};
 
 export {icUsers, fonts, icons};

@@ -32,6 +32,7 @@ const Header = ({
   rightIconStyle,
 
   title,
+  titleColor = colors.white1,
   titleStyle,
   renderCenterTitle,
   titlePosition = 'center',
@@ -87,6 +88,7 @@ const Header = ({
             style={[
               {
                 ...styles.titleStyle,
+                color: titleColor,
                 textAlign: titlePosition,
               },
               titleStyle,
@@ -149,7 +151,6 @@ const styles = StyleSheet.create({
   titleStyle: {
     fontSize: scale(20),
     fontFamily: fonts.semiBold,
-    color: colors.black1,
   },
 });
 
