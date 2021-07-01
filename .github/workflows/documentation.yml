@@ -33,7 +33,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      env:
+        env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
       - name: Release to GitHub Pages
         env:
