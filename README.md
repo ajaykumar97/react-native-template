@@ -19,22 +19,4 @@ Key features:
 
 ## Getting Started
 
-This template is base on the React-Native v0.63.4. To create a new project using the template, use the `init` command like:
-
-```bash
-npx react-native init MyApp --template @ajaysidhu/react-native-template
-```
-
-**Note:** The above command will fail if you have the global legacy `react-native-cli` installed. Make sure you uninstall it first(only if you have the old version of the  `react-native-cli`):
-
-```bash
-npm uninstall -g react-native-cli
-```
-or
-```bash
-yarn global remove react-native-cli
-```
-
-Then run the above `npx` command again.
-
-More info can be found at [react-native-community/cli](https://github.com/react-native-community/cli#about).
+Check out the [documentation website](https://ajaykumar97.github.io/react-native-template/).

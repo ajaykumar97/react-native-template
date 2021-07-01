@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'React Native Template',
   tagline: 'Reduce project initialization time by 80%',
-  url: 'https://ajaykumar97.github.io/react-native-template/',
+  url: 'https://ajaykumar97.github.io/react-native-template',
   baseUrl: '/react-native-template/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -17,7 +17,7 @@ module.exports = {
       title: 'React Native Template',
       logo: {
         alt: 'react-native-template Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         {

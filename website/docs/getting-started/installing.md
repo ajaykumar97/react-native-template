@@ -34,7 +34,7 @@ npm uninstall -g react-native-cli
 
 ## Older versions
 
-If you need to use an older version of react-native-template, then you will need to run a:
+If you need to use an older version the template, then you will need to run:
 
 ```shell
 npx react-native init MyApp --template @ajaysidhu/react-native-template@version
