@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: '12.x'
       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_REPO_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
       - name: Release to GitHub Pages
         env:
           USE_SSH: true
