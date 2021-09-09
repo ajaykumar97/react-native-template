@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login screen renders Login correctly 1`] = `
+<RNCSafeAreaView
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#008DF6",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0.35,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "Arial",
+          "fontSize": 60,
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "Arial",
+          "fontSize": 34.285714285714285,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 0.65,
+        "paddingHorizontal": 42.857142857142854,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "marginHorizontal": 0,
+            "marginTop": 0,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#F5F5F5",
+              "fontFamily": "Arial",
+              "fontSize": 25.714285714285715,
+            },
+            undefined,
+          ]
+        }
+      />
+      <TextInput
+        autoCapitalize="none"
+        autoCorrect={false}
+        blurOnSubmit={false}
+        keyboardType="email-address"
+        onChangeText={[Function]}
+        onSubmitEditing={[Function]}
+        returnKeyType="next"
+        style={
+          Array [
+            Object {
+              "borderBottomWidth": 1.0714285714285714,
+              "borderColor": "#BBBBBB",
+              "color": "#FFFFFF",
+              "fontFamily": "Arial",
+              "fontSize": 30,
+              "paddingHorizontal": 10.714285714285714,
+            },
+            Object {
+              "height": 85.71428571428571,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value=""
+      />
+    </View>
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "marginHorizontal": 0,
+            "marginTop": 20,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#F5F5F5",
+              "fontFamily": "Arial",
+              "fontSize": 25.714285714285715,
+            },
+            undefined,
+          ]
+        }
+      />
+      <TextInput
+        blurOnSubmit={true}
+        containerMarginTop={20}
+        onChangeText={[Function]}
+        secureTextEntry={true}
+        style={
+          Array [
+            Object {
+              "borderBottomWidth": 1.0714285714285714,
+              "borderColor": "#BBBBBB",
+              "color": "#FFFFFF",
+              "fontFamily": "Arial",
+              "fontSize": 30,
+              "paddingHorizontal": 10.714285714285714,
+            },
+            Object {
+              "height": 85.71428571428571,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value=""
+      />
+    </View>
+    <Text
+      onPress={[Function]}
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "color": "#FFFFFF",
+          "fontFamily": "Arial",
+          "fontSize": 30,
+          "marginTop": 10.714285714285714,
+          "paddingVertical": 21.428571428571427,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "borderRadius": 4.285714285714286,
+            "justifyContent": "center",
+          },
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "transparent",
+            "borderRadius": 4.285714285714286,
+            "borderWidth": undefined,
+            "height": 96.42857142857143,
+            "marginBottom": 0,
+            "marginHorizontal": 0,
+            "marginTop": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#2F5E9C",
+            "fontFamily": "Arial",
+            "fontSize": 38.57142857142857,
+            "textAlign": "center",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingVertical": 32.14285714285714,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "Arial",
+            "fontSize": 30,
+          }
+        }
+      />
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "Arial",
+            "fontSize": 30,
+            "marginLeft": 10.714285714285714,
+            "textDecorationLine": "underline",
+          }
+        }
+      />
+    </View>
+  </View>
+</RNCSafeAreaView>
+`;
