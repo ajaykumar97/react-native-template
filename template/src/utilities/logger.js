@@ -1,5 +1,3 @@
-/* eslint-disable no-param-reassign */
-
 const logger = {
   error: (header, err) => {
     if (!__DEV__) {

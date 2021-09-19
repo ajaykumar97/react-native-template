@@ -11,6 +11,7 @@ import {navigate} from '../../../utilities/NavigationService';
 import {showErrorMessage} from '../../../utilities/helperFunctions';
 import {login} from './actions';
 import strings from '../../../localization';
+import styles from './styles';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -43,12 +44,7 @@ const Login = () => {
 
   return (
     <Wrapper>
-      <View
-        style={{
-          flex: 0.35,
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
+      <View style={styles.container}>
         <Text
           style={{
             color: colors.white1,
@@ -68,11 +64,7 @@ const Login = () => {
         </Text>
       </View>
 
-      <View
-        style={{
-          flex: 0.65,
-          paddingHorizontal: scale(20),
-        }}>
+      <View style={styles.inputContainer}>
         <TextInputWithLabel
           value={email}
           label={strings.email}
@@ -95,26 +87,14 @@ const Login = () => {
         />
 
         <Text
-          style={{
-            alignSelf: 'flex-end',
-            fontSize: scale(14),
-            color: colors.white1,
-            fontFamily: fonts.regular,
-            marginTop: scale(5),
-            paddingVertical: scale(10),
-          }}
+          style={styles.forgottenPasswordText}
           onPress={onForgotPasswordPress}>
           {strings.forgotPasswordWithQuestion}
         </Text>
 
         <Button label={strings.login} marginTop={20} onPress={onLoginPress} />
 
-        <View
-          style={{
-            paddingVertical: scale(15),
-            flexDirection: 'row',
-            justifyContent: 'center',
-          }}>
+        <View style={styles.dontHaveAnAccount}>
           <Text
             style={{
               fontSize: scale(14),
@@ -123,15 +103,7 @@ const Login = () => {
             }}>
             {strings.dontHaveAnAccount}
           </Text>
-          <Text
-            style={{
-              fontSize: scale(14),
-              fontFamily: fonts.regular,
-              color: colors.white1,
-              textDecorationLine: 'underline',
-              marginLeft: scale(5),
-            }}
-            onPress={onSignupPress}>
+          <Text style={styles.signup} onPress={onSignupPress}>
             {strings.signup}
           </Text>
         </View>
