@@ -8,16 +8,17 @@
 A starter kit for initializing a new React-Native project with some commonly used preconfigured libraries and the folder structure.
 
 Key features:
-- Folder structure
-- Navigation using `react-navigation`(v6)
-- State management using `redux`
-- Redux middleware `redux-saga`
-- Staging and Production environment configurations using `react-native-config`
-- Image caching using `react-native-fast-image`
-- Splash screen using `react-native-bootsplash`
-- API request using `axios`
-- Localization using `react-native-localization`
-- Responsive UI using flexbox and `react-native-size-matters`
+- Pre-configured Folder structure
+- Navigation using [react-navigation](https://reactnavigation.org/) (v6)
+- State management using [redux](https://redux.js.org/)
+- Redux middleware [redux-saga](https://redux-saga.js.org/)
+- Git hooks using [husky](https://typicode.github.io/husky/#/)
+- Staging and Production environment configurations using [react-native-config](https://github.com/luggit/react-native-config)
+- Image caching using [react-native-fast-image](https://github.com/DylanVann/react-native-fast-image)
+- Splash screen using [react-native-bootsplash](https://github.com/zoontek/react-native-bootsplash)
+- API request using [axios](https://axios-http.com/)
+- Localization using [react-native-localization](https://github.com/stefalda/ReactNativeLocalization)
+- Responsive UI using flexbox and [react-native-size-matters](https://github.com/nirsky/react-native-size-matters)
 
 ## Getting Started
 
