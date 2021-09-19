@@ -8,7 +8,7 @@
 A starter kit for initializing a new React-Native project with some commonly used preconfigured libraries and the folder structure.
 
 Key features:
-- Pre-configured Folder structure
+- Pre-configured folder structure
 - Navigation using [react-navigation](https://reactnavigation.org/) (v6)
 - State management using [redux](https://redux.js.org/)
 - Redux middleware [redux-saga](https://redux-saga.js.org/)
