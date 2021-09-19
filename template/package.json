@@ -13,7 +13,8 @@
     "test:watch": "npx cross-env NODE_ENV=test jest --watchAll",
     "lint": "eslint .",
     "postinstall": "node ./scripts/runPostInstallUninstallTasks.js",
-    "uninstall": "node ./scripts/runPostInstallUninstallTasks.js"
+    "uninstall": "node ./scripts/runPostInstallUninstallTasks.js",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.8",
@@ -51,7 +52,8 @@
     "jest-fetch-mock": "^3.0.3",
     "metro-react-native-babel-preset": "^0.66.0",
     "react-native-codegen": "^0.0.7",
-    "react-test-renderer": "17.0.2"
+    "react-test-renderer": "17.0.2",
+    "husky": "^7.0.0"
   },
   "jest": {
     "preset": "react-native",
