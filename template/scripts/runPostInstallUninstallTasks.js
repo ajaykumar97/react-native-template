@@ -8,3 +8,5 @@ function logOutput(error, stdout, stderr) {
 if (os.type() === 'Darwin') {
   exec('cd ios && pod install', logOutput);
 }
+
+exec('npx patch-package', logOutput);
