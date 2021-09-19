@@ -4,7 +4,7 @@
   "description": "It is a minimalist React Native template with preconfigured common set of packages to start a new app.",
   "scripts": {
     "test": "exit 0",
-    "release": "npx release-it"
+    "release": "release-it"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,16 @@
   "release-it": {
     "git": {
       "commitMessage": "chore: release v${version}"
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
+      }
     }
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^3.3.0",
+    "release-it": "^14.11.5"
   }
 }
