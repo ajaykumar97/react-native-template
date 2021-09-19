@@ -9,10 +9,10 @@ A starter kit for initializing a new React-Native project with some commonly use
 
 Key features:
 - Folder structure
-- Navigation using `react-navigation`(v5)
+- Navigation using `react-navigation`(v6)
 - State management using `redux`
 - Redux middleware `redux-saga`
-- Splash screen
+- Splash screen using `react-native-bootsplash`
 - API request using `axios`
 - Localization using `react-native-localization`
 - Responsive UI using `react-native-size-matters`

@@ -11,8 +11,8 @@ const MainStack = createStackNavigator();
 
 const MainNavigator = () => (
   <MainStack.Navigator
-    headerMode={'none'}
     screenOptions={{
+      headerShown: false,
       cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
     }}>
     <MainStack.Screen name={screenNames.UsersScreen} component={Users} />

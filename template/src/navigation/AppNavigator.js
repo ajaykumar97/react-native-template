@@ -13,8 +13,8 @@ const AppStack = createStackNavigator();
 
 const AppNavigator = () => (
   <AppStack.Navigator
-    headerMode={'none'}
     screenOptions={{
+      headerShown: false,
       cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
     }}>
     <AppStack.Screen name={screenNames.BootStrapApp} component={BootStrapApp} />

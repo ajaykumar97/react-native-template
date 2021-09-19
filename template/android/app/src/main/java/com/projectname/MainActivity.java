@@ -33,6 +33,6 @@ public class MainActivity extends ReactActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
       RNBootSplash.init(R.drawable.bootsplash, MainActivity.this);
-      super.onCreate(savedInstanceState);
+      super.onCreate(null);
   }
 }

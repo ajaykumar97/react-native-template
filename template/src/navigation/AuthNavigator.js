@@ -13,8 +13,8 @@ const AuthStack = createStackNavigator();
 
 const AuthNavigator = () => (
   <AuthStack.Navigator
-    headerMode={'none'}
     screenOptions={{
+      headerShown: false,
       cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
     }}>
     <AuthStack.Screen name={screenNames.Login} component={Login} />
