@@ -1,18 +1,11 @@
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  Image,
-  Text,
-  I18nManager,
-} from 'react-native';
+import {View, TouchableOpacity, Image, Text, I18nManager} from 'react-native';
 import {scale} from 'react-native-size-matters';
 
-import {colors} from '../utilities/constants';
-import {fonts} from '../assets';
+import {colors} from '../../utilities/constants';
+import styles from './styles';
 
-const Header = ({
+export const Header = ({
   wrapperBackgroundColor,
   containerStyle,
   showBottomBorder,
@@ -38,29 +31,31 @@ const Header = ({
   titlePosition = 'center',
 }) => {
   const renderLeft = () => {
-    if (!disableLeft && leftIconSource) {
-      return (
-        <TouchableOpacity
-          activeOpacity={0.6}
-          style={[styles.leftStyle, leftButtonStyle]}
-          onPress={onLeftPress}>
-          <Image
-            source={leftIconSource}
-            style={[
-              leftIconStyle,
-              {transform: [{rotateY: I18nManager.isRTL ? '180deg' : '0deg'}]},
-            ]}
-          />
-        </TouchableOpacity>
-      );
+    if (disableLeft || !leftIconSource) {
+      return <View style={styles.leftStyle} />;
     }
-    return <View style={styles.leftStyle} />;
+
+    return (
+      <TouchableOpacity
+        activeOpacity={0.6}
+        style={[styles.leftStyle, leftButtonStyle]}
+        onPress={onLeftPress}>
+        <Image
+          source={leftIconSource}
+          style={[
+            I18nManager.isRTL && styles.rotatedIconHorizontally,
+            leftIconStyle,
+          ]}
+        />
+      </TouchableOpacity>
+    );
   };
 
   const renderRight = () => {
     if (renderRightButton) {
       return renderRightButton();
-    } else if (!disableRight && rightIconSource) {
+    }
+    if (!disableRight && rightIconSource) {
       return (
         <TouchableOpacity
           activeOpacity={0.6}
@@ -76,13 +71,14 @@ const Header = ({
   const renderTitle = () => {
     if (renderCenterTitle) {
       return renderCenterTitle();
-    } else if (title) {
+    }
+    if (title) {
       return (
         <View
-          style={{
-            flex: 1,
-            marginHorizontal: titlePosition === 'center' ? scale(10) : 0,
-          }}>
+          style={[
+            styles.titleContainer,
+            titlePosition === 'center' && scale(10),
+          ]}>
           <Text
             style={[
               {
@@ -110,11 +106,8 @@ const Header = ({
       <View
         style={[
           styles.container,
+          showBottomBorder && styles.borderBottom1px,
           containerStyle,
-          {
-            borderBottomWidth: showBottomBorder ? scale(0.5) : 0,
-            borderBottomColor: colors.grey1,
-          },
         ]}>
         {renderLeft()}
         {renderTitle()}
@@ -123,34 +116,3 @@ const Header = ({
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  wrapper: {
-    height: scale(56),
-    overflow: 'hidden',
-    backgroundColor: colors.white1,
-  },
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  leftStyle: {
-    height: scale(56),
-    width: scale(56),
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  rightStyle: {
-    height: scale(56),
-    width: scale(56),
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  titleStyle: {
-    fontSize: scale(20),
-    fontFamily: fonts.semiBold,
-  },
-});
-
-export {Header};

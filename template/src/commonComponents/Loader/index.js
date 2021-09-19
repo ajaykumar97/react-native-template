@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, StyleSheet, ActivityIndicator} from 'react-native';
-import {scale} from 'react-native-size-matters';
 
-import {colors} from '../utilities/constants';
+import {colors} from '../../utilities/constants';
+import styles from './styles';
 
 const Loader = ({
   loading,
@@ -21,7 +21,7 @@ const Loader = ({
         style={[
           StyleSheet.absoluteFill,
           styles.flexCenterStyle,
-          {backgroundColor: colors.black2},
+          styles.backdrop,
           containerStyle,
         ]}>
         <View style={styles.absoluteLoaderSubContainer}>
@@ -36,30 +36,15 @@ const Loader = ({
 
   return (
     <View
-      style={{
-        ...styles.flexCenterStyle,
-        backgroundColor: backgroundColor || colors.transparent,
-        flex: 1,
+      style={[
+        styles.flexCenterStyle,
+        styles.flex1,
+        {backgroundColor: backgroundColor || colors.transparent},
         containerStyle,
-      }}>
+      ]}>
       <ActivityIndicator color={loaderColor || colors.white1} size={'large'} />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  flexCenterStyle: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  absoluteLoaderSubContainer: {
-    backgroundColor: colors.white1,
-    height: scale(100),
-    width: scale(100),
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: scale(10),
-  },
-});
 
 export {Loader};
