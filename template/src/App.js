@@ -15,13 +15,13 @@ const App = () => (
     <Provider store={store}>
       <StatusBar
         translucent={!layout.isOldDevice}
-        backgroundColor={!layout.isOldDevice ? 'transparent' : colors.black1}
+        backgroundColor={!layout.isOldDevice ? colors.transparent : colors.black1}
         barStyle={'dark-content'}
       />
 
       <AppNavigator />
 
-      <FlashMessage position="top" />
+      <FlashMessage position={'top'} />
     </Provider>
   </NavigationContainer>
 );
