@@ -38,7 +38,7 @@ const showInfoMessage = (alertMessage, options = {}) => {
   });
 };
 
-const intoTitleCase = (string) => {
+const intoTitleCase = string => {
   let sentence = string.toLowerCase().split(' ');
   for (let i = 0; i < sentence.length; i++) {
     sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
@@ -47,7 +47,7 @@ const intoTitleCase = (string) => {
   return sentence;
 };
 
-const keyExtractor = (item) => String(item.id);
+const keyExtractor = item => String(item.id);
 
 const truncateString = (str, num = 50) => {
   if (str.length > num) {
@@ -56,7 +56,7 @@ const truncateString = (str, num = 50) => {
   return str;
 };
 
-const getAPIError = (error) => {
+const getAPIError = error => {
   if (error?.response?.data?.error?.message) {
     return error.response.data.error.message;
   }

@@ -81,8 +81,7 @@ const Header = ({
         <View
           style={{
             flex: 1,
-            marginHorizontal:
-              titlePosition === 'center' ? scale(10) : 0,
+            marginHorizontal: titlePosition === 'center' ? scale(10) : 0,
           }}>
           <Text
             style={[

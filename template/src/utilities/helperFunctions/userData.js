@@ -3,7 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {USER_DATA} from '../constants/otherConstants';
 
 const getLocalUserData = (key = USER_DATA) =>
-  AsyncStorage.getItem(key).then((data) => JSON.parse(data));
+  AsyncStorage.getItem(key).then(data => JSON.parse(data));
 
 const setLocalUserData = (data, key = USER_DATA) =>
   AsyncStorage.setItem(key, JSON.stringify(data));

@@ -3,7 +3,7 @@ import {View, StyleSheet} from 'react-native';
 
 import {colors} from '../utilities/constants';
 
-const Container = (props) => (
+const Container = props => (
   <View {...props} style={{...styles.container, ...props.style}}>
     {props.children}
   </View>

@@ -4,7 +4,7 @@ export const getAllUsers = () => ({
   type: GET_USER_REQUESTED,
 });
 
-export const logout = (params) => ({
+export const logout = params => ({
   type: SESSION_EXPIRE_REQUESTED,
   params,
 });

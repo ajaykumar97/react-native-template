@@ -6,7 +6,7 @@ import strings from '../localization';
 
 export const axios = Axios.create({
   baseURL: urls.baseUrl,
-  validateStatus: (status) => {
+  validateStatus: status => {
     if (status === 200 || status === 401) {
       return true;
     }
@@ -15,7 +15,7 @@ export const axios = Axios.create({
 });
 
 export const request = (config: AxiosRequestConfig) =>
-  axios(config).then((response) => {
+  axios(config).then(response => {
     if (response.status === 401) {
       UserMethodsObj.instance.props.logout({showAlert: true});
 

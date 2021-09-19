@@ -23,7 +23,7 @@ export function* getAllUsersSaga() {
 
     logger.data('getUsers response is: ', data, true);
 
-    data = data.map((user) => {
+    data = data.map(user => {
       user.key = String(user.id);
       return user;
     });

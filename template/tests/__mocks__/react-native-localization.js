@@ -1,5 +1,5 @@
 class RNLocalization {
-  setLanguage(interfaceLanguage) { }
+  setLanguage(interfaceLanguage) {}
 
   formatString(string, formatObj = {}) {}
 }
