@@ -1,5 +1,5 @@
 module.exports = {
   placeholderName: 'ProjectName',
   templateDir: './template',
-  postInitScript: './post-init.script.js',
+  postInitScript: './post-init.script.sh',
 }
