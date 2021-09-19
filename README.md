@@ -12,6 +12,8 @@ Key features:
 - Navigation using `react-navigation`(v6)
 - State management using `redux`
 - Redux middleware `redux-saga`
+- Staging and Production environment configurations using `react-native-config`
+- Image caching using `react-native-fast-image`
 - Splash screen using `react-native-bootsplash`
 - API request using `axios`
 - Localization using `react-native-localization`
