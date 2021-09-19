@@ -5,8 +5,10 @@ exports[`Login screen renders Login correctly 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#008DF6",
         "flex": 1,
+      },
+      Object {
+        "backgroundColor": "#008DF6",
       },
       undefined,
     ]
@@ -182,7 +184,7 @@ exports[`Login screen renders Login correctly 1`] = `
           },
           Object {
             "backgroundColor": "#FFFFFF",
-            "borderColor": "transparent",
+            "borderColor": "#FFFFFF",
             "borderRadius": 4.285714285714286,
             "borderWidth": undefined,
             "height": 96.42857142857143,
@@ -196,12 +198,16 @@ exports[`Login screen renders Login correctly 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "#2F5E9C",
-            "fontFamily": "Arial",
-            "fontSize": 38.57142857142857,
-            "textAlign": "center",
-          }
+          Array [
+            Object {
+              "fontFamily": "Arial",
+              "fontSize": 38.57142857142857,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#008DF6",
+            },
+          ]
         }
       />
     </View>
