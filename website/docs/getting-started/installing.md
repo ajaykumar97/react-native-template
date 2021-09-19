@@ -4,10 +4,10 @@ sidebar_position: 1
 
 # Installing
 
-Generate a new React-Native app using the **@ajaysidhu/react-native-template**:
+Generate a new React Native(**v0.65.1**) app using the **@ajaysidhu/react-native-template**:
 
 ```shell
-npx react-native init MyApp --template @ajaysidhu/react-native-template
+npx react-native init MyApp --template @ajaysidhu/react-native-template --skip-install
 ```
 
 After that, we need to install the dependencies to use the project on iOS(you can skip this part, if you are using this on Android).
@@ -34,10 +34,10 @@ npm uninstall -g react-native-cli
 
 ## Older versions
 
-If you need to use an older version the template, then you will need to run:
+If you need to use an older version the template, then you will need to run(replace `version` with your desired version):
 
 ```shell
-npx react-native init MyApp --template @ajaysidhu/react-native-template@version
+npx react-native init MyApp --template @ajaysidhu/react-native-template@version --skip-install
 ```
 
 You can look at all versions, that I have published [here](https://github.com/ajaykumar97/react-native-template/releases).

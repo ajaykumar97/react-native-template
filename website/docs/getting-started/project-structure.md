@@ -6,14 +6,15 @@ sidebar_position: 3
 
 ```
 root
-├── __tests__
+├── .husky
 ├── android
 ├── ios
+├── node_modules
 ├── scripts
 ├── src
 │   ├── assets
 │   │   ├── fonts
-│   │   ├── images
+│   │   ├── icons
 │   │   └── index.js
 │   ├── commonComponents
 │   ├── localization
@@ -24,7 +25,12 @@ root
 │   │   ├── AuthNavigator.js
 │   │   └── MainNavigator.js
 │   ├── screens
+│   │   ├── AuthScreens
+│   │   └── MainAppScreens
 │   ├── store
+│   │   ├── index.js
+│   │   ├── reducers.js
+│   │   └── sagas.js
 │   ├── utilities
 │   │   ├── constants
 │   │   ├── helperFunctions
@@ -33,8 +39,11 @@ root
 │   │   ├── NavigationService.js
 │   │   └── request.js
 │   └── App.js
+├── tests
 ├── .env
 ├── .env.production
 ├── .env.staging
-└── index.js
+├── .env.template
+├── index.js
+└── package.json
 ```
