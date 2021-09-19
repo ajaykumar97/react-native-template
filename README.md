@@ -15,7 +15,7 @@ Key features:
 - Splash screen using `react-native-bootsplash`
 - API request using `axios`
 - Localization using `react-native-localization`
-- Responsive UI using `react-native-size-matters`
+- Responsive UI using flexbox and `react-native-size-matters`
 
 ## Getting Started
 
