@@ -10,9 +10,7 @@ Generate a new React Native(**v0.65.1**) app using the **@ajaysidhu/react-native
 npx react-native init MyApp --template @ajaysidhu/react-native-template --skip-install
 ```
 
-After that, we need to install the dependencies to use the project on iOS(you can skip this part, if you are using this on Android).
-
-Now run a simple: `npx pod-install` or `cd ios && pod install`. After that, you should be able to use the newly initialised app on both Platforms, iOS and Android.
+The template will automatically install the `npm` dependencies and the `pods` (if you are on the MacOS).
 
 :::danger Take care
 

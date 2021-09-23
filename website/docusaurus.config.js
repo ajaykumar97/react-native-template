@@ -27,6 +27,11 @@ module.exports = {
           label: 'Docs',
         },
         {
+          href: 'https://www.npmjs.com/package/@ajaysidhu/react-native-template',
+          label: 'npm',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/ajaykumar97/react-native-template',
           label: 'GitHub',
           position: 'right',
