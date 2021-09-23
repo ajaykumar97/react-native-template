@@ -18,7 +18,7 @@ The above command will fail if you have the global legacy `react-native-cli` ins
 
 :::
 
-Make sure you uninstall it first(only if you have the old version of the `react-native-cli`):
+Make sure you uninstall it first:
 
 ```shell
 yarn global remove react-native-cli
