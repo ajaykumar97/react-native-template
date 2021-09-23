@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+title: 'Getting Started'
 ---
 
-# Installing
+# Initialising
 
 Generate a new React Native(**v0.65.1**) app using the **@ajaysidhu/react-native-template**:
 
