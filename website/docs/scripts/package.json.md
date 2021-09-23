@@ -1,0 +1,48 @@
+The `scripts` section of the `package.json` contains few handy scripts to automate some common operations. You can run any of the desired script like:
+
+```bash
+yarn <script-name>
+```
+
+For example, to run `androidStagingDebug`:
+```bash
+yarn androidStagingDebug
+```
+
+or, using npm:
+
+```bash
+npm run androidStagingDebug
+```
+
+## androidStagingDebug
+It will run the `debug` android build with `staging` varient.
+
+## androidProductionDebug
+It will run the `debug` android build with `production` varient.
+
+## iosStagingDebug
+It will run the `debug` iOS build with `STAGING` scheme.
+
+## iosProductionDebug
+It will run the `debug` iOS build with `PRODUCTION` scheme.
+
+## start
+It will start the `Metro Bundler`.
+
+## test
+It will run all of the test cases.
+
+## test:watch
+It will run the all of the test cases or the specified test case(after the `test` command) in `watch` mode. It will automatically re-run the test cases if any of the `test case` or the `.js` file will be changed.
+
+## lint
+It will check the whole codebase for the `lint` issues.
+
+## postinstall
+These are the set of tasks which will run after every dependency installation. These tasks are:
+  - If you are running the project on MacOS, the it will automatically install the `pods` in the `ios` directory. If you are not on a MacOS machine, then it will skip the installing the pods.
+  - It will run all of the `patches` defined in the `patches` directory. You can find the list of the patched dependencies [here](https://github.com/ajaykumar97/react-native-template/tree/master/template/patches).
+
+## uninstall
+It will run all of the tasks mentioned in the `postinstall` script above after uninstalling any dependency.

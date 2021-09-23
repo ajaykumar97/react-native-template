@@ -22,7 +22,7 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'getting-started/installing',
+          docId: 'getting-started',
           position: 'left',
           label: 'Docs',
         },
@@ -45,16 +45,20 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Installing',
-              to: '/docs/getting-started/installing',
+              label: 'Getting Started',
+              to: '/docs/getting-started',
             },
             {
               label: 'Libraries',
-              to: '/docs/getting-started/libraries',
+              to: '/docs/libraries',
             },
             {
               label: 'Project Structure',
-              to: '/docs/getting-started/project-structure',
+              to: '/docs/project-structure',
+            },
+            {
+              label: 'Scripts',
+              to: '/docs/scripts/package.json',
             },
           ],
         },
