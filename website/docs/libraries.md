@@ -1,3 +1,8 @@
+---
+title: 'Libraries'
+sidebar_position: 2
+---
+
 # Libraries
 
 - Navigation using [react-navigation (v6)](https://reactnavigation.org/)

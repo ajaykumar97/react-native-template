@@ -1,3 +1,8 @@
+---
+title: 'Project Structure'
+sidebar_position: 3
+---
+
 # Project Structure
 
 ```

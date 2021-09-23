@@ -58,7 +58,7 @@ module.exports = {
             },
             {
               label: 'Scripts',
-              to: '/docs/scripts/package.json',
+              to: '/docs/scripts',
             },
           ],
         },

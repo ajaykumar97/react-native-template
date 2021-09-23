@@ -1,3 +1,8 @@
+---
+title: 'Scripts'
+sidebar_position: 4
+---
+
 The `scripts` section of the `package.json` contains few handy scripts to automate some common operations. You can run any of the desired script like:
 
 ```bash
