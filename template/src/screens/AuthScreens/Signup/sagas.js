@@ -7,7 +7,7 @@ import {
   showErrorMessage,
 } from '../../../utilities/helperFunctions';
 import logger from '../../../utilities/logger';
-import {replace} from '../../../utilities/NavigationService';
+import {replace} from '../../../utilities/navigationService';
 import {SIGNUP_FAILED, SIGNUP_SUCCEEDED} from './types';
 
 export function* signupSaga({params}) {

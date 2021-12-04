@@ -4,7 +4,7 @@ import RNBootSplash from 'react-native-bootsplash';
 import {screenNames} from '../../../utilities/constants';
 import {getLocalUserData} from '../../../utilities/helperFunctions';
 import logger from '../../../utilities/logger';
-import {replace} from '../../../utilities/NavigationService';
+import {replace} from '../../../utilities/navigationService';
 import {LOGIN_SUCCEEDED} from '../Login/types';
 
 export function* checkIfLoggedInSaga() {

@@ -37,7 +37,7 @@ root
 │   │   ├── helperFunctions
 │   │   ├── layout.js
 │   │   ├── logger.js
-│   │   ├── NavigationService.js
+│   │   ├── navigationService.js
 │   │   └── request.js
 │   └── App.js
 ├── tests

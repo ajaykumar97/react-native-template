@@ -14,7 +14,7 @@ import {regex} from '../../../utilities/constants';
 import {showErrorMessage} from '../../../utilities/helperFunctions';
 import {signup} from './actions';
 import {icons} from '../../../assets';
-import {goBack} from '../../../utilities/NavigationService';
+import {goBack} from '../../../utilities/navigationService';
 import strings from '../../../localization';
 import styles from './styles';
 

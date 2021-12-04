@@ -16,7 +16,7 @@ import {
   showSuccessMessage,
   showErrorMessage,
 } from '../../../utilities/helperFunctions';
-import {goBack} from '../../../utilities/NavigationService';
+import {goBack} from '../../../utilities/navigationService';
 import styles from './styles';
 
 const ForgotPassword = () => {

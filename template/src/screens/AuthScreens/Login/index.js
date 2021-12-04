@@ -7,7 +7,7 @@ import {useDispatch} from 'react-redux';
 import {fonts} from '../../../assets';
 import {TextInputWithLabel, Button, Wrapper} from '../../../commonComponents';
 import {colors, screenNames, regex} from '../../../utilities/constants';
-import {navigate} from '../../../utilities/NavigationService';
+import {navigate} from '../../../utilities/navigationService';
 import {showErrorMessage} from '../../../utilities/helperFunctions';
 import {login} from './actions';
 import strings from '../../../localization';

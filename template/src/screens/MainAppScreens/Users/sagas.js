@@ -8,7 +8,7 @@ import {
   showErrorMessage,
 } from '../../../utilities/helperFunctions';
 import logger from '../../../utilities/logger';
-import {replace} from '../../../utilities/NavigationService';
+import {replace} from '../../../utilities/navigationService';
 import {request} from '../../../utilities/request';
 import {GET_USERS_FAILED, GET_USERS_SUCCEEDED, SESSION_EXPIRED} from './types';
 
