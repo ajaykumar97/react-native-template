@@ -55,9 +55,3 @@ npm uninstall -g react-native-cli
 
 Check out the [documentation website](https://ajaykumar97.github.io/react-native-template/) to learn more about the template.
 
-## Roadmap
-- Update libraries version
-- Add explanation to common components
-- Add atomic structure for components
-- Add common styles
-- https://abdo-arwish.medium.com/one-number-to-rule-them-all-d91abdeb0b34
