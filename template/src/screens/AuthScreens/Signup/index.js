@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useCallback} from 'react';
 import {Keyboard} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -30,7 +30,7 @@ const Signup = () => {
 
   const onNameSubmit = () => emailRef.current.focus();
   const onEmailSubmit = () => passwordRef.current.focus();
-  const onSignupPress = () => {
+  const onSignupPress = useCallback(() => {
     if (!name.trim()) {
       return showErrorMessage(strings.enterYourName);
     }
@@ -53,10 +53,10 @@ const Signup = () => {
         name: name.trim(),
         email: email.trim(),
         password: password.trim(),
-      }),
+      })
     );
     return;
-  };
+  }, [dispatch, email, name, password]);
 
   return (
     <Wrapper>

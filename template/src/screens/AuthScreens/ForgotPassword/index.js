@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 import {Keyboard} from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {scale} from 'react-native-size-matters';
@@ -22,7 +22,7 @@ import styles from './styles';
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
 
-  const onSubmit = () => {
+  const onSubmit = useCallback(() => {
     if (!email.trim()) {
       return showErrorMessage(strings.enterAnEmail);
     }
@@ -35,7 +35,7 @@ const ForgotPassword = () => {
     showSuccessMessage(strings.checkEmailForPasswordRest);
     goBack();
     return;
-  };
+  }, [email]);
 
   return (
     <Wrapper>

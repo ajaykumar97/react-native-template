@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {View, Pressable, Image, Text, I18nManager} from 'react-native';
 import {scale} from 'react-native-size-matters';
 
@@ -30,7 +30,7 @@ export const Header = ({
   renderCenterTitle,
   titlePosition = 'center',
 }) => {
-  const renderLeft = () => {
+  const renderLeft = useCallback(() => {
     if (disableLeft || !leftIconSource) {
       return <View style={styles.leftStyle} />;
     }
@@ -48,9 +48,15 @@ export const Header = ({
         />
       </Pressable>
     );
-  };
+  }, [
+    disableLeft,
+    leftButtonStyle,
+    leftIconSource,
+    leftIconStyle,
+    onLeftPress,
+  ]);
 
-  const renderRight = () => {
+  const renderRight = useCallback(() => {
     if (renderRightButton) {
       return renderRightButton();
     }
@@ -64,9 +70,16 @@ export const Header = ({
       );
     }
     return <View style={styles.leftStyle} />;
-  };
+  }, [
+    disableRight,
+    onRightPress,
+    renderRightButton,
+    rightButtonStyle,
+    rightIconSource,
+    rightIconStyle,
+  ]);
 
-  const renderTitle = () => {
+  const renderTitle = useCallback(() => {
     if (renderCenterTitle) {
       return renderCenterTitle();
     }
@@ -93,7 +106,7 @@ export const Header = ({
       );
     }
     return <View />;
-  };
+  }, [renderCenterTitle, title, titleColor, titlePosition, titleStyle]);
 
   return (
     <View

@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useCallback} from 'react';
 import {Text, View} from 'react-native';
 import {scale} from 'react-native-size-matters';
 import Config from 'react-native-config';
@@ -24,7 +24,7 @@ const Login = () => {
   const onSignupPress = () => navigate(screenNames.Signup);
   const onForgotPasswordPress = () => navigate(screenNames.ForgotPassword);
 
-  const onLoginPress = () => {
+  const onLoginPress = useCallback(() => {
     if (!email.trim()) {
       return showErrorMessage(strings.enterAnEmail);
     }
@@ -40,7 +40,7 @@ const Login = () => {
 
     dispatch(login({email, password}));
     return;
-  };
+  }, [dispatch, email, password]);
 
   return (
     <Wrapper>
