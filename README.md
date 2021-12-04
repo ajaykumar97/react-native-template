@@ -23,7 +23,7 @@ A starter kit for initializing a new React-Native project with some commonly use
 
 ## Quick start
 
-Generate a new React Native(**v0.65.1**) app using the **@ajaysidhu/react-native-template**:
+Generate a new React Native(**v0.66.3**) app using the **@ajaysidhu/react-native-template**:
 
 ```shell
 npx react-native init MyApp --template @ajaysidhu/react-native-template --skip-install

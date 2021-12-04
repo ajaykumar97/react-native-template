@@ -23,7 +23,7 @@
     "clone-deep": "^4.0.1",
     "dayjs": "^1.10.7",
     "react": "17.0.2",
-    "react-native": "0.65.1",
+    "react-native": "0.66.3",
     "react-native-bootsplash": "^3.2.5",
     "react-native-config": "^1.4.4",
     "react-native-fast-image": "^8.5.8",
@@ -48,8 +48,7 @@
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
     "jest-fetch-mock": "^3.0.3",
-    "metro-react-native-babel-preset": "^0.66.0",
-    "react-native-codegen": "^0.0.7",
+    "metro-react-native-babel-preset": "^0.66.2",
     "react-test-renderer": "17.0.2"
   },
   "jest": {
