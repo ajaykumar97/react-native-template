@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, TouchableOpacity, Image, Text, I18nManager} from 'react-native';
+import {View, Pressable, Image, Text, I18nManager} from 'react-native';
 import {scale} from 'react-native-size-matters';
 
 import {colors} from '../../utilities/constants';
@@ -36,8 +36,7 @@ export const Header = ({
     }
 
     return (
-      <TouchableOpacity
-        activeOpacity={0.6}
+      <Pressable
         style={[styles.leftStyle, leftButtonStyle]}
         onPress={onLeftPress}>
         <Image
@@ -47,7 +46,7 @@ export const Header = ({
             leftIconStyle,
           ]}
         />
-      </TouchableOpacity>
+      </Pressable>
     );
   };
 
@@ -57,12 +56,11 @@ export const Header = ({
     }
     if (!disableRight && rightIconSource) {
       return (
-        <TouchableOpacity
-          activeOpacity={0.6}
+        <Pressable
           style={[styles.rightStyle, rightButtonStyle]}
           onPress={onRightPress}>
           <Image source={rightIconSource} style={rightIconStyle} />
-        </TouchableOpacity>
+        </Pressable>
       );
     }
     return <View style={styles.leftStyle} />;
