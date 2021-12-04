@@ -7,7 +7,6 @@
     "androidProductionDebug": "react-native run-android --variant=productionDebug",
     "iosStagingDebug": "react-native run-ios --scheme 'STAGING'",
     "iosProductionDebug": "react-native run-ios --scheme 'PRODUCTION'",
-    "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
     "test:watch": "npx cross-env NODE_ENV=test jest --watchAll",
