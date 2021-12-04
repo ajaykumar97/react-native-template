@@ -11,3 +11,7 @@ yarn install
 
 echo "\nInitializing husky hooks\n"
 npx husky set .husky/pre-commit "yarn test && yarn lint"
+
+mv _env ._env
+mv _env.production .env.production
+mv _env.staging .env.staging
