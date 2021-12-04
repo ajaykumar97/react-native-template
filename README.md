@@ -7,6 +7,10 @@
 
 A starter kit for initializing a new React-Native project with some commonly used preconfigured libraries and the folder structure.
 
+<p align="center">
+  <img height="400" alt="react-native-template installation" src="https://i.imgur.com/HXiqoj7.gif">
+</p>
+
 ## Key features:
 - Pre-configured folder structure
 - Navigation using [react-navigation](https://reactnavigation.org/) (v6)
