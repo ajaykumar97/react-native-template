@@ -8,7 +8,7 @@
 A starter kit for initializing a new React-Native project with some commonly used preconfigured libraries and the folder structure.
 
 <p align="center">
-  <img height="400" alt="react-native-template installation" src="./react-native-template-installation.gif?raw=true">
+  <img height="400" alt="react-native-template installation" src="https://i.imgur.com/d69cgbF.gif">
 </p>
 
 ## Key features:
@@ -54,4 +54,3 @@ npm uninstall -g react-native-cli
 ## Digging Deeper
 
 Check out the [documentation website](https://ajaykumar97.github.io/react-native-template/) to learn more about the template.
-
