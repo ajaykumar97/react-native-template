@@ -53,7 +53,7 @@ const Signup = () => {
         name: name.trim(),
         email: email.trim(),
         password: password.trim(),
-      })
+      }),
     );
     return;
   }, [dispatch, email, name, password]);
