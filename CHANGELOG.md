@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/ajaykumar97/react-native-template/compare/2.0.1...3.0.0) (2021-12-05)
+
+
+### Bug Fixes
+
+* fixed `_env` files not being renamed to `.env` ([bd3d06e](https://github.com/ajaykumar97/react-native-template/commit/bd3d06e29cdc19192ae1a98cd8f146f66719752a))
+
+
+### Features
+
+* updated react native to v0.66.3 ([6c490e3](https://github.com/ajaykumar97/react-native-template/commit/6c490e340d9f0a0b55408cdbe988b1b9d292a017))
+
 ## [2.0.1](https://github.com/ajaykumar97/react-native-template/compare/2.0.0...2.0.1) (2021-09-19)
 
 
