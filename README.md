@@ -8,7 +8,7 @@
 A starter kit for initializing a new React-Native project with some commonly used preconfigured libraries and the folder structure.
 
 <p align="center">
-  <img height="400" alt="react-native-template installation" src="https://i.imgur.com/d69cgbF.gif">
+  <img height="400" alt="react-native-template installation" src="https://raw.githubusercontent.com/ajaykumar97/images-container/main/react-native-template/react-native-template-installation.gif">
 </p>
 
 ## Key features:
