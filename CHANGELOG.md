@@ -1,3 +1,11 @@
+## [3.0.1](https://github.com/ajaykumar97/react-native-template/compare/3.0.0...3.0.1) (2021-12-12)
+
+
+### Bug Fixes
+
+* fixed `assets` not found ([5ab7ef4](https://github.com/ajaykumar97/react-native-template/commit/5ab7ef4a87c39a6165482d2e8ded036ba53f1a02))
+* fixed `debug.keystore` not found ([c040a25](https://github.com/ajaykumar97/react-native-template/commit/c040a25e6d5cb0e5a6e9d9089bd07ec18426a808))
+
 # [3.0.0](https://github.com/ajaykumar97/react-native-template/compare/2.0.1...3.0.0) (2021-12-05)
 
 
