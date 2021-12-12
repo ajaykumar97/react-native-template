@@ -8,9 +8,6 @@ node_modules
 # runtime data
 tmp
 
-#screenshots
-assets
-
 #android
 template/android/app/build
 template/android/.gradle
