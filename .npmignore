@@ -11,7 +11,6 @@ tmp
 #android
 template/android/app/build
 template/android/.gradle
-template/android/app/debug.keystore
 template/android/app/production
 template/android/app/staging
 
