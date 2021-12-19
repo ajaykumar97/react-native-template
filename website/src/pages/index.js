@@ -8,21 +8,31 @@ import HomepageFeatures from '../components/HomepageFeatures';
 import { urls } from '../../static/constants';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <img
-          style={{height: 400, width: 800}}
-          src={urls.templateInstallationGIF}
-          alt="Logo"
-        />
+      <div className='container'>
+        <h1 className='hero__title'>{siteConfig.title}</h1>
+        <p className='hero__subtitle'>{siteConfig.tagline}</p>
+        <picture>
+          <source
+            media='(max-width: 480px)'
+            srcset={urls.templateInstallationSmallGIF}
+          />
+          <source
+            media='(min-width: 481px'
+            srcSet={urls.templateInstallationGIF}
+          />
+          <img
+            src={urls.templateInstallationGIF}
+            alt='IfItDoesntMatchAnyMedia'
+          />
+        </picture>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
-            to="/docs/getting-started">
+            className='button button--secondary button--lg'
+            to='/docs/getting-started'
+          >
             Getting Started
           </Link>
         </div>
@@ -32,11 +42,12 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`Docs of ${siteConfig.title}`}
-      description="Reduce project initialization time by 80%">
+      description='Reduce project initialization time by 80%'
+    >
       <HomepageHeader />
       {/* <main>
         <HomepageFeatures />
