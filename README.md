@@ -24,6 +24,20 @@ A starter kit for initializing a new React-Native project with some commonly use
 - Localization using [react-native-localization](https://github.com/stefalda/ReactNativeLocalization)
 - Responsive UI using flexbox and [react-native-size-matters](https://github.com/nirsky/react-native-size-matters)
 
+## Prerequisite
+1. Make sure that you have followed the environment setup instructions properly from the official [React Native docs](https://reactnative.dev/docs/environment-setup).
+
+2. The installation command will fail if you have the global legacy `react-native-cli` installed in your machine. Make sure you uninstall it first:
+
+```shell
+yarn global remove react-native-cli
+```
+
+or if using `npm`
+
+```shell
+npm uninstall -g react-native-cli
+```
 
 ## Quick start
 
@@ -36,20 +50,6 @@ npx react-native init MyApp --template @ajaysidhu/react-native-template --skip-i
 You might also be prompted to confirm the installation for the packages `react-native` and `husky`. Simply hit `enter` to proceed.
 
 The template will automatically install the `npm` dependencies and the `pods` (if you are on the MacOS).
-
-## IMPORTANT
-
-The above command will fail if you have the global legacy `react-native-cli` installed in your machine. Make sure you uninstall it first:
-
-```shell
-yarn global remove react-native-cli
-```
-
-or if using `npm`
-
-```shell
-npm uninstall -g react-native-cli
-```
 
 ## Digging Deeper
 
