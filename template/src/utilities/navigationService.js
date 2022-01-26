@@ -1,22 +1,46 @@
-import * as React from 'react';
+import {createNavigationContainerRef} from '@react-navigation/native';
 import {StackActions} from '@react-navigation/native';
 
-const navigationRef = React.createRef();
+export const navigationRef = createNavigationContainerRef();
 
-const navigate = (name, params) =>
-  navigationRef.current?.navigate(name, params);
+export const navigate = (name, params) => {
+  if (!navigationRef.isReady()) {
+    return;
+  }
+  navigationRef.navigate(name, params);
+};
 
-const replace = (name, params) =>
-  navigationRef.current?.dispatch(StackActions.replace(name, params));
+export const replace = (name, params) => {
+  if (!navigationRef.isReady()) {
+    return;
+  }
+  navigationRef.dispatch(StackActions.replace(name, params));
+};
 
-const push = (...args) =>
-  navigationRef.current?.dispatch(StackActions.push(...args));
+export const push = (...args) => {
+  if (!navigationRef.isReady()) {
+    return;
+  }
+  navigationRef.dispatch(StackActions.push(...args));
+};
 
-const pop = (screenCount = 1) =>
-  navigationRef.current?.dispatch(StackActions.pop(screenCount));
+export const pop = (screenCount = 1) => {
+  if (!navigationRef.isReady()) {
+    return;
+  }
+  navigationRef.dispatch(StackActions.pop(screenCount));
+};
 
-const popToTop = () => navigationRef.current?.dispatch(StackActions.popToTop());
+export const popToTop = () => {
+  if (!navigationRef.isReady()) {
+    return;
+  }
+  navigationRef.dispatch(StackActions.popToTop());
+};
 
-const goBack = () => navigationRef.current?.goBack();
-
-export {navigationRef, navigate, replace, push, pop, popToTop, goBack};
+export const goBack = () => {
+  if (!navigationRef.isReady()) {
+    return;
+  }
+  navigationRef.goBack();
+};
