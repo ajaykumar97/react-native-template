@@ -354,7 +354,7 @@ PODS:
     - React-perflogger (= 0.66.3)
   - ReactNativeLocalization (2.1.7):
     - React-Core
-  - RNBootSplash (3.2.5):
+  - RNBootSplash (4.1.3):
     - React-Core
   - RNCAsyncStorage (1.15.14):
     - React-Core
@@ -590,7 +590,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: bbbdb3d8fcf327c6e2249ee71b6ef1764b7dc266
   ReactCommon: 9bac022ab71596f2b0fde1268272543184c63971
   ReactNativeLocalization: 90a1181b7672309701dd7e5364fbf587319d41c6
-  RNBootSplash: 75faf048f66eebe1650e91afdb8c2205fefc1870
+  RNBootSplash: 4f34ccf1a0c2573cb4ba918ab7f69d51d610827f
   RNCAsyncStorage: ea6b5c280997b2b32a587793163b1f10e580c4f7
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
   RNFastImage: 1f2cab428712a4baaf78d6169eaec7f622556dd7
@@ -603,4 +603,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 52084a2df9536acc55f87ef9f5cbe98345feb51e
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
