@@ -2,6 +2,14 @@
 
 exports[`Login screen renders Login correctly 1`] = `
 <RNCSafeAreaView
+  edges={
+    Array [
+      "bottom",
+      "left",
+      "right",
+      "top",
+    ]
+  }
   style={
     Array [
       Object {
