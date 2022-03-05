@@ -1,3 +1,16 @@
+# [4.0.0](https://github.com/ajaykumar97/react-native-template/compare/3.0.1...4.0.0) (2022-03-05)
+
+
+### Bug Fixes
+
+* fixed failing login snapshot test case ([d3cd93a](https://github.com/ajaykumar97/react-native-template/commit/d3cd93aefe2cbaf80898d0ddef1fc10bd8810c6d))
+
+
+### Features
+
+* updated `react-native-boothsplash` to v4 ([118a6f0](https://github.com/ajaykumar97/react-native-template/commit/118a6f0ae86793fbe134d113ccdccbe38ee356a6))
+* updated react-native to v0.67.3 ([ffbaa59](https://github.com/ajaykumar97/react-native-template/commit/ffbaa599982a1a098af8cadd63e2c63347057544))
+
 ## [3.0.1](https://github.com/ajaykumar97/react-native-template/compare/3.0.0...3.0.1) (2021-12-12)
 
 
