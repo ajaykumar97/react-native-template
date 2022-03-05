@@ -1,5 +1,5 @@
 import React from 'react';
-import {StatusBar} from 'react-native';
+import {StatusBar, LogBox} from 'react-native';
 import {Provider} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
 import FlashMessage from 'react-native-flash-message';
@@ -9,6 +9,10 @@ import {colors} from './utilities/constants';
 import {navigationRef} from './utilities/navigationService';
 import {layout} from './utilities/layout';
 import AppNavigator from './navigation/AppNavigator';
+
+LogBox.ignoreLogs([
+  "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
+]);
 
 const App = () => (
   <NavigationContainer ref={navigationRef}>
