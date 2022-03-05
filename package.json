@@ -4,7 +4,9 @@
   "description": "It is a minimalist React Native template with preconfigured common set of packages to start a new app.",
   "scripts": {
     "test": "exit 0",
-    "release": "release-it"
+    "release:major": "release-it -- major",
+    "release:minor": "release-it -- minor",
+    "release:patch": "release-it -- patch"
   },
   "repository": {
     "type": "git",
