@@ -20,7 +20,7 @@ npm uninstall -g react-native-cli
 
 ## Initialising
 
-Generate a new React Native(**v0.66.3**) app using the **@ajaysidhu/react-native-template**:
+Generate a new React Native(**v0.67.3**) app using the **@ajaysidhu/react-native-template**:
 
 ```shell
 npx react-native init MyApp --template @ajaysidhu/react-native-template --skip-install
