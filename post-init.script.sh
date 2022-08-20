@@ -3,7 +3,7 @@
 echo "\nInitializing git repository\n"
 git init
 
-echo "\nInitializing husky\n"
+echo "\nInitializing husky (Please hit return/enter key for the next prompt)\n"
 npx husky-init
 
 echo "\nInstalling node_modules\n"

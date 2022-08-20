@@ -20,7 +20,7 @@ npm uninstall -g react-native-cli
 
 ## Initialising
 
-Generate a new React Native(**v0.67.3**) app using the **@ajaysidhu/react-native-template**:
+Generate a new React Native(**v0.69.4**) app using the **@ajaysidhu/react-native-template**:
 
 ```shell
 npx react-native init MyApp --template @ajaysidhu/react-native-template --skip-install
@@ -46,6 +46,11 @@ npx react-native init MyApp --template @ajaysidhu/react-native-template@version 
 ```
 
 You can look at all versions, that I have published [here](https://github.com/ajaykumar97/react-native-template/releases).
+
+## Configure Bundle Ids, App Name and Google Service Files
+
+If you want to extend the setup further to configure different bundle ids, App Names and Google Service files for **Staging** and **Production** environments, you can follow my [this](https://medium.com/swlh/part-3-configure-bundle-ids-app-name-and-google-service-files-94aed34bbca5) Medium post.
+
 
 ## Make your own template
 Enjoying this awesome template feature of `react-native-cli` and want to build your own react-native-template? No worries! I have written a dedicated post to create your own `react-native-template` based your own project needs. You can give it a read [here](https://hackernoon.com/how-to-quickly-create-a-custom-template-in-react-native-4up340g).
