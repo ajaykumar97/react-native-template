@@ -49,8 +49,8 @@ module.exports = {
               to: '/docs/getting-started',
             },
             {
-              label: 'Libraries',
-              to: '/docs/libraries',
+              label: 'Key Features',
+              to: '/docs/key-features',
             },
             {
               label: 'Project Structure',
