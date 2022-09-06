@@ -6,12 +6,12 @@ sidebar_position: 4
 The `scripts` section of the `package.json` contains few handy scripts to automate some common operations. You can run any of the desired script like:
 
 ```bash
-yarn <script-name>
+npm run <script-name>
 ```
 
 For example, to run `androidStagingDebug`:
 ```bash
-yarn androidStagingDebug
+npm run androidStagingDebug
 ```
 
 or, using npm:

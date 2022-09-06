@@ -9,8 +9,8 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install packages
-        run: cd template && yarn install
+        run: cd template && npm install
       - name: Run Tests
-        run: cd template && yarn test
+        run: cd template && npm run test
