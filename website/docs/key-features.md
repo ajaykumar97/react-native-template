@@ -8,7 +8,7 @@ sidebar_position: 2
 - Pre-configured folder structure
 - Basic Authentication screens(Login, Signup, Forgot Password) and flow
 - Reusable common components, utility functions and constants
-- [Logger](https://github.com/ajaykumar97/react-native-template/blob/master/template/src/utilities/logger.js) to log data more clearly using coloured logs in Chrome Debugger
+- [Logger](https://github.com/ajaykumar97/react-native-simple-logger) to log data more clearly using coloured logs in Chrome Debugger
 - Navigation using [react-navigation](https://reactnavigation.org/) (v6)
 - State management using [redux](https://redux.js.org/)
 - Redux middleware [redux-saga](https://redux-saga.js.org/)
