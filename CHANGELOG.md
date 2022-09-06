@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/ajaykumar97/react-native-template/compare/5.0.0...5.1.0) (2022-09-06)
+
+
+### Features
+
+* added `react-native-simple-logger` for chrome debugger ([fa3b890](https://github.com/ajaykumar97/react-native-template/commit/fa3b89087b322242820effab4ab273cd93f24f62))
+
 # [5.0.0](https://github.com/ajaykumar97/react-native-template/compare/4.0.0...5.0.0) (2022-08-20)
 
 
