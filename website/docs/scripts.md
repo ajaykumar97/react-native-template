@@ -20,17 +20,29 @@ or, using npm:
 npm run androidStagingDebug
 ```
 
+## androidDevelopmentDebug
+It will run the `debug` android build with `development` varient.
+
+## androidTestingDebug
+It will run the `debug` android build with `testing` varient.
+
 ## androidStagingDebug
 It will run the `debug` android build with `staging` varient.
 
 ## androidProductionDebug
 It will run the `debug` android build with `production` varient.
 
+## iosDevelopmentDebug
+It will run the `debug` iOS build with `development` scheme.
+
+## iosTestingDebug
+It will run the `debug` iOS build with `testing` scheme.
+
 ## iosStagingDebug
-It will run the `debug` iOS build with `STAGING` scheme.
+It will run the `debug` iOS build with `staging` scheme.
 
 ## iosProductionDebug
-It will run the `debug` iOS build with `PRODUCTION` scheme.
+It will run the `debug` iOS build with `production` scheme.
 
 ## start
 It will start the `Metro Bundler`.
@@ -47,7 +59,6 @@ It will check the whole codebase for the `lint` issues.
 ## postinstall
 These are the set of tasks which will run after every dependency installation. These tasks are:
   - If you are running the project on MacOS, the it will automatically install the `pods` in the `ios` directory. If you are not on a MacOS machine, then it will skip the installing the pods.
-  - It will run all of the `patches` defined in the `patches` directory. You can find the list of the patched dependencies [here](https://github.com/ajaykumar97/react-native-template/tree/master/template/patches).
 
 ## uninstall
 It will run all of the tasks mentioned in the `postinstall` script above after uninstalling any dependency.

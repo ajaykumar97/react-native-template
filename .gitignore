@@ -72,7 +72,9 @@ template/.watchmanconfig
 
 # .env files
 .env
+.env.development
 .env.staging
+.env.testing
 .env.production
 
 #others

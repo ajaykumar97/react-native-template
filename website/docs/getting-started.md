@@ -20,10 +20,10 @@ npm uninstall -g react-native-cli
 
 ## Initialising
 
-Generate a new React Native(**v0.69.4**) app using the **@ajaysidhu/react-native-template**:
+Generate a new React Native(**v0.73**) app using the **@ajaysidhu/react-native-template**:
 
 ```shell
-npx react-native init MyApp --template @ajaysidhu/react-native-template --skip-install
+npx react-native init myapp --template @ajaysidhu/react-native-template --skip-install
 ```
 
 You might also be prompted to confirm the installation for the packages `react-native` and `husky`. Simply hit `enter` to proceed.
@@ -34,7 +34,7 @@ The template will automatically install the `npm` dependencies and the `pods` (i
 If you want to use the template directly from the `GitHub` or try out the latest features which are not release to the `npm` yet, then you can run:
 
 ```shell
-npx react-native init MyApp --template https://github.com/ajaykumar97/react-native-template.git --skip-install
+npx react-native init myapp --template https://github.com/ajaykumar97/react-native-template.git --skip-install
 ```
 
 ## Use Older versions
@@ -42,14 +42,14 @@ npx react-native init MyApp --template https://github.com/ajaykumar97/react-nati
 If you want to use an older version of the template, then you can run(replace `version` with your desired version):
 
 ```shell
-npx react-native init MyApp --template @ajaysidhu/react-native-template@version --skip-install
+npx react-native init myapp --template @ajaysidhu/react-native-template@version --skip-install
 ```
 
 You can look at all versions, that I have published [here](https://github.com/ajaykumar97/react-native-template/releases).
 
-## Configure Bundle Ids, App Name and Google Service Files
+## Configure Google Service Files
 
-If you want to extend the setup further to configure different bundle ids, App Names and Google Service files for **Staging** and **Production** environments, you can follow my [this](https://medium.com/swlh/part-3-configure-bundle-ids-app-name-and-google-service-files-94aed34bbca5) Medium post.
+If you want to extend the setup further to configure different Google Service files for **Development**, **Testing**, **Staging** and **Production** environments, you can follow my [this](https://medium.com/swlh/part-3-configure-bundle-ids-app-name-and-google-service-files-94aed34bbca5) Medium post.
 
 
 ## Make your own template

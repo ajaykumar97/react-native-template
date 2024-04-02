@@ -4,7 +4,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'React Native Template',
-  tagline: 'Reduce project initialization time by 80%',
+  tagline: 'Reduce project initialization time by 90%',
   url: 'https://ajaykumar97.github.io/react-native-template',
   baseUrl: '/react-native-template/',
   onBrokenLinks: 'throw',
@@ -63,7 +63,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: 'Made with ❤️ by Ajay Kumar',
+      copyright: 'Made with ❤️ by Ajay Kumar at [Diligentic Infotech](https://diligentic.com)',
     },
     prism: {
       theme: lightCodeTheme,

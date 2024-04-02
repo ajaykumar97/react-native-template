@@ -1,1 +1,0 @@
-export const CHECKED_IF_LOGGED_IN = 'CHECKED_IF_LOGGED_IN';

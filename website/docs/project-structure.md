@@ -8,43 +8,44 @@ sidebar_position: 3
 ```
 root
 ├── .husky
+├── __tests__
 ├── android
 ├── ios
 ├── node_modules
 ├── scripts
+│   └── runPostInstallUninstallTasks.js
 ├── src
 │   ├── assets
 │   │   ├── fonts
-│   │   ├── icons
-│   │   └── index.js
+│   │   └── icons
 │   ├── commonComponents
 │   ├── localization
-|   |   ├── en.js
-|   |   └── index.js
+|   |   ├── en.json
+|   |   └── index.tsx
 │   ├── navigation
-│   │   ├── AppNavigator.js
-│   │   ├── AuthNavigator.js
-│   │   └── MainNavigator.js
+│   │   ├── AppNavigator.tsx
+│   │   ├── AuthNavigator.tsx
+│   │   └── MainNavigator.tsx
 │   ├── screens
 │   │   ├── AuthScreens
 │   │   └── MainAppScreens
 │   ├── store
-│   │   ├── index.js
-│   │   ├── reducers.js
-│   │   └── sagas.js
+│   │   ├── index.tsx
+│   │   └── reducers.tsx
 │   ├── utilities
 │   │   ├── constants
 │   │   ├── helperFunctions
-│   │   ├── layout.js
-│   │   ├── logger.js
-│   │   ├── navigationService.js
-│   │   └── request.js
-│   └── App.js
-├── tests
-├── .env
+│   │   ├── layout.tsx
+│   │   ├── logger.tsx
+│   │   ├── navigationService.tsx
+│   │   └── request.tsx
+│   └── App.tsx
+├── .env.development
 ├── .env.production
 ├── .env.staging
 ├── .env.template
+├── .env.testing
 ├── index.js
+├── react-native.config.js
 └── package.json
 ```

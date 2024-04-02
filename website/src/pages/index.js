@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <Layout
       title={`Docs of ${siteConfig.title}`}
-      description='Reduce project initialization time by 80%'
+      description='Reduce project initialization time by 90%'
     >
       <HomepageHeader />
       {/* <main>
