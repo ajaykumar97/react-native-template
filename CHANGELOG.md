@@ -1,3 +1,10 @@
+# [6.0.0](https://github.com/ajaykumar97/react-native-template/compare/5.1.0...6.0.0) (2024-04-02)
+
+
+### Features
+
+* updated `react-native` version to 0.73 and updated libraries version ([f382611](https://github.com/ajaykumar97/react-native-template/commit/f3826113daf578705ec63cf9c70fce13c5370d67))
+
 # [5.1.0](https://github.com/ajaykumar97/react-native-template/compare/5.0.0...5.1.0) (2022-09-06)
 
 
