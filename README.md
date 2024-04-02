@@ -103,4 +103,4 @@ Happy coding, and we look forward to hearing from you!
 - [ ] Add atomic structure for components
 - [ ] Add common styles
 - [ ] Add website docs versioning
-- [ ] Add LTR languages support
+- [ ] Add RTL languages support
