@@ -63,7 +63,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: 'Made with ❤️ by Ajay Kumar at [Diligentic Infotech](https://diligentic.com)',
+      copyright: '<div>Made with ❤️ by Ajay Kumar at <a href="https://diligentic.com/">Diligentic Infotech</a></div>',
     },
     prism: {
       theme: lightCodeTheme,
