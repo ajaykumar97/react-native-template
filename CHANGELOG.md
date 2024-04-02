@@ -1,3 +1,5 @@
+## [6.0.1](https://github.com/ajaykumar97/react-native-template/compare/6.0.0...6.0.1) (2024-04-02)
+
 # [6.0.0](https://github.com/ajaykumar97/react-native-template/compare/5.1.0...6.0.0) (2024-04-02)
 
 

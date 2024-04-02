@@ -1,6 +1,6 @@
 {
   "name": "@ajaysidhu/react-native-template",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "It is a minimalist React Native template with preconfigured common set of packages to start a new app.",
   "scripts": {
     "test": "exit 0",
