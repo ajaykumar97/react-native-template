@@ -1,3 +1,10 @@
+## [6.0.4](https://github.com/ajaykumar97/react-native-template/compare/6.0.3...6.0.4) (2024-04-15)
+
+
+### Bug Fixes
+
+* splash screen not taking full width in iOS ([d67c5a0](https://github.com/ajaykumar97/react-native-template/commit/d67c5a0b8fb58e0a82cae62eaa91a935fae1bf18))
+
 ## [6.0.3](https://github.com/ajaykumar97/react-native-template/compare/6.0.2...6.0.3) (2024-04-02)
 
 ## [6.0.2](https://github.com/ajaykumar97/react-native-template/compare/6.0.1...6.0.2) (2024-04-02)
