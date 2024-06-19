@@ -19,3 +19,5 @@ echo 'ENV=development' > .env.development
 echo 'ENV=testing' > .env.testing
 echo 'ENV=staging' > .env.staging
 echo 'ENV=production' > .env.production
+
+echo "Please refer to the Readme.md file for instructions on running the project for Android and iOS."
