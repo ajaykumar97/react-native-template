@@ -26,3 +26,5 @@ sidebar_position: 2
 - Responsive UI using flexbox and [react-native-size-matters](https://github.com/nirsky/react-native-size-matters#readme)
 - SVG files support using [react-native-svg](https://github.com/software-mansion/react-native-svg#readme) and [react-native-svg-transformer](https://github.com/kristerkari/react-native-svg-transformer#readme)
 - [Logger](https://github.com/ajaykumar97/react-native-simple-logger) to log data more clearly using coloured logs in Chrome Debugger
+- [Net Info](https://github.com/react-native-netinfo/react-native-netinfo) to listen for network conditions updates.
+- [React Hook Form](https://github.com/react-hook-form/react-hook-form) and [Yup](https://www.npmjs.com/package/yup) for form state management and validation.
