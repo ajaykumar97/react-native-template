@@ -3,7 +3,7 @@
 echo "\nInitializing git repository\n"
 git init
 
-echo "\nInitializing husky (if asked, please hit return/enter key for the next prompt)\n"
+echo "\nInitializing husky (if prompted, please hit return/enter key for the next prompt)\n"
 npx husky-init
 
 echo "\nInstalling node_modules\n"
@@ -11,6 +11,9 @@ npm install
 
 echo "\nInitializing husky hooks\n"
 npx husky set .husky/pre-commit "npm run test && npm run lint"
+
+git add .
+git commit -m "initial commit"
 
 echo 'ENV=development' > .env.development
 echo 'ENV=testing' > .env.testing
