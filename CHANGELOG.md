@@ -1,3 +1,10 @@
+## [7.0.4](https://github.com/ajaykumar97/react-native-template/compare/7.0.3...7.0.4) (2024-06-19)
+
+
+### Bug Fixes
+
+* lint issues ([bd8a79e](https://github.com/ajaykumar97/react-native-template/commit/bd8a79e8984cac3d19a1d094840374e7425396b8))
+
 ## [7.0.3](https://github.com/ajaykumar97/react-native-template/compare/7.0.2...7.0.3) (2024-06-19)
 
 ## [7.0.2](https://github.com/ajaykumar97/react-native-template/compare/7.0.1...7.0.2) (2024-06-19)
