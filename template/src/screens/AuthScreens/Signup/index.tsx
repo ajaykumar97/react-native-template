@@ -76,6 +76,7 @@ const Signup: React.FC = () => {
                 value={value}
                 placeholder={t('placeholderName')}
                 label={t('name')}
+                blurOnSubmit={false}
                 keyboardType={'default'}
                 returnKeyType={'next'}
                 errorMessage={errors?.name?.message}
@@ -98,6 +99,7 @@ const Signup: React.FC = () => {
                 value={value}
                 placeholder={t('placeholderEmail')}
                 label={t('email')}
+                blurOnSubmit={false}
                 ref={emailRef}
                 containerMarginTop={scale(15)}
                 keyboardType={'email-address'}
@@ -121,11 +123,11 @@ const Signup: React.FC = () => {
                 value={value}
                 placeholder={t('passsword')}
                 label={t('password')}
+                blurOnSubmit
                 ref={passwordRef}
                 errorMessage={errors?.password?.message}
                 secureTextEntry
                 containerMarginTop={scale(15)}
-                blurOnSubmit
                 onChangeText={onChange}
               />
             );
