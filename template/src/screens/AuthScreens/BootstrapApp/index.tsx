@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
-import logger from 'react-native-simple-logger';
-import {hideAsync} from 'expo-splash-screen';
+import {hideAsync} from "expo-splash-screen";
+import React, {useEffect} from "react";
+import logger from "react-native-simple-logger";
 
-import {getSecuredData} from '../../../utilities/helperFunctions/localStorage';
-import {ACCESS_TOKEN, SCREEN_NAMES} from '../../../utilities/constants';
+import {ACCESS_TOKEN, SCREEN_NAMES} from "../../../utilities/constants";
+import {getSecuredData} from "../../../utilities/helperFunctions/localStorage";
 import {replace} from '../../../utilities/navigationService';
 
 interface BootStrapAppProps {}

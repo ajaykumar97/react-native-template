@@ -1,7 +1,7 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 
-import {request} from '../../../utilities/request';
-import {URLS} from '../../../utilities/constants';
+import {URLS} from "../../../utilities/constants";
+import {request} from "../../../utilities/request";
 
 export const getUsers = createAsyncThunk('users/getUsers', async () => {
   try {

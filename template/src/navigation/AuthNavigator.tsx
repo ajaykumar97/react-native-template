@@ -1,10 +1,10 @@
-import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import {createStackNavigator} from "@react-navigation/stack";
+import React from "react";
 
-import Login from '../screens/AuthScreens/Login';
-import {SCREEN_NAMES} from '../utilities/constants';
+import ForgotPassword from "../screens/AuthScreens/ForgotPassword";
+import Login from "../screens/AuthScreens/Login";
 import Signup from '../screens/AuthScreens/Signup';
-import ForgotPassword from '../screens/AuthScreens/ForgotPassword';
+import {SCREEN_NAMES} from '../utilities/constants';
 
 const AuthStack = createStackNavigator();
 

@@ -2,8 +2,8 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {scale} from 'react-native-size-matters';
 
-import {COLORS, commonStyles} from '../../../../utilities/constants';
-import {Body1, Body2} from '../../../../commonComponents/TextComponents';
+import {Body1, Body2} from "../../../../commonComponents/TextComponents";
+import {COLORS, commonStyles} from "../../../../utilities/constants";
 
 interface UserCardProps {
   user: {

@@ -1,8 +1,8 @@
-import React from 'react';
 import {
   CardStyleInterpolators,
   createStackNavigator,
-} from '@react-navigation/stack';
+} from "@react-navigation/stack";
+import React from "react";
 import 'react-native-gesture-handler';
 
 import BootstrapApp from '../screens/AuthScreens/BootstrapApp';

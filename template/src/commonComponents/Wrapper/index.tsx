@@ -15,7 +15,7 @@ interface WrapperProps {
 const Wrapper: React.FC<WrapperProps> = ({
   children,
   wrapperStyle,
-  wrapperBackgroundColor = COLORS.blue1,
+  wrapperBackgroundColor = COLORS.white1,
 }) => (
   <SafeAreaView
     style={[

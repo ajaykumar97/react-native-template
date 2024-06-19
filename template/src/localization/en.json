@@ -9,7 +9,12 @@
     "sessionExpired": "Session Expired! Please login again.",
     "done": "Done",
     "enterAnEmail": "Please enter an email",
-    "enterValidEmail": "Please enter a valid email",
+    "placeholderEmail": "e.g. john@example.com",
+    "placeholderName": "John Doe",
+    "passsword": "********",
+    "pleaseEnterPassword": "Please enter password.",
+    "validPassword": "Please enter the password.",
+    "enterValidEmail": "Please enter a valid email address.",
     "enterAPassword": "Please enter a passsword",
     "passwordCanContainOnly": "Password can only contain alphabets, numbers and any of the special characters from _@./#&+-",
     "checkEmailForPasswordRest": "Please check your email. A verification link is sent to your email to change your password.",
@@ -22,6 +27,8 @@
     "submit": "Submit",
     "name": "Name",
     "logout": "Logout",
-    "noUsersFound": "No Users Found"
+    "noUsersFound": "No Users Found",
+    "noInternetConnected": "Oops! It looks like you're offline.",
+    "checkInternetConnection": "Please check your internet connection and try again."
   }
 }

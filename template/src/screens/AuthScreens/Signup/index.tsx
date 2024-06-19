@@ -1,26 +1,36 @@
-import React, {useRef, useState, useCallback} from 'react';
+import {yupResolver} from '@hookform/resolvers/yup';
+import React, {useRef, useCallback} from 'react';
+import {Controller, useForm} from 'react-hook-form';
+import {useTranslation} from 'react-i18next';
 import {Keyboard} from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {scale} from 'react-native-size-matters';
-import {useTranslation} from 'react-i18next';
 
-import {ACCESS_TOKEN, REGEX, SCREEN_NAMES} from '../../../utilities/constants';
-import {goBack, replace} from '../../../utilities/navigationService';
 import BackIcon from '../../../assets/icons/icBackArrow.svg';
-import {setSecuredData} from '../../../utilities/helperFunctions/localStorage';
-import {showErrorMessage} from '../../../utilities/helperFunctions/miscellaneous';
 import Button from '../../../commonComponents/Button';
 import Header from '../../../commonComponents/Header';
 import TextInputWithLabel from '../../../commonComponents/TextInputWithLabel';
 import Wrapper from '../../../commonComponents/Wrapper';
+import {
+  ACCESS_TOKEN,
+  INPUT_FIELDS,
+  SCREEN_NAMES,
+} from '../../../utilities/constants';
+import {setSecuredData} from '../../../utilities/helperFunctions/localStorage';
+import {signupFormSchema} from '../../../utilities/helperFunctions/validators';
+import {goBack, replace} from '../../../utilities/navigationService';
 
 import styles from './styles';
 
 const Signup: React.FC = () => {
-  const [name, setName] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-
+  const {
+    handleSubmit,
+    control,
+    formState: {errors},
+  } = useForm({
+    resolver: yupResolver(signupFormSchema),
+    mode: 'onSubmit',
+  });
   const {t} = useTranslation();
 
   const emailRef = useRef() as any;
@@ -38,28 +48,16 @@ const Signup: React.FC = () => {
     }
   };
 
-  const onSignupPress = useCallback(async () => {
-    if (!name.trim()) {
-      return showErrorMessage(t('enterYourName'));
-    }
-    if (!email.trim()) {
-      return showErrorMessage(t('enterAnEmail'));
-    }
-    if (!REGEX.email.test(email.trim())) {
-      return showErrorMessage(t('enterValidEmail'));
-    }
-    if (!password) {
-      return showErrorMessage(t('enterAPassword'));
-    }
-    if (!REGEX.password.test(password)) {
-      return showErrorMessage(t('passwordCanContainOnly'));
-    }
-    setSecuredData(ACCESS_TOKEN, email.trim());
+  const onSignupPress = useCallback(
+    async formData => {
+      setSecuredData(ACCESS_TOKEN, formData.email.trim());
 
-    Keyboard.dismiss();
+      Keyboard.dismiss();
 
-    replace(SCREEN_NAMES.MainNavigator);
-  }, [email, name, password, t]);
+      replace(SCREEN_NAMES.MainNavigator);
+    },
+    [t],
+  );
 
   return (
     <Wrapper>
@@ -72,39 +70,76 @@ const Signup: React.FC = () => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.container}
         keyboardShouldPersistTaps={'handled'}>
-        <TextInputWithLabel
-          value={name}
-          label={t('name')}
-          keyboardType={'default'}
-          returnKeyType={'next'}
-          onSubmitEditing={onNameSubmit}
-          onChangeText={setName}
+        <Controller
+          control={control}
+          name={INPUT_FIELDS.name}
+          render={({field: {onChange, value}}) => {
+            return (
+              <TextInputWithLabel
+                value={value}
+                placeholder={t('placeholderName')}
+                label={t('name')}
+                keyboardType={'default'}
+                returnKeyType={'next'}
+                errorMessage={errors?.name?.message}
+                onSubmitEditing={onNameSubmit}
+                onChangeText={onChange}
+              />
+            );
+          }}
         />
 
-        <TextInputWithLabel
-          value={email}
-          label={t('email')}
-          ref={emailRef}
-          containerMarginTop={scale(15)}
-          keyboardType={'email-address'}
-          returnKeyType={'next'}
-          autoCapitalize={'none'}
-          autoCorrect={false}
-          onSubmitEditing={onEmailSubmit}
-          onChangeText={setEmail}
+        <Controller
+          control={control}
+          name={INPUT_FIELDS.email}
+          render={({field: {onChange, value}}) => {
+            const handleChange = (text: string) => {
+              onChange(text.toLowerCase());
+            };
+            return (
+              <TextInputWithLabel
+                value={value}
+                placeholder={t('placeholderEmail')}
+                label={t('email')}
+                ref={emailRef}
+                containerMarginTop={scale(15)}
+                keyboardType={'email-address'}
+                errorMessage={errors?.email?.message}
+                returnKeyType={'next'}
+                autoCapitalize={'none'}
+                autoCorrect={false}
+                onSubmitEditing={onEmailSubmit}
+                onChangeText={handleChange}
+              />
+            );
+          }}
         />
 
-        <TextInputWithLabel
-          value={password}
-          label={t('password')}
-          ref={passwordRef}
-          secureTextEntry
-          containerMarginTop={scale(15)}
-          blurOnSubmit
-          onChangeText={setPassword}
+        <Controller
+          control={control}
+          name={INPUT_FIELDS.password}
+          render={({field: {onChange, value}}) => {
+            return (
+              <TextInputWithLabel
+                value={value}
+                placeholder={t('passsword')}
+                label={t('password')}
+                ref={passwordRef}
+                errorMessage={errors?.password?.message}
+                secureTextEntry
+                containerMarginTop={scale(15)}
+                blurOnSubmit
+                onChangeText={onChange}
+              />
+            );
+          }}
         />
 
-        <Button label={t('signup')} marginTop={30} onPress={onSignupPress} />
+        <Button
+          label={t('signup')}
+          marginTop={30}
+          onPress={handleSubmit(onSignupPress)}
+        />
       </KeyboardAwareScrollView>
     </Wrapper>
   );

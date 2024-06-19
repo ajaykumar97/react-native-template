@@ -5,13 +5,22 @@ import {COLORS} from '../../utilities/constants';
 
 const styles = StyleSheet.create({
   label: {
-    color: COLORS.white2,
+    marginBottom: scale(4),
+  },
+  inputContainer: {
+    paddingHorizontal: scale(10),
+    borderRadius: scale(6),
+    borderWidth: scale(1),
+    borderColor: COLORS.grey3,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   textInput: {
-    paddingHorizontal: scale(5),
-    borderBottomWidth: scale(0.5),
-    borderColor: COLORS.grey2,
-    color: COLORS.white1,
+    flex: 1,
+    color: COLORS.black1,
+  },
+  errorText: {
+    marginTop: scale(4),
   },
 });
 

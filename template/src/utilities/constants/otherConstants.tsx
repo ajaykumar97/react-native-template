@@ -23,13 +23,23 @@ export const REGEX = {
   emailMobileNo: /^([0-9]{9})|([A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$/,
   mobileNo: /^([0-9]{5,15})$/,
   price: /^[1-9][0-9]*$/,
-  email: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/,
-  password: /^[A-Za-z0-9_@./#&+-]*$/, //alpha-numeric and _@./#&+-
-  name: /[^a-zA-Z\s]/,
+  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/gm,
+  password: /^(?=.*[!@#$%^&-])(?=.*[0-9])(?=.*[A-Z])[!@#$%^&0-9A-Za-z-]{8,}$/,
+  name: /^[a-z\s]{1,}[A-Z\s]*$|^[A-Z\s]{1,}[a-z\s]*$/i,
 };
 
 export const CONTENT_TYPE = {
   formData: 'multipart/form-data',
   applicationJson: 'application/json',
   image: 'image/jpeg',
+};
+
+export const INPUT_FIELDS = {
+  name: 'name',
+  email: 'email',
+  password: 'password',
+} as {
+  name: 'name';
+  email: 'email';
+  password: 'password';
 };

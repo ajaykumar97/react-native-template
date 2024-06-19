@@ -1,11 +1,11 @@
 import React from 'react';
+import {useTranslation} from "react-i18next";
 import {
   View,
   InputAccessoryView,
   Pressable,
   GestureResponderEvent,
-} from 'react-native';
-import {useTranslation} from 'react-i18next';
+} from "react-native";
 
 import {COLORS, LAYOUT} from '../../utilities/constants';
 import {Body2} from '../TextComponents';

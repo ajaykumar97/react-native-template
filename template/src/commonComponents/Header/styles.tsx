@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     height: scale(42),
     justifyContent: 'center',
     overflow: 'hidden',
-    backgroundColor: COLORS.white1,
   },
   container: {
     flexDirection: 'row',
@@ -30,7 +29,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   titleStyle: {
-    color: COLORS.white1,
     textAlign: 'center',
   },
   titleContainer: {flex: 1},

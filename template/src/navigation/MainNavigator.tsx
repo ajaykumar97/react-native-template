@@ -1,8 +1,8 @@
-import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import {createStackNavigator} from "@react-navigation/stack";
+import React from "react";
 
-import {SCREEN_NAMES} from '../utilities/constants';
-import Users from '../screens/MainAppScreens/Users';
+import Users from "../screens/MainAppScreens/Users";
+import {SCREEN_NAMES} from "../utilities/constants";
 
 const MainStack = createStackNavigator();
 

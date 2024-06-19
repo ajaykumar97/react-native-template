@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   heading: {
-    color: COLORS.white1,
     marginTop: scale(10),
   },
   inputContainer: {
@@ -22,9 +21,6 @@ const styles = StyleSheet.create({
     marginTop: scale(5),
     paddingVertical: scale(10),
   },
-  forgottenPasswordText: {
-    color: COLORS.white1,
-  },
   dontHaveAnAccount: {
     paddingVertical: scale(15),
     flexDirection: 'row',
@@ -32,7 +28,6 @@ const styles = StyleSheet.create({
   },
   signupText: {paddingHorizontal: scale(5), justifyContent: 'flex-end'},
   signup: {
-    color: COLORS.white1,
     textDecorationLine: 'underline',
   },
 });
