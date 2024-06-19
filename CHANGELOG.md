@@ -1,3 +1,10 @@
+## [7.0.1](https://github.com/ajaykumar97/react-native-template/compare/7.0.0...7.0.1) (2024-06-19)
+
+
+### Bug Fixes
+
+* new project not initialising using template ([7b17079](https://github.com/ajaykumar97/react-native-template/commit/7b170790eca964c3a2fade72cf62b629d2370a28))
+
 # [7.0.0](https://github.com/ajaykumar97/react-native-template/compare/6.0.4...7.0.0) (2024-06-19)
 
 
