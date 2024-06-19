@@ -1,25 +1,25 @@
 import React, {useCallback, useEffect} from 'react';
-import {useTranslation} from "react-i18next";
-import {FlatList} from "react-native";
-import {useDispatch, useSelector} from "react-redux";
+import {useTranslation} from 'react-i18next';
+import {FlatList} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
 
-import Button from "../../../commonComponents/Button";
-import EmptyListPlaceholder from "../../../commonComponents/EmptyListPlaceholder";
-import Header from "../../../commonComponents/Header";
-import ItemSeparatorComponent from "../../../commonComponents/ItemSeparatorComponent";
-import Loader from "../../../commonComponents/Loader";
-import Wrapper from "../../../commonComponents/Wrapper";
+import Button from '../../../commonComponents/Button';
+import EmptyListPlaceholder from '../../../commonComponents/EmptyListPlaceholder';
+import Header from '../../../commonComponents/Header';
+import ItemSeparatorComponent from '../../../commonComponents/ItemSeparatorComponent';
+import Loader from '../../../commonComponents/Loader';
+import Wrapper from '../../../commonComponents/Wrapper';
 import {ACCESS_TOKEN, COLORS, SCREEN_NAMES} from '../../../utilities/constants';
 import {
   deleteUnsecuredData,
   removeSecuredData,
 } from '../../../utilities/helperFunctions/localStorage';
-import {keyExtractor} from "../../../utilities/helperFunctions/miscellaneous";
-import {replace} from "../../../utilities/navigationService";
+import {keyExtractor} from '../../../utilities/helperFunctions/miscellaneous';
+import {replace} from '../../../utilities/navigationService';
 
-import UserCard from "./components/UserCard";
-import {getUsers} from "./slice";
-import styles from "./styles";
+import UserCard from './components/UserCard';
+import {getUsers} from './slice';
+import styles from './styles';
 
 type useSelectorType = {
   users: {

@@ -43,6 +43,6 @@ export const signupFormSchema = yup.object().shape({
     .required(t('enterValidEmail')),
   password: yup
     .string()
-    .required(t("pleaseEnterPassword"))
-    .matches(REGEX.password, t("passwordCanContainOnly")),
+    .required(t('pleaseEnterPassword'))
+    .matches(REGEX.password, t('passwordCanContainOnly')),
 });

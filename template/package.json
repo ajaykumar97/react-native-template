@@ -12,6 +12,7 @@
     "iosTestingDebug": "react-native run-ios --scheme 'testing'",
     "iosDevelopmentDebug": "react-native run-ios --scheme 'development'",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "start": "react-native start",
     "test": "jest",
     "test:watch": "npx cross-env NODE_ENV=test jest --watchAll",

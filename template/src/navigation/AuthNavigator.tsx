@@ -1,8 +1,8 @@
-import {createStackNavigator} from "@react-navigation/stack";
-import React from "react";
+import {createStackNavigator} from '@react-navigation/stack';
+import React from 'react';
 
-import ForgotPassword from "../screens/AuthScreens/ForgotPassword";
-import Login from "../screens/AuthScreens/Login";
+import ForgotPassword from '../screens/AuthScreens/ForgotPassword';
+import Login from '../screens/AuthScreens/Login';
 import Signup from '../screens/AuthScreens/Signup';
 import {SCREEN_NAMES} from '../utilities/constants';
 

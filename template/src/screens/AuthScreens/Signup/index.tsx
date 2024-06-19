@@ -48,16 +48,13 @@ const Signup: React.FC = () => {
     }
   };
 
-  const onSignupPress = useCallback(
-    async formData => {
-      setSecuredData(ACCESS_TOKEN, formData.email.trim());
+  const onSignupPress = useCallback(async formData => {
+    setSecuredData(ACCESS_TOKEN, formData.email.trim());
 
-      Keyboard.dismiss();
+    Keyboard.dismiss();
 
-      replace(SCREEN_NAMES.MainNavigator);
-    },
-    [t],
-  );
+    replace(SCREEN_NAMES.MainNavigator);
+  }, []);
 
   return (
     <Wrapper>

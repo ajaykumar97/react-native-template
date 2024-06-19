@@ -1,8 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {scale} from 'react-native-size-matters';
 
-import {COLORS} from '../../../utilities/constants';
-
 const styles = StyleSheet.create({
   container: {
     flex: 0.35,
