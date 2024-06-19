@@ -1,3 +1,11 @@
+# [7.0.0](https://github.com/ajaykumar97/react-native-template/compare/6.0.4...7.0.0) (2024-06-19)
+
+
+### Features
+
+* added `@react-native-community/netinfo`, `react-hook-form` and `yup` ([9d56544](https://github.com/ajaykumar97/react-native-template/commit/9d565443fd2966017b878abc39ec5817e309f824))
+* updated react-native to v0.74.2 and other libraries' versions ([45fe55c](https://github.com/ajaykumar97/react-native-template/commit/45fe55c99c2e1efd43590ee689188d08f8e23f70))
+
 ## [6.0.4](https://github.com/ajaykumar97/react-native-template/compare/6.0.3...6.0.4) (2024-04-15)
 
 
