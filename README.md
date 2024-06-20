@@ -69,6 +69,12 @@ You might also be prompted to confirm the installation for the packages `react-n
 
 The template will automatically install the `npm` dependencies and the `pods` (if you are on the MacOS).
 
+## Install from GitHub
+If you want to use the template directly from the `GitHub` or try out the latest features which are not release to the `npm` yet, then you can run:
+
+```shell
+npx react-native init myapp --template https://github.com/ajaykumar97/react-native-template.git --skip-install --pm npm --skip-git-init
+```
 
 ## Notes
 1. Starting React Native **v0.74**, Xcode does not start Metro bundler automatically. If you are running the app from the XCode, please make sure that your metro bundler is running before running the build from XCode. You can start the metro bundler by running the following command in the root directory of your newly created project using this template:
@@ -80,6 +86,16 @@ npm start
 2. Minimum supported versions:
 - iOS: 15
 - Android: 26
+
+## Use Older versions
+
+If you want to use an older version of the template, then you can run(replace `version` with your desired version):
+
+```shell
+npx react-native init myapp --template @ajaysidhu/react-native-template@version --skip-install --pm npm --skip-git-init
+```
+
+You can look at all versions, that I have published [here](https://github.com/ajaykumar97/react-native-template/tags).
 
 ## Digging Deeper
 
