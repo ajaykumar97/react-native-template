@@ -8,6 +8,32 @@ module.exports = {
     'import/no-cycle': 2,
     'import/no-duplicates': 1,
     'import/no-unresolved': 2,
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+        pathGroups: [
+          {
+            pattern: '~/**',
+            group: 'internal',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['builtin'],
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+        warnOnUnassignedImports: true,
+      },
+    ],
   },
   env: {
     'jest/globals': true,
