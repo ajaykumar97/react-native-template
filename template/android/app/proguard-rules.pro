@@ -8,3 +8,8 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
+
+-keep class com.projectname.BuildConfig { *; }
+-keep class com.projectname.staging.BuildConfig { *; }
+-keep class com.projectname.development.BuildConfig { *; }
+-keep class com.projectname.testing.BuildConfig { *; }
