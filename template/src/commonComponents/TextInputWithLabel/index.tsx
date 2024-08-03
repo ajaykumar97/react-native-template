@@ -25,7 +25,9 @@ interface TextInputWithLabelProps extends TextInputProps {
   errorMessage: string | undefined;
   inputAccessoryViewID?: string;
   inputAccessoryViewLabel?: string;
-  onInputAccessoryViewPress?: (event: GestureResponderEvent) => void;
+  onInputAccessoryViewPress?:
+    | ((event: GestureResponderEvent) => void)
+    | undefined;
 }
 
 const TextInputWithLabel = forwardRef<TextInput, TextInputWithLabelProps>(
@@ -36,6 +38,7 @@ const TextInputWithLabel = forwardRef<TextInput, TextInputWithLabelProps>(
     return (
       <View
         style={[
+          styles.container,
           props.containerStyle,
           {
             marginTop: props.containerMarginTop || 0,
@@ -47,6 +50,7 @@ const TextInputWithLabel = forwardRef<TextInput, TextInputWithLabelProps>(
         </Body3>
         <View style={styles.inputContainer}>
           <TextInput
+            {...props}
             placeholderTextColor={COLORS.grey2}
             ref={ref}
             secureTextEntry={isSecureTextEntryEnabled}
@@ -56,14 +60,14 @@ const TextInputWithLabel = forwardRef<TextInput, TextInputWithLabelProps>(
               {height: props.multiline ? undefined : scale(40)},
               props.style,
             ]}
-            {...props}
           />
 
           {props.secureTextEntry && (
             <Pressable
               onPress={() =>
                 setIsSecureTextEntryEnabled(!isSecureTextEntryEnabled)
-              }>
+              }
+              style={styles.secureTextEntry}>
               {isSecureTextEntryEnabled ? <EyeSlashIcon /> : <OpenEyeIcon />}
             </Pressable>
           )}

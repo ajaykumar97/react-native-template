@@ -5,11 +5,11 @@ declare global {
 }
 
 export type ScreensParams = {
-  BootStrapApp: undefined;
-  AuthNavigator: undefined;
-  MainNavigator: undefined;
-  Login: undefined;
-  Signup: undefined;
-  ForgotPassword: undefined;
-  UsersScreen: undefined;
+  BootStrapApp: string;
+  AuthNavigator: string;
+  MainNavigator: string;
+  Login: string;
+  Signup: string;
+  ForgotPassword: string;
+  UsersScreen: string;
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Pressable, PressableProps, ViewStyle} from 'react-native';
+import {GestureResponderEvent, Pressable, ViewStyle} from 'react-native';
 import {scale} from 'react-native-size-matters';
 
 import {COLORS} from '../../utilities/constants';
@@ -9,7 +9,7 @@ import styles from './styles';
 
 interface ButtonProps {
   height?: number;
-  onPress: PressableProps['onPress'];
+  onPress: (event: GestureResponderEvent) => void;
   label: string;
   bgColor?: string;
   labelColor?: string;
@@ -32,7 +32,7 @@ const Button: React.FC<ButtonProps> = ({
   marginBottom = 0,
   marginHorizontal = 0,
   transparent,
-  borderRadius = scale(2),
+  borderRadius = scale(5),
 }) => (
   <Pressable
     onPress={onPress}

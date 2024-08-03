@@ -18,10 +18,7 @@ export const loginFormSchema = yup.object().shape({
     .string()
     .email(t('enterValidEmail'))
     .required(t('enterValidEmail')),
-  password: yup
-    .string()
-    .required(t('validPassword'))
-    .matches(/\S+/i, t('validPassword')),
+  password: yup.string().required(t('pleaseEnterPassword')),
 });
 
 export const forgotPasswordFormSchema = yup.object().shape({

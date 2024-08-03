@@ -45,7 +45,7 @@ const Login: React.FC<LoginProps> = () => {
   const onSignupPress = () => navigate(SCREEN_NAMES.Signup);
   const onForgotPasswordPress = () => navigate(SCREEN_NAMES.ForgotPassword);
 
-  const onLoginPress = useCallback(async formData => {
+  const onLoginPress = useCallback(async (formData: {email: string}) => {
     await setSecuredData(ACCESS_TOKEN, formData.email.trim());
     replace(SCREEN_NAMES.MainNavigator);
   }, []);
@@ -95,7 +95,6 @@ const Login: React.FC<LoginProps> = () => {
                 ref={passwordRef}
                 returnKeyType={'done'}
                 secureTextEntry
-                containerMarginTop={20}
                 errorMessage={errors?.password?.message}
                 blurOnSubmit
                 onChangeText={onChange}

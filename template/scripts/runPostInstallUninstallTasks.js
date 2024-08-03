@@ -1,5 +1,6 @@
 const exec = require('child_process').exec;
 const os = require('os');
+
 const {circle} = require('cli-spinners');
 
 if (os.type() === 'Darwin') {

@@ -1,6 +1,6 @@
 import {
   createNavigationContainerRef,
-  RouteProp,
+  NavigationContainerRefWithCurrent,
   StackActions,
 } from '@react-navigation/native';
 
@@ -8,11 +8,12 @@ import {ScreensParams} from '../navigation/types';
 
 type Params = Record<string, any>;
 
-export const navigationRef = createNavigationContainerRef();
+export const navigationRef: NavigationContainerRefWithCurrent<ReactNavigation.RootParamList> =
+  createNavigationContainerRef();
 
-export const navigate = <T extends keyof ScreensParams>(
-  name: T,
-  params?: RouteProp<ScreensParams, T>['params'],
+export const navigate = <RouteName extends keyof ScreensParams>(
+  name: any,
+  params?: ReactNavigation.RootParamList[RouteName],
 ) => {
   if (navigationRef.current?.isReady()) {
     return navigationRef.current.navigate(name, params);
@@ -59,17 +60,7 @@ export const replace = (name: string, params?: Params) => {
   }, 1000);
 };
 
-export const push = <T extends keyof ScreensParams>(
-  name: T,
-  params?:
-    | {
-        screen: T;
-        key?: string;
-        params: ScreensParams[T];
-        merge?: boolean;
-      }
-    | ScreensParams[T],
-) => {
+export const push = <T extends keyof ScreensParams>(name: T, params?: any) => {
   if (navigationRef.current?.isReady()) {
     return navigationRef.current.dispatch(StackActions.push(name, params));
   }

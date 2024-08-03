@@ -19,18 +19,16 @@ const styles = StyleSheet.create({
   leftStyle: {
     height: scale(56),
     width: scale(56),
-    alignItems: 'center',
+    paddingLeft: scale(15),
     justifyContent: 'center',
   },
   rightStyle: {
     height: scale(56),
     width: scale(56),
-    alignItems: 'center',
+    paddingRight: scale(15),
     justifyContent: 'center',
   },
-  titleStyle: {
-    textAlign: 'center',
-  },
+  titleStyle: {textAlign: 'center'},
   titleContainer: {flex: 1},
 });
 

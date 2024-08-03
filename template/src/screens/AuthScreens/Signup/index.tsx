@@ -4,7 +4,6 @@ import {Controller, useForm} from 'react-hook-form';
 import {useTranslation} from 'react-i18next';
 import {Keyboard} from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-import {scale} from 'react-native-size-matters';
 
 import BackIcon from '../../../assets/icons/icBackArrow.svg';
 import Button from '../../../commonComponents/Button';
@@ -48,7 +47,7 @@ const Signup: React.FC = () => {
     }
   };
 
-  const onSignupPress = useCallback(async formData => {
+  const onSignupPress = useCallback(async (formData: {email: string}) => {
     setSecuredData(ACCESS_TOKEN, formData.email.trim());
 
     Keyboard.dismiss();
@@ -101,7 +100,6 @@ const Signup: React.FC = () => {
                 label={t('email')}
                 blurOnSubmit={false}
                 ref={emailRef}
-                containerMarginTop={scale(15)}
                 keyboardType={'email-address'}
                 errorMessage={errors?.email?.message}
                 returnKeyType={'next'}
@@ -127,7 +125,6 @@ const Signup: React.FC = () => {
                 ref={passwordRef}
                 errorMessage={errors?.password?.message}
                 secureTextEntry
-                containerMarginTop={scale(15)}
                 onChangeText={onChange}
               />
             );

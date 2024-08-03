@@ -38,7 +38,7 @@ const showFlashMessage = (message: string, options = {}) => {
 };
 
 export const showErrorMessage = (
-  error: {response: {data: {message: string}}} | string,
+  error: {response: {data: {message: string}}},
   options = {},
 ) => {
   let errorMessage;

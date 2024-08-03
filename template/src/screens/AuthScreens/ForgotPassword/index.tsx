@@ -76,7 +76,7 @@ const ForgotPassword: React.FC<ForgotPasswordProps> = () => {
 
         <Button
           label={t('submit')}
-          marginTop={50}
+          marginTop={scale(20)}
           onPress={handleSubmit(onSubmit)}
         />
       </KeyboardAwareScrollView>

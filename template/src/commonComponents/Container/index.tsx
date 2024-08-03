@@ -1,16 +1,15 @@
-import React from 'react';
-import {View, ViewProps, ViewStyle} from 'react-native';
+import React, {ReactNode} from 'react';
+import {View, ViewStyle} from 'react-native';
 
 import styles from './styles';
 
-interface ContainerProps extends ViewProps {
+interface ContainerProps {
   style?: ViewStyle;
+  children: ReactNode;
 }
 
-const Container: React.FC<ContainerProps> = props => (
-  <View {...props} style={[styles.container, props.style]}>
-    {props.children}
-  </View>
+const Container: React.FC<ContainerProps> = ({children, style}) => (
+  <View style={[styles.container, style]}>{children}</View>
 );
 
 export default Container;

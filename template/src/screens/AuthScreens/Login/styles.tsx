@@ -12,11 +12,10 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     flex: 0.65,
-    paddingHorizontal: scale(20),
+    paddingHorizontal: scale(15),
   },
   forgottenPasswordContainer: {
     alignSelf: 'flex-end',
-    marginTop: scale(5),
     paddingVertical: scale(10),
   },
   dontHaveAnAccount: {

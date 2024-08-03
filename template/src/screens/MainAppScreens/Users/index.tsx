@@ -57,15 +57,28 @@ const UsersScreen: React.FC = () => {
     return <EmptyListPlaceholder insideList placeholder={t('noUsersFound')} />;
   }, [isLoading, t]);
 
-  const renderContent = () => {
-    return (
-      <>
+  const renderItem = ({
+    item,
+  }: {
+    item: {
+      id: string;
+      name: string;
+      username: string;
+      email: string;
+      phone: string;
+    };
+  }) => {
+    return <UserCard user={item} />;
+  };
+
+  return (
+    <>
+      <Wrapper>
+        <Header title={t('users')} />
         <FlatList
           data={allUsers}
           showsVerticalScrollIndicator={false}
-          renderItem={({item}) => {
-            return <UserCard user={item} />;
-          }}
+          renderItem={renderItem}
           keyExtractor={keyExtractor}
           ListEmptyComponent={ListEmptyComponent}
           ItemSeparatorComponent={ItemSeparatorComponent}
@@ -73,24 +86,18 @@ const UsersScreen: React.FC = () => {
         />
         <Button
           label={t('logout')}
+          borderRadius={0}
           onPress={async () => {
             replace(SCREEN_NAMES.AuthNavigator);
             deleteUnsecuredData(ACCESS_TOKEN);
             await removeSecuredData(ACCESS_TOKEN);
           }}
         />
-        {isLoading && (
-          <Loader loading={true} absolute={true} loaderColor={COLORS.black1} />
-        )}
-      </>
-    );
-  };
-
-  return (
-    <Wrapper>
-      <Header title={t('users')} />
-      {renderContent()}
-    </Wrapper>
+      </Wrapper>
+      {isLoading && (
+        <Loader loading={true} absolute={true} loaderColor={COLORS.black1} />
+      )}
+    </>
   );
 };
 

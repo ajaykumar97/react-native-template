@@ -14,7 +14,7 @@ import styles from './styles';
 
 interface TextInputAccessoryViewProps {
   inputAccessoryViewID: string;
-  onPress: (event: GestureResponderEvent) => void;
+  onPress: ((event: GestureResponderEvent) => void) | undefined;
   label?: string;
 }
 

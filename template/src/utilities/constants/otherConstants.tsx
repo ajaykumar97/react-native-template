@@ -19,13 +19,11 @@ export const USER_DATA = 'userData';
 export const ACCESS_TOKEN = 'userToken';
 
 export const REGEX = {
-  number: /^[0-9]{1,}$/,
-  emailMobileNo: /^([0-9]{9})|([A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$/,
-  mobileNo: /^([0-9]{5,15})$/,
-  price: /^[1-9][0-9]*$/,
-  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/gm,
-  password: /^(?=.*[!@#$%^&-])(?=.*[0-9])(?=.*[A-Z])[!@#$%^&0-9A-Za-z-]{8,}$/,
-  name: /^[a-z\s]{1,}[A-Z\s]*$|^[A-Z\s]{1,}[a-z\s]*$/i,
+  number: /^\d{6,}$/,
+  mobileNo: /^\d{6,10}$/,
+  email: /^[a-zA-Z0-9._%+-@]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/gm,
+  password: /^(?=.*[!@#$%^&-?])(?=.*[0-9])(?=.*[A-Z])[!@#$%^&0-9A-Za-z-?]{8,}$/,
+  name: /[^a-zA-Z\s]/,
 };
 
 export const CONTENT_TYPE = {
