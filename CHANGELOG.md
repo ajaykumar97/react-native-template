@@ -1,3 +1,17 @@
+# [8.0.0](https://github.com/ajaykumar97/react-native-template/compare/7.0.6...8.0.0) (2024-08-03)
+
+
+### Bug Fixes
+
+* failing test cases ([27aea15](https://github.com/ajaykumar97/react-native-template/commit/27aea152c81896b385f6a27017278604a386d31b))
+
+
+### Features
+
+* added `no internet` banner ([a3fba47](https://github.com/ajaykumar97/react-native-template/commit/a3fba47289cc204cefbd315f636d2104ce2f3db1))
+* added proguard rules for release mode ([2f404f4](https://github.com/ajaykumar97/react-native-template/commit/2f404f42d5db3f51e07b75897822e5901bcbb429))
+* updated react native and libraries' versions ([aab62b3](https://github.com/ajaykumar97/react-native-template/commit/aab62b352f6c929518e6e9c5ab378a01c28edcc2))
+
 ## [7.0.6](https://github.com/ajaykumar97/react-native-template/compare/7.0.5...7.0.6) (2024-06-19)
 
 ## [7.0.5](https://github.com/ajaykumar97/react-native-template/compare/7.0.4...7.0.5) (2024-06-19)
