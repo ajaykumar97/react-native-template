@@ -1,3 +1,5 @@
+# [8.2.0](https://github.com/ajaykumar97/react-native-template/compare/8.1.0...8.2.0) (2024-08-03)
+
 # [8.1.0](https://github.com/ajaykumar97/react-native-template/compare/8.0.0...8.1.0) (2024-08-03)
 
 # [8.0.0](https://github.com/ajaykumar97/react-native-template/compare/7.0.6...8.0.0) (2024-08-03)
