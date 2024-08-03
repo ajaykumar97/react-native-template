@@ -4,7 +4,7 @@ import {scale} from 'react-native-size-matters';
 import {COLORS} from '../../utilities/constants';
 
 const styles = StyleSheet.create({
-  container: {paddingBottom: 24},
+  container: {paddingBottom: scale(5)},
   label: {
     marginBottom: scale(4),
   },
@@ -22,9 +22,7 @@ const styles = StyleSheet.create({
   },
   secureTextEntry: {paddingLeft: scale(10), paddingVertical: scale(10)},
   errorText: {
-    position: 'absolute',
-    left: 0,
-    bottom: 4,
+    marginTop: scale(2),
   },
 });
 
