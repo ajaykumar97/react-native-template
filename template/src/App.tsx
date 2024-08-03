@@ -6,6 +6,7 @@ import {Alert, StatusBar} from 'react-native';
 import FlashMessage from 'react-native-flash-message';
 import {Provider} from 'react-redux';
 
+import NoInternetBanner from './commonComponents/NoInternetBanner';
 import i18next from './localization';
 import AppNavigator from './navigation/AppNavigator';
 import store from './store';
@@ -21,6 +22,11 @@ function App(): React.JSX.Element {
       Alert.alert(t('noInternetConnected'), t('checkInternetConnection'));
     }
   }, [isConnected, t]);
+
+  if (isConnected === false) {
+    return <NoInternetBanner />;
+  }
+
   return (
     <I18nextProvider i18n={i18next}>
       <NavigationContainer ref={navigationRef}>
