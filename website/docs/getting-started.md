@@ -29,7 +29,7 @@ npm uninstall -g react-native-cli
 Generate a new React Native(**v0.75**) app using the **@ajaysidhu/react-native-template**:
 
 ```shell
-npx react-native init myapp --template @ajaysidhu/react-native-template --skip-install --pm npm --skip-git-init
+npx @react-native-community/cli@latest init myapp --template @ajaysidhu/react-native-template --skip-install --pm npm --skip-git-init
 ```
 
 You might also be prompted to confirm the installation for the packages `react-native` and `husky`. Simply hit `enter` to proceed.
@@ -40,7 +40,7 @@ The template will automatically install the `npm` dependencies and the `pods` (i
 If you want to use the template directly from the `GitHub` or try out the latest features which are not release to the `npm` yet, then you can run:
 
 ```shell
-npx react-native init myapp --template https://github.com/ajaykumar97/react-native-template.git --skip-install --pm npm --skip-git-init
+npx @react-native-community/cli@latest init myapp --template https://github.com/ajaykumar97/react-native-template.git --skip-install --pm npm --skip-git-init
 ```
 
 ## Notes
@@ -59,7 +59,7 @@ npm start
 If you want to use an older version of the template, then you can run(replace `version` with your desired version):
 
 ```shell
-npx react-native init myapp --template @ajaysidhu/react-native-template@version --skip-install --pm npm --skip-git-init
+npx @react-native-community/cli@latest init myapp --template @ajaysidhu/react-native-template@version --skip-install --pm npm --skip-git-init
 ```
 
 You can look at all versions, that I have published [here](https://github.com/ajaykumar97/react-native-template/releases).
