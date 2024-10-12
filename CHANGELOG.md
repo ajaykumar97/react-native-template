@@ -1,3 +1,10 @@
+# [9.0.0](https://github.com/ajaykumar97/react-native-template/compare/8.2.0...9.0.0) (2024-10-12)
+
+
+### Features
+
+* updated react-native version ([ccc1815](https://github.com/ajaykumar97/react-native-template/commit/ccc1815d5ea5988de0a157e8b683ec042fb4c1bd))
+
 # [8.2.0](https://github.com/ajaykumar97/react-native-template/compare/8.1.0...8.2.0) (2024-08-03)
 
 # [8.1.0](https://github.com/ajaykumar97/react-native-template/compare/8.0.0...8.1.0) (2024-08-03)
