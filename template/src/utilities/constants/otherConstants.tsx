@@ -19,11 +19,10 @@ export const USER_DATA = 'userData';
 export const ACCESS_TOKEN = 'userToken';
 
 export const REGEX = {
-  number: /^\d{6,}$/,
   mobileNo: /^\d{6,10}$/,
-  email: /^[a-zA-Z0-9._%+-@]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/gm,
+  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/gm,
   password: /^(?=.*[!@#$%^&-?])(?=.*[0-9])(?=.*[A-Z])[!@#$%^&0-9A-Za-z-?]{8,}$/,
-  name: /[^a-zA-Z\s]/,
+  name: /^[a-z\s-]{1,}[A-Z\s-]$|^[A-Z\s-]{1,}[a-z\s-]$/i,
 };
 
 export const CONTENT_TYPE = {
