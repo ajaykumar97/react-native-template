@@ -1,0 +1,13 @@
+diff --git a/node_modules/expo-splash-screen/ios/SplashScreenManager.swift b/node_modules/expo-splash-screen/ios/SplashScreenManager.swift
+index 5650622..8477a2e 100644
+--- a/node_modules/expo-splash-screen/ios/SplashScreenManager.swift
++++ b/node_modules/expo-splash-screen/ios/SplashScreenManager.swift
+@@ -17,7 +17,7 @@ public class SplashScreenManager: NSObject {
+     }
+ 
+     self.rootView = rootView
+-    if let vc = UIStoryboard(name: "SplashScreen", bundle: nil).instantiateInitialViewController() {
++    if let vc = UIStoryboard(name: "LaunchScreenProduction", bundle: nil).instantiateInitialViewController() {
+       loadingView = vc.view
+       loadingView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+ 
