@@ -1,4 +1,4 @@
-import {hideAsync} from 'expo-splash-screen';
+import {preventAutoHideAsync, hideAsync} from 'expo-splash-screen';
 import React, {useEffect} from 'react';
 import logger from 'react-native-simple-logger';
 
@@ -7,6 +7,8 @@ import {getSecuredData} from '../../../utilities/helperFunctions/localStorage';
 import {replace} from '../../../utilities/navigationService';
 
 interface BootStrapAppProps {}
+
+preventAutoHideAsync()
 
 const BootstrapApp: React.FC<BootStrapAppProps> = () => {
   const bootstrapApp = async () => {
