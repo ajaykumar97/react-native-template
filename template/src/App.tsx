@@ -15,13 +15,6 @@ import {navigationRef} from './utilities/navigationService';
 
 function App(): React.JSX.Element {
   const {isConnected} = useNetInfo();
-  const {t} = useTranslation();
-
-  useEffect(() => {
-    if (isConnected === false) {
-      Alert.alert(t('noInternetConnected'), t('checkInternetConnection'));
-    }
-  }, [isConnected, t]);
 
   if (isConnected === false) {
     return <NoInternetBanner />;
