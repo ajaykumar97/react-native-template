@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2D5ED6132D342E92007EBEEB /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5ED6112D342A71007EBEEB /* SplashScreen.storyboard */; };
 		882330512BB58683007333F2 /* LaunchScreenStaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882330502BB58683007333F2 /* LaunchScreenStaging.storyboard */; };
 		882330532BB58698007333F2 /* LaunchScreenDevelopment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882330522BB58698007333F2 /* LaunchScreenDevelopment.storyboard */; };
 		882330552BB586AC007333F2 /* LaunchScreenTesting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882330542BB586AC007333F2 /* LaunchScreenTesting.storyboard */; };
@@ -34,6 +35,7 @@
 		17F18BA8CD02D59C4120D759 /* Pods-projectname.testingrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectname.testingrelease.xcconfig"; path = "Target Support Files/Pods-projectname/Pods-projectname.testingrelease.xcconfig"; sourceTree = "<group>"; };
 		25142DE1B3F4B4F1CD8E81DE /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-projectname/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		261B60481D08C27F13EAA0FB /* Pods-projectname.stagingdebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectname.stagingdebug.xcconfig"; path = "Target Support Files/Pods-projectname/Pods-projectname.stagingdebug.xcconfig"; sourceTree = "<group>"; };
+		2D5ED6112D342A71007EBEEB /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = projectname/SplashScreen.storyboard; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-projectname.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectname.debug.xcconfig"; path = "Target Support Files/Pods-projectname/Pods-projectname.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-projectname.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectname.release.xcconfig"; path = "Target Support Files/Pods-projectname/Pods-projectname.release.xcconfig"; sourceTree = "<group>"; };
 		586B8B84B35CEF32995F3EED /* Pods-projectname.stagingrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectname.stagingrelease.xcconfig"; path = "Target Support Files/Pods-projectname/Pods-projectname.stagingrelease.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
+				2D5ED6112D342A71007EBEEB /* SplashScreen.storyboard */,
 				88476BE22BB6537A001B28EA /* LaunchScreenProduction.storyboard */,
 				882330542BB586AC007333F2 /* LaunchScreenTesting.storyboard */,
 				882330522BB58698007333F2 /* LaunchScreenDevelopment.storyboard */,
@@ -172,6 +175,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "projectname" */;
 			buildPhases = (
+				2D3F92FE2D3424D700BD0D0B /* Generate Splash Screen */,
 				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
 				AB950897B62ECA357659FF58 /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
@@ -226,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D5ED6132D342E92007EBEEB /* SplashScreen.storyboard in Resources */,
 				882330552BB586AC007333F2 /* LaunchScreenTesting.storyboard in Resources */,
 				882330512BB58683007333F2 /* LaunchScreenStaging.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
@@ -270,6 +275,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-projectname/Pods-projectname-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		2D3F92FE2D3424D700BD0D0B /* Generate Splash Screen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Splash Screen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n\nCONFIG_LOWER=$(echo \"$CONFIGURATION\" | tr '[:upper:]' '[:lower:]')\n\nif [[ \"$CONFIG_LOWER\" == *\"development\"* ]]; then\n  cp \"${PROJECT_DIR}/LaunchScreenDevelopment.storyboard\" \\\n     \"${PROJECT_DIR}/projectname/SplashScreen.storyboard\"\n  echo \"Using DEV splash screen...\"\n\nelif [[ \"$CONFIG_LOWER\" == *\"test\"* ]]; then\n  cp \"${PROJECT_DIR}/LaunchScreenTesting.storyboard\" \\\n     \"${PROJECT_DIR}/projectname/SplashScreen.storyboard\"\n  echo \"Using TEST splash screen...\"\n\nelif [[ \"$CONFIG_LOWER\" == *\"stage\"* ]]; then\n  cp \"${PROJECT_DIR}/LaunchScreenStaging.storyboard\" \\\n     \"${PROJECT_DIR}/projectname/SplashScreen.storyboard\"\n  echo \"Using STAGE splash screen...\"\n\nelse\n  cp \"${PROJECT_DIR}/LaunchScreenProduction.storyboard\" \\\n     \"${PROJECT_DIR}/projectname/SplashScreen.storyboard\"\n  echo \"Using PROD splash screen...\"\nfi\n\n";
 		};
 		AB950897B62ECA357659FF58 /* [Expo] Configure project */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -355,7 +378,6 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = projectname/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
-				LAUNCH_SCREEN = LaunchScreenProduction;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,7 +406,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = projectname/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
-				LAUNCH_SCREEN = LaunchScreenProduction;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -476,10 +497,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -552,10 +570,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -637,10 +652,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -657,7 +669,6 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = projectname/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
-				LAUNCH_SCREEN = LaunchScreenStaging;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -743,10 +754,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -763,7 +771,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = projectname/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
-				LAUNCH_SCREEN = LaunchScreenStaging;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -855,10 +862,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -875,7 +879,6 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = projectname/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
-				LAUNCH_SCREEN = LaunchScreenDevelopment;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -960,10 +963,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -980,7 +980,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = projectname/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
-				LAUNCH_SCREEN = LaunchScreenDevelopment;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1072,10 +1071,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -1092,7 +1088,6 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = projectname/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
-				LAUNCH_SCREEN = LaunchScreenTesting;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1177,10 +1172,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -1197,7 +1189,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = projectname/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
-				LAUNCH_SCREEN = LaunchScreenTesting;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
