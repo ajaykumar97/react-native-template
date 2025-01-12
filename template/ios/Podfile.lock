@@ -1,13 +1,13 @@
 PODS:
   - boost (1.84.0)
   - DoubleConversion (1.1.6)
-  - EXConstants (17.0.3):
+  - EXConstants (17.0.4):
     - ExpoModulesCore
-  - Expo (52.0.17):
+  - Expo (52.0.25):
     - ExpoModulesCore
-  - ExpoAsset (11.0.1):
+  - ExpoAsset (11.0.2):
     - ExpoModulesCore
-  - ExpoModulesCore (2.1.1):
+  - ExpoModulesCore (2.1.3):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -30,7 +30,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - ExpoSplashScreen (0.29.16):
+  - ExpoSplashScreen (0.29.20):
     - ExpoModulesCore
   - FBLazyVector (0.76.6)
   - fmt (9.1.0)
@@ -1633,7 +1633,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNGestureHandler (2.21.2):
+  - RNGestureHandler (2.22.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1720,7 +1720,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNSVG (15.10.1):
+  - RNSVG (15.11.1):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1740,9 +1740,9 @@ PODS:
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - RNSVG/common (= 15.10.1)
+    - RNSVG/common (= 15.11.1)
     - Yoga
-  - RNSVG/common (15.10.1):
+  - RNSVG/common (15.11.1):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2008,11 +2008,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   boost: 1dca942403ed9342f98334bf4c3621f011aa7946
   DoubleConversion: f16ae600a246532c4020132d54af21d0ddb2a385
-  EXConstants: 277129d9a42ba2cf1fad375e7eaa9939005c60be
-  Expo: 74b3356fc899e189782a177cef9133a53bed16e2
-  ExpoAsset: 6f7a8887cbb9fb39fdb0808e7f6f74ba0e1ae9b6
-  ExpoModulesCore: 5c2036ec792be80ebf777ba5bbe197f20d9b6eed
-  ExpoSplashScreen: 623f0e81c44956532d1cb03b4af6c9a959c6cafc
+  EXConstants: 6b8c5653492349b3c3fe6b905c556bc45b360405
+  Expo: 63db23579a7a878567185fa0524b8294b4f93b28
+  ExpoAsset: d2d2cbc6a4efadf51a3da27d85d589935abd0b98
+  ExpoModulesCore: 7e6ae3311a7d566bd284043dc17627b2dac8c203
+  ExpoSplashScreen: ecc937bf66daf3be21135268a3e2bd3a67ec7871
   FBLazyVector: be509404b5de73a64a74284edcaf73a5d1e128b1
   fmt: 10c6e61f4be25dc963c36bd73fc7b1705fe975be
   glog: 08b301085f15bcbb6ff8632a8ebaf239aae04e6a
@@ -2077,10 +2077,10 @@ SPEC CHECKSUMS:
   ReactCodegen: 0a0eef9c8cd84c932ae1868832086c6441811e84
   ReactCommon: 3c1c8c6d777103c0e60e37c6c5f08e828e2a77c9
   RNCAsyncStorage: 2edc69cf6db9299363a11477668b7f452f2cb4a6
-  RNGestureHandler: e1dcb274c17ca0680a04d7ff357e35e37c384185
+  RNGestureHandler: 7afc0db05cd604c8530dba90d9b453d4d581deab
   RNKeychain: 2c8ed1dc7a077aa51869fbd8f9114754e03837d9
   RNScreens: 06e1f09654d2da4ff95dee6621b2b13b033e9c5a
-  RNSVG: 588c85abb474f7ee58dd886ed1fe198cc73772b2
+  RNSVG: c50d29abf38abbf48ebfc50b6258f81099aeabae
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: be6f55a028e86c83ae066f018e9b5d24ffc45436
 
