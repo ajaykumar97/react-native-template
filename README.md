@@ -15,7 +15,7 @@ A starter kit for initializing a new React-Native project to save at least 1 wee
 - Pre-configured folder structure
 - Common authentication screens(Login, Signup, Forgot Password) and flow
 - Reusable common components, utility functions and constants
-- Navigation using [react-navigation](https://reactnavigation.org/) (v6)
+- Navigation using [react-navigation](https://reactnavigation.org/) (v7)
 - State management using [redux-toolkit](https://redux-toolkit.js.org/)
 - Git hooks using [husky](https://typicode.github.io/husky/#/)
 - Development, Testing, Staging and Production environment configurations using [react-native-config](https://github.com/luggit/react-native-config#readme)
