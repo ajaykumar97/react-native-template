@@ -1,3 +1,18 @@
+# [10.0.0](https://github.com/ajaykumar97/react-native-template/compare/9.0.1...10.0.0) (2025-01-18)
+
+
+### Bug Fixes
+
+* `email` and `name` regex ([a81cf6b](https://github.com/ajaykumar97/react-native-template/commit/a81cf6b9188b0e32762104f5387a252446d4d97d))
+* android splash screen hiding before application code loads ([f94e0b1](https://github.com/ajaykumar97/react-native-template/commit/f94e0b18128682450ac4f869298c32e0a9a1b6cf))
+
+
+### Features
+
+* updated `react-native` version ([848ec93](https://github.com/ajaykumar97/react-native-template/commit/848ec9355b9fd0ba5b4182a1f9029970e6ae7e7b))
+* updated libraries ([310ff23](https://github.com/ajaykumar97/react-native-template/commit/310ff23b318ec1eb58276fd38a0aa9f653140517))
+* updated react-navigation to v7 ([2174bfa](https://github.com/ajaykumar97/react-native-template/commit/2174bfa5172e09c13715c7d91a3c1637bd207b4c))
+
 ## [9.0.1](https://github.com/ajaykumar97/react-native-template/compare/9.0.0...9.0.1) (2024-10-12)
 
 # [9.0.0](https://github.com/ajaykumar97/react-native-template/compare/8.2.0...9.0.0) (2024-10-12)
