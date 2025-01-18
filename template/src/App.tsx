@@ -1,8 +1,8 @@
 import {useNetInfo} from '@react-native-community/netinfo';
 import {NavigationContainer} from '@react-navigation/native';
-import React, {useEffect} from 'react';
-import {I18nextProvider, useTranslation} from 'react-i18next';
-import {Alert, StatusBar} from 'react-native';
+import React from 'react';
+import {I18nextProvider} from 'react-i18next';
+import {StatusBar} from 'react-native';
 import FlashMessage from 'react-native-flash-message';
 import {Provider} from 'react-redux';
 
