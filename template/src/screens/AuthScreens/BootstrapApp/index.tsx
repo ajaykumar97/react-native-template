@@ -8,7 +8,7 @@ import {replace} from '../../../utilities/navigationService';
 
 interface BootStrapAppProps {}
 
-preventAutoHideAsync()
+preventAutoHideAsync();
 
 const BootstrapApp: React.FC<BootStrapAppProps> = () => {
   const bootstrapApp = async () => {

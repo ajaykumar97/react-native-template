@@ -1,1 +1,4 @@
-module.exports.hideAsync = () => new Promise();
+module.exports = {
+  hideAsync: () => new Promise(),
+  preventAutoHideAsync: () => Promise.resolve(false),
+};
