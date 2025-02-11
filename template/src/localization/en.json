@@ -1,6 +1,7 @@
 {
   "translation": {
     "appEnvironment": "App environment: {0}",
+    "somethingWentWrong": "Something went wrong. Please try again later.",
     "login": "Log in",
     "signup": "Sign up",
     "users": "Users",
