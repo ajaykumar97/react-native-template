@@ -15,7 +15,7 @@ export const getUsers = createAsyncThunk('users/getUsers', async () => {
 
     return users;
   } catch (error) {
-    showErrorMessage(error);
+    showErrorMessage(error as any);
   }
 });
 

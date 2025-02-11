@@ -22,14 +22,14 @@ const showFlashMessage = (message: string, options = {}) => {
 };
 
 export const showErrorMessage = (
-  error: {response: {data: {message: string}}},
+  error: {response: {data: {message: string}}} | {message: string} | string,
   options = {},
 ) => {
-  let errorMessage;
+  let errorMessage: string | undefined;
   if (typeof error === 'string') {
     errorMessage = error;
   }
-  if (error?.response?.data?.message) {
+  if (typeof error === 'object' && 'response' in error && error.response?.data?.message) {
     errorMessage = error.response.data.message;
   }
   if (!errorMessage) {
