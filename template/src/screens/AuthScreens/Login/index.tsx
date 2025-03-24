@@ -34,7 +34,7 @@ const Login: React.FC<LoginProps> = () => {
   });
   const {t} = useTranslation();
 
-  const passwordRef = useRef() as any;
+  const passwordRef = useRef(null) as any;
 
   const onEmailSubmit = () => {
     if (passwordRef.current) {

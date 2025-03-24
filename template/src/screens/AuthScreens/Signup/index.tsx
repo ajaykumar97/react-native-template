@@ -32,8 +32,8 @@ const Signup: React.FC = () => {
   });
   const {t} = useTranslation();
 
-  const emailRef = useRef() as any;
-  const passwordRef = useRef() as any;
+  const emailRef = useRef(null) as any;
+  const passwordRef = useRef(null) as any;
 
   const onNameSubmit = () => {
     if (emailRef.current) {
