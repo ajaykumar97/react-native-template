@@ -35,6 +35,7 @@ local.properties
 !debug.keystore
 *.apk
 output.json
+.kotlin/
 
 # node.js
 #
