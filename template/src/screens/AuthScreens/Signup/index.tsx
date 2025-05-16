@@ -119,7 +119,7 @@ const Signup: React.FC = () => {
             return (
               <TextInputWithLabel
                 value={value}
-                placeholder={t('passsword')}
+                placeholder={t('passswordPlaceholder')}
                 label={t('password')}
                 blurOnSubmit
                 ref={passwordRef}

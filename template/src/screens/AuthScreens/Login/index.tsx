@@ -90,7 +90,7 @@ const Login: React.FC<LoginProps> = () => {
             return (
               <TextInputWithLabel
                 value={value}
-                placeholder={t('passsword')}
+                placeholder={t('passswordPlaceholder')}
                 label={t('password')}
                 ref={passwordRef}
                 returnKeyType={'done'}
