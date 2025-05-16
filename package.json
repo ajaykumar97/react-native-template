@@ -41,7 +41,7 @@
     }
   },
   "devDependencies": {
-    "@release-it/conventional-changelog": "^3.3.0",
-    "release-it": "^14.11.5"
+    "@release-it/conventional-changelog": "^10.0.1",
+    "release-it": "^19.0.2"
   }
 }
