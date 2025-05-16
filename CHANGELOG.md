@@ -1,3 +1,14 @@
+# Changelog
+
+# [11.0.0](https://github.com/ajaykumar97/react-native-template/compare/10.0.2...11.0.0) (2025-05-16)
+
+
+### Features
+
+* updated `react-native` version to `0.79.2` ([66c1756](https://github.com/ajaykumar97/react-native-template/commit/66c175624575e339d10049c43c5c74ee30e42bf5))
+* updated library versions ([1a5e4ec](https://github.com/ajaykumar97/react-native-template/commit/1a5e4ec6f234cdab9f679b451c652ebc8ad9808b))
+* updated react native version to `0.78` and other libraries versions ([cc95803](https://github.com/ajaykumar97/react-native-template/commit/cc95803f1cea49e6926ab21b8fe658e53aa111c4))
+
 ## [10.0.2](https://github.com/ajaykumar97/react-native-template/compare/10.0.1...10.0.2) (2025-02-11)
 
 ## [10.0.1](https://github.com/ajaykumar97/react-native-template/compare/10.0.0...10.0.1) (2025-01-18)
@@ -183,4 +194,3 @@
 
 
 ## [1.0.1](https://github.com/ajaykumar97/react-native-template/compare/2.0.0...2.0.1) (2021-03-07)
-
