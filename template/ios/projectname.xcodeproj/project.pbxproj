@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-projectname.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-projectname.a */; };
-		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2D5ED6132D342E92007EBEEB /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5ED6112D342A71007EBEEB /* SplashScreen.storyboard */; };
+		2DB853C22D9142B200700C58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB853C12D9142B200700C58 /* AppDelegate.swift */; };
 		882330512BB58683007333F2 /* LaunchScreenStaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882330502BB58683007333F2 /* LaunchScreenStaging.storyboard */; };
 		882330532BB58698007333F2 /* LaunchScreenDevelopment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882330522BB58698007333F2 /* LaunchScreenDevelopment.storyboard */; };
 		882330552BB586AC007333F2 /* LaunchScreenTesting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882330542BB586AC007333F2 /* LaunchScreenTesting.storyboard */; };
@@ -21,21 +20,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* projectnameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = projectnameTests.m; sourceTree = "<group>"; };
 		07B253923903AE5BE2E21273 /* Pods-projectname.developmentdebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectname.developmentdebug.xcconfig"; path = "Target Support Files/Pods-projectname/Pods-projectname.developmentdebug.xcconfig"; sourceTree = "<group>"; };
 		118CF17772E5603C2E94F9C5 /* Pods-projectname.testingdebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectname.testingdebug.xcconfig"; path = "Target Support Files/Pods-projectname/Pods-projectname.testingdebug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* projectname.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectname.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = projectname/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = projectname/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = projectname/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = projectname/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = projectname/main.m; sourceTree = "<group>"; };
-		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = RnDiffApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		17F18BA8CD02D59C4120D759 /* Pods-projectname.testingrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectname.testingrelease.xcconfig"; path = "Target Support Files/Pods-projectname/Pods-projectname.testingrelease.xcconfig"; sourceTree = "<group>"; };
 		25142DE1B3F4B4F1CD8E81DE /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-projectname/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		261B60481D08C27F13EAA0FB /* Pods-projectname.stagingdebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectname.stagingdebug.xcconfig"; path = "Target Support Files/Pods-projectname/Pods-projectname.stagingdebug.xcconfig"; sourceTree = "<group>"; };
 		2D5ED6112D342A71007EBEEB /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = projectname/SplashScreen.storyboard; sourceTree = "<group>"; };
+		2DB853C12D9142B200700C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-projectname.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectname.debug.xcconfig"; path = "Target Support Files/Pods-projectname/Pods-projectname.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-projectname.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectname.release.xcconfig"; path = "Target Support Files/Pods-projectname/Pods-projectname.release.xcconfig"; sourceTree = "<group>"; };
 		586B8B84B35CEF32995F3EED /* Pods-projectname.stagingrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectname.stagingrelease.xcconfig"; path = "Target Support Files/Pods-projectname/Pods-projectname.stagingrelease.xcconfig"; sourceTree = "<group>"; };
@@ -61,28 +55,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* projectnameTests */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F21AD99517003FC87E /* projectnameTests.m */,
-				00E356F01AD99517003FC87E /* Supporting Files */,
-			);
-			path = projectnameTests;
-			sourceTree = "<group>";
-		};
-		00E356F01AD99517003FC87E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F11AD99517003FC87E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* projectname */ = {
 			isa = PBXGroup;
 			children = (
-				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
-				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				2D5ED6112D342A71007EBEEB /* SplashScreen.storyboard */,
@@ -90,9 +65,8 @@
 				882330542BB586AC007333F2 /* LaunchScreenTesting.storyboard */,
 				882330522BB58698007333F2 /* LaunchScreenDevelopment.storyboard */,
 				882330502BB58683007333F2 /* LaunchScreenStaging.storyboard */,
-				13B07FB71A68108700A75B9A /* main.m */,
-				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				AD88712C6FB2101968747D1C /* PrivacyInfo.xcprivacy */,
+				2DB853C12D9142B200700C58 /* AppDelegate.swift */,
 			);
 			name = projectname;
 			sourceTree = "<group>";
@@ -126,7 +100,6 @@
 			children = (
 				13B07FAE1A68108700A75B9A /* projectname */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* projectnameTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -359,8 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
-				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				2DB853C22D9142B200700C58 /* AppDelegate.swift in Sources */,
 				E1292CECBB217B6C707FE9D2 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,6 +663,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.projectname.staging;
 				PRODUCT_NAME = "projectname-staging";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -907,6 +880,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.projectname.development;
 				PRODUCT_NAME = "projectname-development";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1122,6 +1096,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.projectname.testing;
 				PRODUCT_NAME = "projectname-testing";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

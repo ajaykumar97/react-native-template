@@ -59,7 +59,7 @@ npm uninstall -g react-native-cli
 
 ## Quick start
 
-Generate a new React Native(**v0.76**) app using the **@ajaysidhu/react-native-template**:
+Generate a new React Native(**v0.79**) app using the **@ajaysidhu/react-native-template**:
 
 ```shell
 npx @react-native-community/cli@latest init myapp --template @ajaysidhu/react-native-template --skip-install --pm npm --skip-git-init
@@ -84,7 +84,7 @@ npm start
 ```
 
 2. Minimum supported versions:
-- iOS: 15
+- iOS: 15.1
 - Android: 26
 
 ## Use Older versions
