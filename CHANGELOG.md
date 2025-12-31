@@ -1,3 +1,10 @@
+# [12.0.0](https://github.com/ajaykumar97/react-native-template/compare/11.0.0...12.0.0) (2025-12-31)
+
+
+### Features
+
+* updated react native to `0.81.5` and lib versions ([a02bd43](https://github.com/ajaykumar97/react-native-template/commit/a02bd43e62dcbba33c765cce58d88a6abb280735))
+
 # Changelog
 
 # [11.0.0](https://github.com/ajaykumar97/react-native-template/compare/10.0.2...11.0.0) (2025-05-16)
