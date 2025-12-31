@@ -5,6 +5,23 @@ import {scale} from 'react-native-size-matters';
 import {fontsFamily} from '../../commonComponents/TextComponents';
 import {LAYOUT} from '../constants';
 
+export const getAPIError = (error: {
+  response: {data: {message: string; error: {message: string}}};
+  data: {error: {message: string}};
+}) => {
+  if (error?.response?.data?.message) {
+    return error.response.data.message;
+  }
+  if (error?.response?.data?.error?.message) {
+    return error.response.data.error.message;
+  }
+  if (error?.data?.error?.message) {
+    return error.data.error.message;
+  }
+
+  return i18next.t('somethingWentWrong');
+};
+
 export const flashMessageConfig = {
   floating: true,
   duration: 5000,

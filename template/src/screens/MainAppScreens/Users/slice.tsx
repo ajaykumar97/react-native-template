@@ -1,8 +1,8 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 
 import {URLS} from '../../../utilities/constants';
-import {showErrorMessage} from '../../../utilities/helperFunctions/miscellaneous';
 import {request} from '../../../utilities/request';
+import { showErrorMessage } from '../../../utilities/helperFunctions/miscellaneous';
 
 export const getUsers = createAsyncThunk('users/getUsers', async () => {
   try {
@@ -15,7 +15,7 @@ export const getUsers = createAsyncThunk('users/getUsers', async () => {
 
     return users;
   } catch (error) {
-    showErrorMessage(error as any);
+    showErrorMessage(error);
   }
 });
 

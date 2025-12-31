@@ -32,8 +32,8 @@ const Signup: React.FC = () => {
   });
   const {t} = useTranslation();
 
-  const emailRef = useRef(null) as any;
-  const passwordRef = useRef(null) as any;
+  const emailRef = useRef() as any;
+  const passwordRef = useRef() as any;
 
   const onNameSubmit = () => {
     if (emailRef.current) {
@@ -119,7 +119,7 @@ const Signup: React.FC = () => {
             return (
               <TextInputWithLabel
                 value={value}
-                placeholder={t('passswordPlaceholder')}
+                placeholder={t('passsword')}
                 label={t('password')}
                 blurOnSubmit
                 ref={passwordRef}

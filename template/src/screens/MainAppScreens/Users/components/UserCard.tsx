@@ -3,7 +3,7 @@ import {View, StyleSheet} from 'react-native';
 import {scale} from 'react-native-size-matters';
 
 import {Body1, Body2} from '../../../../commonComponents/TextComponents';
-import {COLORS, commonStyles} from '../../../../utilities/constants';
+import {BORDER_RADIUS, COLORS, commonStyles} from '../../../../utilities/constants';
 
 interface UserCardProps {
   user: {
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white1,
     padding: scale(10),
     marginTop: scale(2),
-    borderRadius: scale(2),
+    borderRadius: BORDER_RADIUS.xs,
     ...commonStyles.shadow,
   },
 });

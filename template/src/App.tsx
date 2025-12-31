@@ -14,9 +14,9 @@ import {COLORS} from './utilities/constants';
 import {navigationRef} from './utilities/navigationService';
 
 function App(): React.JSX.Element {
-  const {isConnected} = useNetInfo();
+  const {isInternetReachable} = useNetInfo();
 
-  if (isConnected === false) {
+  if (isInternetReachable === false) {
     return <NoInternetBanner />;
   }
 

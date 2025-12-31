@@ -50,11 +50,12 @@ const TextInputWithLabel = forwardRef<TextInput, TextInputWithLabelProps>(
         </Body3>
         <View style={styles.inputContainer}>
           <TextInput
-            {...props}
+            allowFontScaling={false}
             placeholderTextColor={COLORS.grey2}
             ref={ref}
             secureTextEntry={isSecureTextEntryEnabled}
             underlineColorAndroid={COLORS.transparent}
+            {...props}
             style={[
               styles.textInput,
               {height: props.multiline ? undefined : scale(40)},

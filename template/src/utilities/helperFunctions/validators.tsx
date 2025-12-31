@@ -33,7 +33,7 @@ export const signupFormSchema = yup.object().shape({
     .string()
     .trim()
     .required(t('enterYourName'))
-    .matches(REGEX.name, t('enterValidName')),
+    .matches(REGEX.name, t('enterYourName')),
   email: yup
     .string()
     .email(t('enterValidEmail'))

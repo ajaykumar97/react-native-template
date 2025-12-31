@@ -11,7 +11,7 @@ const AuthStack = createStackNavigator();
 interface AuthNavigatorProps {}
 
 const AuthNavigator: React.FC<AuthNavigatorProps> = () => (
-  <AuthStack.Navigator screenOptions={{headerShown: false, animation: 'slide_from_right'}}>
+  <AuthStack.Navigator screenOptions={{headerShown: false}}>
     <AuthStack.Screen name={SCREEN_NAMES.Login} component={Login} />
     <AuthStack.Screen name={SCREEN_NAMES.Signup} component={Signup} />
     <AuthStack.Screen

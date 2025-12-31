@@ -2,7 +2,7 @@ import React from 'react';
 import {GestureResponderEvent, Pressable, ViewStyle} from 'react-native';
 import {scale} from 'react-native-size-matters';
 
-import {COLORS} from '../../utilities/constants';
+import {BORDER_RADIUS, COLORS} from '../../utilities/constants';
 import {Body1} from '../TextComponents';
 
 import styles from './styles';
@@ -32,7 +32,7 @@ const Button: React.FC<ButtonProps> = ({
   marginBottom = 0,
   marginHorizontal = 0,
   transparent,
-  borderRadius = scale(5),
+  borderRadius = BORDER_RADIUS.sm,
 }) => (
   <Pressable
     onPress={onPress}

@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import {scale} from 'react-native-size-matters';
 
-import {COLORS} from '../../utilities/constants';
+import {BORDER_RADIUS, COLORS} from '../../utilities/constants';
 
 const styles = StyleSheet.create({
   flex1: {flex: 1},
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     width: scale(100),
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: scale(10),
+    borderRadius: BORDER_RADIUS.lg,
   },
 });
 

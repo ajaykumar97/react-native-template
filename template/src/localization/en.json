@@ -1,7 +1,7 @@
 {
   "translation": {
     "appEnvironment": "App environment: {0}",
-    "somethingWentWrong": "Something went wrong. Please try again later.",
+    "somethingWentWrong": "Something went wrong. Please try again later",
     "login": "Log in",
     "signup": "Sign up",
     "users": "Users",
@@ -12,13 +12,12 @@
     "enterAnEmail": "Please enter your email.",
     "placeholderEmail": "e.g. john@example.com",
     "placeholderName": "John Doe",
-    "passswordPlaceholder": "********",
+    "passsword": "********",
     "pleaseEnterPassword": "Please enter the password.",
     "enterValidEmail": "Please enter a valid email address.",
     "passwordCanContainOnly": "Your password must be a minimum of 8 characters long and contain at least one special character from !@#$%^&-?, one number, and one uppercase letter.",
     "checkEmailForPasswordRest": "Please check your email. A verification link has been sent to change your password.",
     "enterYourName": "Please enter your name.",
-    "enterValidName": "Please enter a valid name.",
     "forgotPassword": "Forgot Password",
     "forgotPasswordWithQuestion": "Forgot Password?",
     "dontHaveAnAccount": "Don't have an account?",

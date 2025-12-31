@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native';
-import {scale} from 'react-native-size-matters';
+
+import {BORDER_RADIUS} from '../../utilities/constants';
 
 const styles = StyleSheet.create({
   button: {
-    borderRadius: scale(2),
+    borderRadius: BORDER_RADIUS.xs,
     alignItems: 'center',
     justifyContent: 'center',
   },

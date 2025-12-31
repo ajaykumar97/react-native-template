@@ -6,9 +6,8 @@ import {
   Text,
   TextStyle,
 } from 'react-native';
-import {scale} from 'react-native-size-matters';
 
-import {COLORS} from '../../utilities/constants';
+import {COLORS, FONT_SIZES} from '../../utilities/constants';
 
 type TextProps = {
   style?: StyleProp<TextStyle> | undefined;
@@ -41,15 +40,16 @@ export const TextComponents: React.FC<TextProps> = ({
   return (
     <Text
       onPress={onPress}
-      {...props}
+      allowFontScaling={false}
       numberOfLines={numberOfLines}
       style={{
         color,
         fontSize,
-
         fontFamily,
         ...(style as object),
-      }}>
+      }}
+      {...props}
+    >
       {children}
     </Text>
   );
@@ -59,7 +59,7 @@ export const Heading1: React.FC<TextProps> = props => {
     <TextComponents
       color={COLORS.black1}
       {...props}
-      fontSize={scale(28)}
+      fontSize={FONT_SIZES.xxxl}
       fontFamily={fontsFamily.arialBold}
     />
   );
@@ -69,7 +69,7 @@ export const Heading2: React.FC<TextProps> = props => {
     <TextComponents
       color={COLORS.black1}
       {...props}
-      fontSize={scale(24)}
+      fontSize={FONT_SIZES.xxl}
       fontFamily={fontsFamily.arialSemiBold}
     />
   );
@@ -80,7 +80,7 @@ export const Heading3: React.FC<TextProps> = props => {
     <TextComponents
       color={COLORS.black1}
       {...props}
-      fontSize={scale(18)}
+      fontSize={FONT_SIZES.lg}
       fontFamily={fontsFamily.arialSemiBold}
     />
   );
@@ -91,7 +91,7 @@ export const SubHeading: React.FC<TextProps> = props => {
     <TextComponents
       color={COLORS.black1}
       {...props}
-      fontSize={scale(20)}
+      fontSize={FONT_SIZES.xl}
       fontFamily={fontsFamily.arialMedium}
     />
   );
@@ -102,7 +102,7 @@ export const Body1: React.FC<TextProps> = props => {
     <TextComponents
       color={COLORS.black1}
       {...props}
-      fontSize={scale(16)}
+      fontSize={FONT_SIZES.md}
       fontFamily={fontsFamily.arialRegular}
     />
   );
@@ -113,7 +113,7 @@ export const Body2: React.FC<TextProps> = props => {
     <TextComponents
       color={COLORS.black1}
       {...props}
-      fontSize={scale(14)}
+      fontSize={FONT_SIZES.sm}
       fontFamily={fontsFamily.arialRegular}
     />
   );
@@ -124,7 +124,7 @@ export const Body3: React.FC<TextProps> = props => {
     <TextComponents
       color={COLORS.black1}
       {...props}
-      fontSize={scale(14)}
+      fontSize={FONT_SIZES.sm}
       fontFamily={fontsFamily.arialRegular}
     />
   );
@@ -135,7 +135,7 @@ export const ErrorText: React.FC<TextProps> = props => {
     <TextComponents
       color={COLORS.red1}
       {...props}
-      fontSize={scale(12)}
+      fontSize={FONT_SIZES.xs}
       fontFamily={fontsFamily.arialRegular}
     />
   );
