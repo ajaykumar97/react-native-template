@@ -63,7 +63,7 @@ You've successfully run and modified your React Native App. :partying_face:
 
 # Troubleshooting
 
-If you can't get this to work, feel free to [get in touch](https://diligentic.com/get-in-touch).
+If you can't get this to work, feel free to [get in touch](https://forms.gle/WdZSojBQ6h4MYW2VA).
 
 # Learn More
 

@@ -72,14 +72,18 @@ If you want to extend the setup further to configure different Google Service fi
 ## Make your own template
 Enjoying this awesome template feature of `react-native-cli` and want to build your own react-native-template? No worries! I have written a dedicated post to create your own `react-native-template` based your own project needs. You can give it a read [here](https://hackernoon.com/how-to-quickly-create-a-custom-template-in-react-native-4up340g).
 
-## Need further help?
-Thank you for choosing our React Native Template for your mobile app development needs. We're thrilled to contribute to your project's success!
+## Maintenance & Updates
+This template is not on an automated or scheduled upgrade cycle. It is intentionally kept stable and only updated when:
+- A breaking React Native or dependency change requires it, or
+- Someone explicitly requests a newer version
 
-Should you encounter any issues, have questions, or need further assistance using our package to initialise your new mobile app, please don't hesitate to reach out. Our team at Diligentic Infotech is here to help you every step of the way.
+This repository exists to demonstrate architecture, tooling, and engineering practices, not to chase every weekly package release.
 
-Feel free to visit our website [Diligentic Infotech](https://diligentic.com/get-in-touch) to learn more about our services and how we can support your mobile app development journey.
+If you need this template upgraded to a specific React Native version or dependency set, request it [here](https://forms.gle/WdZSojBQ6h4MYW2VA).
 
-Happy coding, and we look forward to hearing from you!
+When a request comes in, I update the template to the latest stable stack and push a new release.
+
+Happy coding, and I look forward to hearing from you!
 
 ## Roadmap
 - [x] Add [react-native-keychain](https://github.com/oblador/react-native-keychain) for secured user data storage
